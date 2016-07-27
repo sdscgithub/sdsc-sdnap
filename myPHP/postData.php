@@ -8,7 +8,6 @@
   $laborCharge = $_POST["Labor_Charge"];
   $cost = $_POST["Yearly_Cost"];
 
-  //mysql_query("INSERT INTO `test2` VALUES('$client', '$rackSpace', '$megabit', '$icfee', '$laborCharge', '$cost', DEFAULT)");
   $mysqli->query("INSERT INTO `test2` VALUES('$client', '$rackSpace', '$megabit', '$icfee', '$laborCharge', '$cost', DEFAULT)");
 
 header( 'Location: http://localhost' ) ;

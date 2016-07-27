@@ -18,6 +18,7 @@ echo '<head>
 echo `<body>
       <div class="container">`;
 
+/* Adds the buttons */
 echo '<div class = "btn-toolbar">
       <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
        Add
@@ -30,6 +31,7 @@ echo '<div class = "btn-toolbar">
     </button>
      </div>';
 
+/* Form for Add new Entry */
 echo '<!-- Modal -->
   <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
@@ -76,7 +78,7 @@ echo '<!-- Modal -->
 </div>';
 
 
-
+/* Form for Updating Entry */
 echo '<!-- Modal -->
  <div class="modal fade" id="edit" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">

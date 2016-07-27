@@ -9,11 +9,6 @@
   $cost = $_POST["Yearly_Cost"];
   $id = $_POST["alterId"];
 
-
-   //$mysqli->query("UPDATE `test2` SET Client='$client', `Rack Space`='$rackSpace', Megabit='$megabit', `Internet Connector Fee`='$icfee',
-  //              `Labor Charge`='$laborCharge', `Yearly Cost`='$cost' WHERE id='$id' ");
-
-
   $mysqli->query("UPDATE `test2` SET Client='$client' WHERE id='$id' AND '$client' <> '' ");
   $mysqli->query("UPDATE `test2` SET `Rack Space`='$rackSpace' WHERE id='$id' AND '$rackSpace' <> '' ");
   $mysqli->query("UPDATE `test2` SET Megabit='$megabit' WHERE id='$id' AND '$megabit' <> '' ");
