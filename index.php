@@ -25,6 +25,9 @@ echo '<div class = "btn-toolbar">
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <button class="delete btn btn-danger btn-sm">Delete</button> </form>
+     <button class="add btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
+      Edit
+    </button>
      </div>';
 
 echo '<!-- Modal -->
@@ -71,6 +74,56 @@ echo '<!-- Modal -->
         </div>
     </div>
 </div>';
+
+
+
+echo '<!-- Modal -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Add New Entry
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form id="myForm" action="myPHP/updateData.php" method="post">';
+
+                 foreach ($FIELDS as $val){
+                   echo '<div class="form-group">';
+                   echo '<label for=',$val,"input>",$val,'</label>';
+                   echo '<input type="',$val,'"', ' name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
+                   echo '</div>';
+
+                 }
+            echo '<div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div></form>';
+            echo '</div>';
+
+            echo '<!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>';
+
+
+
 
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
