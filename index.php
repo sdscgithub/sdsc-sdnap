@@ -31,7 +31,7 @@ echo '<div class = "btn-toolbar">
      </div>';
 
 echo '<!-- Modal -->
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+  <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -78,7 +78,7 @@ echo '<!-- Modal -->
 
 
 echo '<!-- Modal -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog"
+ <div class="modal fade" id="edit" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -97,12 +97,13 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="myForm" action="myPHP/updateData.php" method="post">';
+                <form id="myEdit" action="myPHP/updateData.php" method="post">
+                <input name="alterId" id="alterId" type="int" hidden="true">';
 
                  foreach ($FIELDS as $val){
                    echo '<div class="form-group">';
                    echo '<label for=',$val,"input>",$val,'</label>';
-                   echo '<input type="',$val,'"', ' name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
+                   echo '<input type="',$val,'"', 'name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
                    echo '</div>';
 
                  }

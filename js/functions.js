@@ -6,6 +6,7 @@ function highlight(id){
  ele.css("background-color", "yellow");
 
  document.getElementById("deleteId").setAttribute("value", id);
+ document.getElementById("alterId").setAttribute("value",id);
 
 }
 
