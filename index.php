@@ -17,6 +17,7 @@ echo '<head>
 
 echo `<body><div class="container">`;
 
+/* Adds the buttons */
 echo '<div class = "btn-toolbar">
       <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
        Add
@@ -25,20 +26,21 @@ echo '<div class = "btn-toolbar">
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <button class="delete btn btn-danger btn-sm">Delete</button> </form>
-     </div>';
+     <button class="edit btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
+      Edit
+    </button>
+    <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
+     Add Column
+   </button>
+     </div>
+      <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormColDelete">
+          Remove Column
+      </button>';
 
-     echo '<div class = "btn-toolbar">
-           <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
-            Add Column
-          </button>';
 
-          echo '<div class = "btn-toolbar">
-                <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormColDelete">
-                 Remove Column
-               </button>';
 
 echo '<!-- Modal -->
-<div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+  <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -189,6 +191,57 @@ echo '<!-- Modal -->
         </div>
     </div>
 </div>';
+
+
+/* Form for Updating Entry */
+echo '<!-- Modal -->
+ <div class="modal fade" id="edit" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Add New Entry
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form id="myEdit" action="myPHP/updateData.php" method="post">
+                <input name="alterId" id="alterId" type="int" hidden="true">';
+
+                 foreach ($FIELDS as $val){
+                   echo '<div class="form-group">';
+                   echo '<label for=',$val,"input>",$val,'</label>';
+                   echo '<input type="',$val,'"', 'name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
+                   echo '</div>';
+
+                 }
+            echo '<div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div></form>';
+            echo '</div>';
+
+            echo '<!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>';
+
+
+
 
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">

@@ -14,18 +14,6 @@
   }
 
 
-/*
-  $client = $_POST["Client"];
-  $rackSpace = $_POST["Rack_Space"];
-  $megabit = $_POST["Megabit"];
-  $icfee = $_POST["Internet_Connector_Fee"];
-  $laborCharge = $_POST["Labor_Charge"];
-  $cost = $_POST["Yearly_Cost"];
-  */
-
-  //mysql_query("INSERT INTO `test2` VALUES('$client', '$rackSpace', '$megabit', '$icfee', '$laborCharge', '$cost', DEFAULT)");
-  //$mysqli->query("INSERT INTO `test2` VALUES('$client', '$rackSpace', '$megabit', '$icfee', '$laborCharge', '$cost', DEFAULT)");
-
   header( 'Location: http://localhost' ) ;
 
   ?>
