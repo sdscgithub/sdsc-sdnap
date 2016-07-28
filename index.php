@@ -22,10 +22,21 @@ echo '<div class = "btn-toolbar">
       <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
        Add
      </button>
+
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <button class="delete btn btn-danger btn-sm">Delete</button> </form>
      </div>';
+
+     echo '<div class = "btn-toolbar">
+           <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
+            Add Column
+          </button>';
+
+          echo '<div class = "btn-toolbar">
+                <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormColDelete">
+                 Remove Column
+               </button>';
 
 echo '<!-- Modal -->
 <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
@@ -49,13 +60,16 @@ echo '<!-- Modal -->
 
                 <form id="myForm" action="myPHP/postData.php" method="post">';
 
-                 foreach ($FIELDS as $val){
-                   echo '<div class="form-group">';
-                   echo '<label for=',$val,"input>",$val,'</label>';
-                   echo '<input type="',$val,'"', ' name="', $val,'" class="form-control" id =',$val,'input placeholder=""','/>';
-                   echo '</div>';
-
-                 }
+                $sql = "SHOW COLUMNS FROM test2";
+                $result = $mysqli->query($sql);
+                while($row = $result->fetch_array()){
+                  if($row['Field'] != 'id'){
+                    echo '<div class="form-group">';
+                    echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
+                    echo '<input type="',$row['Field'],'"', ' name="', $row['Field'],'" class="form-control" id =',$row['Field'],'input placeholder=""','/>';
+                    echo '</div>';
+                  }
+                }
             echo '<div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </div></form>';
@@ -72,12 +86,117 @@ echo '<!-- Modal -->
     </div>
 </div>';
 
+echo '<!-- Modal -->
+<div class="modal fade" id="myModalNormCol" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Add New Entry
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form id="addColumnForm" action="myPHP/addColumn.php" method="post">';
+                    $newCol = "New Column Name";
+                    $dataType = "Input Type";
+
+                    echo '<div class="form-group">';
+                    echo '<label for=', "$newCol","input>","$newCol",'</label>';
+                    echo '<input name="', "col",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
+
+                    echo '<label for=', "DataType","input>","$dataType",'</label>';
+                    echo  '<select class="selectpicker" name="DataType">
+                           <option>Text</option>
+                           <option value="Long">Numeric</option>
+                           <option>Date</option>
+                           </select>';
+
+                    echo '</div>';
+
+
+            echo '</div>';
+
+            echo '<!-- Modal Footer -->
+            <div class="modal-footer">',
+            '<div>
+             <button type="submit" class="btn btn-default">Submit</button>
+           </div></form>',
+                '<button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>';
+
+echo '<!-- Modal -->
+<div class="modal fade" id="myModalNormColDelete" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Select Column to Remove
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form id="removeColumnForm" action="myPHP/removeColumn.php" method="post">';
+
+                echo '<select class="selectpicker" name="delCol">';
+                echo '<option> Select Column </option>';
+                    $newCol = "Delete Column";
+                    $sql = "SHOW COLUMNS FROM test2";
+                    $result = $mysqli->query($sql);
+                    while($row = $result->fetch_array()){
+                      if($row['Field'] != 'id'){
+                        echo '<option>', $row['Field'],'</option>';
+                      }
+                    }
+
+            echo '</select></div>';
+
+            echo '<!-- Modal Footer -->
+            <div class="modal-footer">',
+
+                '<div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </div></form>',
+
+                '<button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>';
+
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead class="thead-inverse">
         <tr>';
 /* Generate table headers */
-    $data = $mysqli->query("SELECT * FROM test2 WHERE 1");
+    $data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
        echo '<th>', $obj->name, '</th>';
@@ -89,7 +208,7 @@ echo  '</tr></thead>';
 
 /*Genearte table footer*/
 echo '<tfoot><tr>';
-$data = $mysqli->query("SELECT * FROM test2 WHERE 1");
+$data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
 while($obj = $data->fetch_field()){
   if($obj->name != "id")
    echo '<th>', $obj->name, '</th>';
@@ -100,13 +219,23 @@ echo  '</tr></tfoot>';
 
 echo '<tbody>';
 
-  while ($row =$data->fetch_assoc()) {
-     echo "<tr onclick='highlight(id)' id='$row[id]'>";
-     foreach ($FIELDS as $value){
-       echo '<td>', $row[$value], '</td>';
-     }
-     echo '</tr>';
-   }
+$data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
+  $rowNum = 0;
+  while($stuff = $data->fetch_row()){
+    $rowNum = $rowNum + 1;
+   $data->data_seek($rowNum - 1);
+    $stuff2 = $data->fetch_assoc();
+    //echo $stuff2["id"];
+    echo "<tr onclick='highlight(id)' id='$stuff2[id]'>";
+    $counter = 0;
+    while($counter < $data->field_count){
+      if($stuff[$counter] != $stuff2["id"])
+      echo '<td>', $stuff[$counter], '</td>';
+      $counter = $counter + 1;
+    }
+    echo '</tr>';
+  }
+
    echo '</tbody></table>';
    echo '</div></body>';
 
