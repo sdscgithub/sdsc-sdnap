@@ -26,7 +26,7 @@ echo '<div class = "btn-toolbar">
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <button class="delete btn btn-danger btn-sm">Delete</button> </form>
-     <button class="add btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
+     <button class="edit btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
       Edit
     </button>
      </div>';
