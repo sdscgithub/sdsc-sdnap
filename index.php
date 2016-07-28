@@ -15,8 +15,7 @@ echo '<head>
         <script src="js/test.js"></script>
     </head>';
 
-echo `<body>
-      <div class="container">`;
+echo `<body><div class="container">`;
 
 echo '<div class = "btn-toolbar">
       <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
@@ -116,9 +115,9 @@ echo '<!-- Modal -->
 
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
                     echo  '<select class="selectpicker" name="DataType">
-                           <option>Text</option>
-                           <option value="Long">Numeric</option>
-                           <option>Date</option>
+                           <option value="TEXT">Text</option>
+                           <option value="INT">Numeric</option>
+                           <option "DATE">Date</option>
                            </select>';
 
                     echo '</div>';
