@@ -1,19 +1,18 @@
 <?php
   include_once("db.php");
-
+  //TODO Change the form that calls this method so that the data fields are filled out with the previouos info. Right now it is impossible to delete a filed with edit
   $id = $_POST["alterId"];
 
-
-//TODO this will need to be updated when data field names are changed
                 foreach($_POST as $key=>$value){
-                  if($key != 'id'){
+                  echo "$key=$value\n";
+                  if($key != 'alterId'){
                     $keyMod = str_replace('_', ' ', $key);
-                    $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
+                      $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
                   }
                 }
 
 
 
-header( 'Location: http://localhost' ) ;
+  header( 'Location: http://localhost' ) ;
 
   ?>
