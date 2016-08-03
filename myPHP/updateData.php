@@ -1,18 +1,20 @@
 <?php
+/*
+File: updateData.php
+Purpose: update database with new information for existing row
+Description: a row has none, some or all of its data changed
+*/
   include_once("db.php");
-  //TODO Change the form that calls this method so that the data fields are filled out with the previouos info. Right now it is impossible to delete a filed with edit
+  /* the row's id that is to be updated */
   $id = $_POST["alterId"];
-
-                foreach($_POST as $key=>$value){
-                  echo "$key=$value\n";
-                  if($key != 'alterId'){
-                    $keyMod = str_replace('_', ' ', $key);
-                      $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
-                  }
-                }
-
-
-
+    /* Update any fileds that were passed with the POST request */
+    foreach($_POST as $key=>$value){
+      if($key != 'alterId'){
+        $keyMod = str_replace('_', ' ', $key);
+        $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
+      }
+    }
+  /* Display updated webpage */
   header( 'Location: http://localhost' ) ;
 
   ?>

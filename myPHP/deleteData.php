@@ -14,13 +14,19 @@ Description: deleteId and itemToDelete are both expected to be passed in the POS
 
 /* Delete a row */
   if($item == "row"){
-    $mysqli->query("DELETE FROM `test2` WHERE id=$id");
-/* Delete a column */
+    $stmt = $mysqli->prepare("DELETE FROM `$primaryTable` WHERE id=?");
+    $stmt->bind_param('s', $id);
+    $stmt->execute();
+ /* Delete a column */
  }else if($item == "column"){
-   $keyMod = str_replace('_', ' ', $id);
-   $mysqli->query("ALTER TABLE `test2` DROP COLUMN `$keyMod`");
-   $mysqli->query("DELETE FROM `select_options` WHERE column_name='$keyMod'");
 
+   $keyMod = str_replace('_', ' ', $id);
+
+   $mysqli->query("ALTER TABLE `$primaryTable` DROP COLUMN `$keyMod`");
+
+   $stmt2 = $mysqli->prepare("DELETE FROM `$secondaryTable` WHERE column_name=?");
+   $stmt2->bind_param('s', $keyMod);
+   $stmt2->execute();
  }
  /* Display updated page */
  header( 'Location: http://localhost' );

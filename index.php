@@ -2,11 +2,6 @@
 <html>
 
 <?php
-
-   /* These filds should no longer be needed */
-  //$FIELDS = array("Client","Rack Space", "Megabit", "Internet Connector Fee", "Labor Charge", "Yearly Cost");
-  //$NUM_FIELDS = 6;
-
   /* Connect to the server */
   include_once("myPHP/db.php");
 
@@ -26,7 +21,7 @@ echo `<body><div class="container">`;
 /* Adds the buttons for "Add", "Delete", "Edit" and "Add Column" */
 echo '<div class = "btn-toolbar">
       <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
-       Add
+       Add Entry
      </button>
 
      <form id="myFormDel" action="/myPHP/deleteData.php" method="post" onsubmit="return confirmDeletion()">
@@ -65,8 +60,8 @@ echo '<!-- Modal -->
 
                 <form id="myForm" action="myPHP/postData.php" method="post">';
 
-                $sql = "SHOW COLUMNS FROM test2";
-                /* Query the database for all columns in test2 */
+                $sql = "SHOW COLUMNS FROM $primaryTable";
+                /* Query the database for all columns in $primaryTable */
                 $result = $mysqli->query($sql);
                 /* Traverse the columns */
                 while($row = $result->fetch_array()){
@@ -74,6 +69,7 @@ echo '<!-- Modal -->
                   /* Do not do anything with the id field */
                   if($row['Field'] != 'id'){
                     /* Update dataType to reflect the type of data in each column */
+                    /* Datatype will be set to the "type" for the input field for this data */
                     switch($row['Type']){
                       case "int(11)":
                         $dataType = "number";
@@ -93,10 +89,15 @@ echo '<!-- Modal -->
                       echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
 
                       echo  '<select id="addSelect" class="form-control" name="',$row['Field'],'">';
+                      /* Remove leading/trailng whitespace */
                       $notWhiteSpace = rtrim(ltrim($row['Field']));
-                      $data = $mysqli->query("SELECT * FROM `select_options` WHERE column_name='$notWhiteSpace'");
-                      $obj = $data->fetch_row();
-                      $dropdownOptions = explode(",", $obj[0]);
+                      /* Get the string of comma seperated optinos from $secondaryTable */
+                      $data = $mysqli->query("SELECT * FROM `$secondaryTable` WHERE column_name='$notWhiteSpace'");
+                      $optionsString = $data->fetch_row();
+                      /* $optionsString[0] is a list of optins for the dropdown menu, sperated by commas */
+                      /* Split option values up into an array */
+                      $dropdownOptions = explode(",", $optionsString[0]);
+                      /* Go though the strings and make them options for the dropdown menu */
                       foreach($dropdownOptions as $value){
                         echo   '<option>', "$value", '</option>';
                       }
@@ -106,18 +107,22 @@ echo '<!-- Modal -->
                     /* Add a label and input box */
                     }else{
                     echo '<div class="form-group">';
+                    /* Label for the input box */
                     echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
+                    /* Input box itself; Type is dependant on the type of data that it will hold */
                     echo '<input type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control" id =',$row['Field'],'input placeholder=""','/>';
                     echo '</div>';
                   }
                   }
                 }
             /* End styling of popup window */
+            /* Submit button for form */
             echo '<div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </div></form>';
             echo '</div>';
 
+            /* Close button for form */
             echo '<!-- Modal Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
@@ -151,6 +156,7 @@ echo '<!-- Modal -->
             <div class="modal-body">
 
                 <form id="addColumnForm" action="myPHP/addColumn.php" method="post">';
+                    /* Variables for labels' text */
                     $newCol = "New Column Name";
                     $dataType = "Input Type";
 
@@ -168,7 +174,7 @@ echo '<!-- Modal -->
                            <option value="INT">Numeric</option>
                            <option "DATE">Date</option>
                            </select> <br/>';
-                    /* Hidden label and text fiedl that are displayed if "Dropdown" option is chosen */
+                    /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
                     echo '<input id="dropdownText" type=\'hidden\' name="', "options",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
 
@@ -189,59 +195,6 @@ echo '<!-- Modal -->
         </div>
     </div>
 </div>';
-
-/* this should not be needed anymore */
-echo '<!-- Modal -->
-<div class="modal fade" id="myModalNormColDelete" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close"
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Select Column to Remove
-                </h4>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body">
-
-                <form id="removeColumnForm" action="myPHP/removeColumn.php" method="post">';
-
-                echo '<select class="form-control" name="delCol">';
-                echo '<option> Select Column </option>';
-                    $newCol = "Delete Column";
-                    $sql = "SHOW COLUMNS FROM test2";
-                    $result = $mysqli->query($sql);
-                    while($row = $result->fetch_array()){
-                      if($row['Field'] != 'id'){
-                        echo '<option>', $row['Field'],'</option>';
-                      }
-                    }
-
-            echo '</select></div>';
-
-            echo '<!-- Modal Footer -->
-            <div class="modal-footer">',
-
-                '<div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div></form>',
-
-                '<button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>';
-
 
 /* Add bootstrap stylized popup window for editting rows using the "Edit" button */
 echo '<!-- Modal -->
@@ -267,9 +220,10 @@ echo '<!-- Modal -->
                 <form id="myEdit" action="myPHP/updateData.php" method="post">
                 <input name="alterId" id="alterId" type="int" hidden="true">';
 
-                $sql = "SHOW COLUMNS FROM test2";
-                /* Query the database for all columns in test2 */
+                $sql = "SHOW COLUMNS FROM $primaryTable";
+                /* Query the database for all columns in $primaryTable */
                 $result = $mysqli->query($sql);
+                /* Keep track of loop iterations */
                 $counter = 0;
                 /* Traverse the columns */
                 while($row = $result->fetch_array()){
@@ -295,10 +249,15 @@ echo '<!-- Modal -->
                       echo '<div class="form-group">';
                       echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
                       echo  '<select id="addSelect" class="form-control inputField" name="',$row['Field'],'">';
+                      /* Remove any whitespace from the begining and ending */
                       $notWhiteSpace = rtrim(ltrim($row['Field']));
-                      $data = $mysqli->query("SELECT * FROM `select_options` WHERE column_name='$notWhiteSpace'");
-                      $obj = $data->fetch_row();
-                      $dropdownOptions = explode(",", $obj[0]);
+                      /* Get the string of comma seperated optinos from $secondaryTable */
+                      $data = $mysqli->query("SELECT * FROM `$secondaryTable` WHERE column_name='$notWhiteSpace'");
+                      $optionsString = $data->fetch_row();
+                      /* $optionsString[0] is a list of optins for the dropdown menu, sperated by commas */
+                      /* Split option values up into an array */
+                      $dropdownOptions = explode(",", $optionsString[0]);
+                      /* Go though the strings and make them options for the dropdown menu */
                       foreach($dropdownOptions as $value){
                         echo   '<option>', "$value", '</option>';
                       }
@@ -316,11 +275,13 @@ echo '<!-- Modal -->
                   $counter = $counter = 1;
                 }
             /* End styling of popup window */
+            /* Submit button for form*/
             echo '<div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </div></form>';
             echo '</div>';
 
+            /* Close button for form */
             echo '<!-- Modal Footer -->
             <div class="modal-footer">
                 <button type="button" class="btn btn-default"
@@ -337,9 +298,10 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
     <thead class="thead-inverse">
         <tr>';
 /* Generate table headers */
-    $data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
+    $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
+      /* Display name of columns; replace any '_' with ' ' */
       echo '<th onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
@@ -349,10 +311,11 @@ echo  '</tr></thead>';
 
 /*Genearte table footer*/
 echo '<tfoot><tr>';
-$data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
+$data = $mysqli->query("SELECT * FROM `$primaryTable`");
 while($obj = $data->fetch_field()){
   if($obj->name != "id")
-   echo '<th>', $obj->name, '</th>';
+  /* Display name of columns; replace any '_' with ' ' */
+   echo '<th>',  $obj->name, '</th>';
 }
 
 echo  '</tr></tfoot>';
@@ -360,8 +323,8 @@ echo  '</tr></tfoot>';
 /* Generate table body */
 echo '<tbody>';
 
-/* Query "test2" for all rows */
-$data = $mysqli->query("SELECT * FROM `test2` WHERE 1");
+/* Query "$primaryTable" for all rows */
+$data = $mysqli->query("SELECT * FROM `$primaryTable`");
   /* Keep track of what row it is on */
   $rowNum = 0;
   /* The same row is fetched twice. The first as an array that is accessed by numeric index

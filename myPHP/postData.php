@@ -8,7 +8,8 @@ Description: a new row is added to the database. The new row may contain values
   include_once("db.php");
 
   /* Make a new row and only fill in its id value */
-  $mysqli->query("INSERT INTO `test2` (id) VALUES(DEFAULT)");
+  $mysqli->query("INSERT INTO `$primaryTable` (id) VALUES(DEFAULT)");
+
 
   /* Get the id of the row that was just added */
   $id = $mysqli->insert_id;
@@ -16,7 +17,7 @@ Description: a new row is added to the database. The new row may contain values
 /* Update the newly create row with any value that were passed with the POST request */
   foreach($_POST as $key=>$value){
     $keyMod = str_replace('_', ' ', $key);
-    $mysqli->query("UPDATE `test2` SET `$keyMod`='$value' WHERE id=$id");
+    $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
   }
 
 /* Display the updated webpage */

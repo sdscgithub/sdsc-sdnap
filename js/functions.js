@@ -6,7 +6,11 @@
 **********/
 function highlight(id){
 
+  /* Get element by id */
   var ele = $("#" + id);
+
+  /* Check if this element has the class "highlight". If it does, this means that a
+  highlighted row was clicked on. Therfore, unhighlight it and return */
   if(ele.hasClass("highlight")){
     var previous = $(".highlight").removeClass("highlight").css("background-color", "");
     document.getElementById("itemToDelete").setAttribute("value", "none");
@@ -14,15 +18,19 @@ function highlight(id){
     document.getElementById("editButton").disabled = true;
     return;
   }
+
   /* Remove any preiously highlighed elements from the "highlight" class */
   var previous = $(".highlight").removeClass("highlight").css("background-color", "");
 
+  /* Add to highlight class and color it's background blue */
   ele.addClass("highlight");
   ele.css("background-color", "#428bca");
 
+  /* Update the "delete" and "edit" forms elements so that they know what is higlihgted */
   document.getElementById("deleteId").setAttribute("value", id);
   document.getElementById("itemToDelete").setAttribute("value", "row");
   document.getElementById("alterId").setAttribute("value",id);
+  /* Make the "delete" and "edit" buttons clickable */
   document.getElementById("deleteButton").disabled = false;
   document.getElementById("editButton").disabled = false;
 }
@@ -53,7 +61,6 @@ function highlightCol(id){
   document.getElementById("deleteId").setAttribute("value", id);
   document.getElementById("itemToDelete").setAttribute("value", "column");
   document.getElementById("deleteButton").disabled = false;
-  //document.getElementById("editButton").disabled = false;
 }
 
 /**********
@@ -107,13 +114,17 @@ function confirmDeletion(){
     }
 
     itemName = itemId.getAttribute("value");
+    /* Replace all underscores with spaces */
     itemName = itemName.replace( /_/g , " ");
     /* Ask for user confirmation */
     return confirm("Are you sure that you want to remove the column titled \"" + itemName + "\"?");
+
+
   /* Must be a row if not a column*/
   }else{
     /* Children should be the all the data of the row */
     var children = document.getElementById(itemId.getAttribute("value")).childNodes;
+    /* Counter to help with print format */
     var printCounter = 0;
     /* Format data of the row to print */
     for(i = 0; i < children.length; i++){
@@ -121,9 +132,11 @@ function confirmDeletion(){
         continue;
       }
       if(printCounter == 0){
+        /* Print the name of the item if it is the first item */
         itemName =  itemName + children[i].innerHTML;
         printCounter++;
       }else{
+        /* Print a comma followed by the name of the item */
         itemName =  itemName + ", " + children[i].innerHTML ;
       }
     }
@@ -136,14 +149,19 @@ function confirmDeletion(){
   return false;
 }
 
+/**********
+   Name: addValues
+   Purpose: Fills in the edit form with the data that the row has
+   Params: none
+   Return value: none
+**********/
 function addValues(){
-  //var editForm = document.getElementById("alterId");
-  //var editChildren = document.getElementById("myEdit").children;
-
+  /* Find the row that has the id that is the same as "alterId's" value */
   var id = document.getElementById("alterId").getAttribute("value");
+  /* Find the children */
   var children = document.getElementById(id).childNodes;
+  /* Change the "value" of the input filds to the innerHTML of the respective children */
   for(var i = 0; i < children.length; i++){
-    console.log('input' + (i + 1));
     document.getElementsByClassName("inputField")[i].value = children[i].innerHTML;
   }
 }

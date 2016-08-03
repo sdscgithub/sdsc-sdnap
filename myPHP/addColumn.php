@@ -14,18 +14,18 @@ Description: adds a new column to the sql database
   include_once("db.php");
 
   /* varchar(50) means that this column should have a dropbox menu to select its value.
-     Therefore, $_POST[options] should be stored to the 'select_options' datbase along
+     Therefore, $_POST[options] should be stored to the '$secondaryTable' datbase along
      with the column name of this new column. $_POST[options] is a comma delimited list
      of options for the dropdown menu associated with this column
   */
 
-  /* Add a column to "test2" and a row to 'select_options' */
+  /* Add a column to "$primaryTable" and a row to '$secondaryTable' */
   if($_POST["DataType"] == "varchar(50)"){
-    $mysqli->query("ALTER TABLE `test2` ADD `$_POST[col]` $_POST[DataType]");
-    $mysqli->query("INSERT INTO `select_options` (column_name, options) VALUES('$_POST[col]', '$_POST[options]')");
-  /* Just add a column to "test2" */
+    $mysqli->query("ALTER TABLE `$primaryTable` ADD `$_POST[col]` $_POST[DataType]");
+    $mysqli->query("INSERT INTO `$secondaryTable` (column_name, options) VALUES('$_POST[col]', '$_POST[options]')");
+  /* Just add a column to "$primaryTable" */
   }else{
-    $mysqli->query("ALTER TABLE `test2` ADD `$_POST[col]` $_POST[DataType]");
+    $mysqli->query("ALTER TABLE `$primaryTable` ADD `$_POST[col]` $_POST[DataType]");
   }
 
   /*  Display the updated webpage */
