@@ -29,6 +29,6 @@ Description: adds a new column to the sql database
   }
 
   /*  Display the updated webpage */
-  header( 'Location: http://localhost' ) ;
+  header( $redirectPage ) ;
 
   ?>

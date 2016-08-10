@@ -21,6 +21,5 @@ Description: a new row is added to the database. The new row may contain values
   }
 
 /* Display the updated webpage */
-  header( 'Location: http://localhost' ) ;
-
+  header( $redirectPage ) ;
   ?>

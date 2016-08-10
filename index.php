@@ -5,6 +5,7 @@
   /* Connect to the server */
   include_once("myPHP/db.php");
 
+
 /* Add links to css and javascript files */
 echo '<head>
         <link rel="stylesheet" type="text/css" href="css/custom.css"/>
@@ -24,7 +25,7 @@ echo '<div class = "btn-toolbar">
        Add Entry
      </button>
 
-     <form id="myFormDel" action="/myPHP/deleteData.php" method="post" onsubmit="return confirmDeletion()">
+     <form id="myFormDel" action="myPHP/deleteData.php" method="post" onsubmit="return confirmDeletion()">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <input name="itemToDelete" id="itemToDelete" type="string" hidden="true">
      <button disabled id="deleteButton" class="delete btn btn-danger btn-sm">Delete</button> </form>
@@ -302,7 +303,7 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
       /* Display name of columns; replace any '_' with ' ' */
-      echo '<th onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
+      echo '<th  onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
     echo `<th style="width: 36px;"></th>`;
@@ -334,7 +335,7 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     $data->data_seek($rowNum - 1);
     /* Fetch the array the second time */
     $stuff2 = $data->fetch_assoc();
-    echo "<tr class='canClick' onclick='highlight(id)' id='$stuff2[id]'>";
+    echo "<tr class='canClick' ondblclick='rowDblClick(id)' onclick='highlight(id)' id='$stuff2[id]'>";
     $counter = 0;
     /* Traverse the data in every row */
     while($counter < $data->field_count){
@@ -347,7 +348,6 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
 
    echo '</tbody></table>';
    echo '</div></body>';
-
   ?>
 
 </html>

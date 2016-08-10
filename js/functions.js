@@ -1,3 +1,6 @@
+var date = new Date();
+var lastClickTime = date.getTime();
+var lastId = "";
 /**********
    Name: highlight
    Purpose: Highlight rows as they are clicked and unhighlight any rows that were previously clicked
@@ -5,15 +8,26 @@
    Return value: none
 **********/
 function highlight(id){
-
+  var date2 = new Date();
+  var clickTime = date2.getTime();
+  if(clickTime - lastClickTime < 500 && id == lastId){
+    document.getElementById("editButton").disabled = false;
+    rowDblClick();
+    document.getElementById("editButton").disabled = true;
+    lastClickTime = clickTime;
+    lastId = id;
+    return;
+  }
   /* Get element by id */
   var ele = $("#" + id);
 
   /* Check if this element has the class "highlight". If it does, this means that a
   highlighted row was clicked on. Therfore, unhighlight it and return */
   if(ele.hasClass("highlight")){
+    lastClickTime = clickTime;
+    lastId = id;
     var previous = $(".highlight").removeClass("highlight").css("background-color", "");
-    document.getElementById("itemToDelete").setAttribute("value", "none");
+    //document.getElementById("itemToDelete").setAttribute("value", "none");
     document.getElementById("deleteButton").disabled = true;
     document.getElementById("editButton").disabled = true;
     return;
@@ -33,6 +47,8 @@ function highlight(id){
   /* Make the "delete" and "edit" buttons clickable */
   document.getElementById("deleteButton").disabled = false;
   document.getElementById("editButton").disabled = false;
+  lastClickTime = clickTime;
+  lastId = id;
 }
 
 /**********
@@ -164,4 +180,14 @@ function addValues(){
   for(var i = 0; i < children.length; i++){
     document.getElementsByClassName("inputField")[i].value = children[i].innerHTML;
   }
+}
+
+/**********
+   Name: rowDblClick
+   Purpose: Brings op the edit window for whichever row that is currently highlihgted
+   Params: none
+   Return value: none
+**********/
+function rowDblClick(){
+ document.getElementById("editButton").click();
 }

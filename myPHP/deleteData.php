@@ -29,6 +29,5 @@ Description: deleteId and itemToDelete are both expected to be passed in the POS
    $stmt2->execute();
  }
  /* Display updated page */
- header( 'Location: http://localhost' );
-
+  header( $redirectPage ) ;
   ?>

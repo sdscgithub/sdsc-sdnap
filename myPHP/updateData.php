@@ -15,6 +15,5 @@ Description: a row has none, some or all of its data changed
       }
     }
   /* Display updated webpage */
-  header( 'Location: http://localhost' ) ;
-
+  header($redirectPage ) ;
   ?>
