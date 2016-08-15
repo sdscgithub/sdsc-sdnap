@@ -1,6 +1,9 @@
 var date = new Date();
 var lastClickTime = date.getTime();
 var lastId = "";
+var columns = new Array(0);
+var atIntersection = false;
+
 /**********
    Name: highlight
    Purpose: Highlight rows as they are clicked and unhighlight any rows that were previously clicked
@@ -103,10 +106,25 @@ function checkOption(id){
 }
 
 /**********
+   Name: confirmColumnCreateion
+   Purpose: Check for underscores in new column names
+   Params: none
+   Return value: false if column name contains a '_', otherwise true
+**********/
+function confirmColumnCreateion(){
+  if(document.getElementById("New Column Name").value.includes("_")){
+    alert("Column names cannot contain '_'");
+    return false;
+  }else{
+    return true;
+  }
+}
+
+/**********
    Name: confirmDeletion
    Purpose: Alert user of what row or column is about to be deleted
    Params: none
-   Return value: true if user confirms deletion, false if caneled or if there is an error
+   Return value: true if user confirms deletion, false if canceled or if there is an error
 **********/
 function confirmDeletion(){
   /* Do nothing if there is no item selected */
@@ -190,4 +208,119 @@ function addValues(){
 **********/
 function rowDblClick(){
  document.getElementById("editButton").click();
+}
+
+function dragStartHandler(ev){
+  this.style.opacity = "0.4";
+  ev.dataTransfer.setData('text/html', this.innerHTML);
+  this.classList.add("beingDragged");
+}
+
+function dragEndHandler(ev){
+  this.style.opacity = "1.0";
+  this.style.border = "";
+  this.classList.remove("beingDragged");
+}
+
+function dragEnterHandler(ev){
+}
+
+function dragLeaveHandler(){
+  this.style.opacity = "1.0";
+  this.style.border = "";
+  this.classList.remove("swap");
+}
+
+function dragOverHandler(ev,objectUnder){
+  if(ev.preventDefault){
+    ev.preventDefault();
+  }
+
+  if(!atIntersection){
+    objectUnder.style.opacity = "0.4";
+    objectUnder.style.border = "thin dashed red";
+    objectUnder.classList.add("swap");
+  }else{
+    objectUnder.style.opacity = "1.0";
+    var hasLeftBorderColor = objectUnder.style.borderLeft == "thin dashed red" && objectUnder.style.borderTop != "thin dashed red";
+    var hasRightBorderColor = objectUnder.style.borderRight == "thin dashed red" && objectUnder.style.borderTop != "thin dashed red";
+    objectUnder.style.border = "";
+    if(hasLeftBorderColor){
+      objectUnder.style.borderLeft = "thin dashed red";
+    }
+    if(hasRightBorderColor){
+      objectUnder.style.borderRight = "thin dashed red";
+    }
+    objectUnder.classList.remove("swap");
+  }
+}
+
+function dropHandler(ev){
+    var obj = new Object();
+    obj.name = ev.dataTransfer.getData('text/html');
+
+    if($(".between").length != 0){
+      obj.name2 = $(".between")[0].innerHTML;
+      obj.type = "between";
+    }else if($(".swap").length != 0){
+      obj.name2 = $(".swap")[0].innerHTML;
+      obj.type = "swap";
+    }else{
+      obj.type = "last";
+    }
+
+    if(obj.name2 == obj.name){
+      return;
+    }
+  $.post("myPHP/moveColumn.php", obj,function(data){
+    window.location = "index.php";
+  });
+  obj.name = $(".swap").removeClass("swap");
+}
+
+function dragHandler(ev, columns){
+  document.getElementsByClassName("beingDragged")[0].style.border = "thin dashed #428bca";
+  var counter = 0;
+  for(i = 0; i < columns.length; i++){
+    if(inRangeLeft(ev, columns, i)){
+     columns[i].style.borderLeft = "thin dashed red";
+     columns[i].classList.add("between");
+     atIntersection = true;
+   }else if(inRangeRightLast(ev, columns)){
+     columns[columns.length - 1].style.borderRight = "thin dashed red";
+     columns[columns.length - 1].classList.add("last");
+     atIntersection = true;
+   }else{
+     counter++;
+     columns[i].style.borderLeft = "";
+     columns[i].classList.remove("between");
+   }
+  }
+  if(counter == columns.length){
+    atIntersection = false;
+  }
+}
+
+function inRangeLeft(ev, columns, i){
+    return Math.abs(getLeftX(columns[i]) - ev.clientX) < 40 && Math.abs(getTopY(columns[i]) - ev.clientY) < 30;
+}
+
+function inRangeRightLast(ev, columns){
+    return Math.abs(getRightX(columns[columns.length -1]) - ev.clientX) < 40 && Math.abs(getTopY(columns[i]) - ev.clientY) < 30;
+}
+
+function getLeftX(element){
+  return element.getBoundingClientRect().left;
+}
+
+function getRightX(element){
+  return element.getBoundingClientRect().right;
+}
+
+function getTopY(element){
+  return element.getBoundingClientRect().top;
+}
+
+function getBottomY(element){
+  return element.getBoundingClientRect().bottom;
 }
