@@ -4,7 +4,7 @@ TODO
 File: moveColumn.php
 Purpose: move columns around in the database
 Description: Either swaps two columns or moves a single column
-$_POST[type] will be either "swap" or "between"
+$_POST[type] will be "swap", "right" or "left"
 * Swapping
 - Two column names are passed into the function as name and name2
   - Two new columns are created called nameCopy and name2Copy
@@ -15,7 +15,15 @@ $_POST[type] will be either "swap" or "between"
   - nameCopy is renamed to name's name
   - name2Copy is renamed to name2's name
 
-* Between
+* left
+- name is the name of the column to be moved and name2 is the column that name
+should be placed before
+  - nameCopy is added to the table after $beforeName2 (this is right before name2)
+  - name's data is copied into nameCopy
+  - name is dropped from the table
+  - nameCopy is renamed name's name
+
+* right
 - name is the name of the column to be moved and name2 is the column that name
 should be placed after
   - nameCopy is added to the table after name2Copy
@@ -50,7 +58,7 @@ should be placed after
 
       /* store name2's type
       Also, store the name of the column preceeding name2. It is needed
-      for correct placement in "between" */
+      for correct placement in "left" */
 
       if($one['Field'] == $_POST["name2"]){
         $name2Type = $one['Type'];
@@ -73,8 +81,8 @@ should be placed after
     $mysqli->query("ALTER TABLE $primaryTable CHANGE nameCopy `$_POST[name]` $nameType");
     $mysqli->query("ALTER TABLE $primaryTable CHANGE name2Copy `$_POST[name2]` $name2Type");
 
-  /* Add a column between some rows */
-  }else if($_POST['type'] == "between"){
+  /* Move the row to the position before name2 */
+  }else if($_POST['type'] == "left"){
 
     $mysqli->query("ALTER TABLE $primaryTable ADD nameCopy $nameType AFTER `$beforeName2`");
     $mysqli->query("UPDATE $primaryTable SET nameCopy=`$_POST[name]`");
@@ -82,9 +90,9 @@ should be placed after
     $mysqli->query("ALTER TABLE $primaryTable CHANGE nameCopy `$_POST[name]` $nameType");
   }
 
-  /* Move the row to the last position */
-  else if($_POST['type'] == "last"){
-    $mysqli->query("ALTER TABLE $primaryTable ADD nameCopy $nameType");
+  /* Move the row to the position after name2 */
+  else if($_POST['type'] == "right"){
+    $mysqli->query("ALTER TABLE $primaryTable ADD nameCopy $nameType AFTER `$_POST[name2]`");
     $mysqli->query("UPDATE $primaryTable SET nameCopy=`$_POST[name]`");
     $mysqli->query("ALTER TABLE $primaryTable DROP COLUMN `$_POST[name]`");
     $mysqli->query("ALTER TABLE $primaryTable CHANGE nameCopy `$_POST[name]` $nameType");
