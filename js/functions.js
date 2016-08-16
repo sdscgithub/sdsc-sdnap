@@ -398,7 +398,7 @@ function setupHandlers(){
    Return value: true if within the range, false if not
 **********/
 function inRangeLeft(ev, element){
-    return Math.abs(getLeftX(element) - ev.clientX) < leftRightBuffer && Math.abs(getTopY(element) - ev.clientY) < upDownBuffer;
+    return Math.abs(getLeftX(element) - ev.clientX) < leftRightBuffer;
 }
 
 /**********
@@ -409,7 +409,7 @@ function inRangeLeft(ev, element){
    Return value: true if within the range, false if not
 **********/
 function inRangeRight(ev, element){
-  return Math.abs(getRightX(element) - ev.clientX) < leftRightBuffer && Math.abs(getTopY(element) - ev.clientY) < upDownBuffer;
+  return Math.abs(getRightX(element) - ev.clientX) < leftRightBuffer;
 }
 
 /**********
@@ -430,14 +430,4 @@ function getLeftX(element){
 **********/
 function getRightX(element){
   return element.getBoundingClientRect().right;
-}
-
-/**********
-   Name: getTopY
-   Purpose: Returns the y coordinate of element's bounding box's upper side
-   Params: element - the event which the x coordinate will be compared to
-   Return value: the y coordinate of the upper side of element's bounding box
-**********/
-function getTopY(element){
-  return element.getBoundingClientRect().top;
 }
