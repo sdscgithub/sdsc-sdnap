@@ -160,7 +160,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="addColumnForm" action="myPHP/addColumn.php" method="post">';
+                <form id="addColumnForm" action="myPHP/addColumn.php" method="post" onsubmit="return confirmColumnCreateion()">';
                     /* Variables for labels' text */
                     $newCol = "New Column Name";
                     $dataType = "Input Type";
@@ -169,7 +169,7 @@ echo '<!-- Modal -->
                     /* Label */
                     echo '<label for=', "$newCol","input>","$newCol",'</label>';
                     /* Text entry box */
-                    echo '<input name="', "col",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
+                    echo '<input name="', "col",'" class="form-control" id="',$newCol,'" input placeholder=""','/>';
                     /* Label for  type of data */
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
                     /* Dropdown menu for types of data */
@@ -177,7 +177,7 @@ echo '<!-- Modal -->
                            <option value="TEXT">Text</option>
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
-                           <option "DATE">Date</option>
+                           <option value="DATE">Date</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
@@ -185,7 +185,7 @@ echo '<!-- Modal -->
 
                     /* End styling of popup window */
                     echo '</div>';
-            echo '</div>';
+            //echo '</div>';
 
             echo '<!-- Modal Footer -->
             <div class="modal-footer">',
@@ -199,7 +199,7 @@ echo '<!-- Modal -->
             </div>
         </div>
     </div>
-</div>';
+</div></div>';
 
 /* Add bootstrap stylized popup window for editting rows using the "Edit" button */
 echo '<!-- Modal -->
@@ -296,7 +296,7 @@ echo '<!-- Modal -->
             </div>
         </div>
     </div>
-</div>';
+</div></div>';
 
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -306,8 +306,8 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
     $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
-      /* Display name of columns; replace any '_' with ' ' */
-      echo '<th  onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
+      /* Display name of columns; replace any ' ' with '_' */
+      echo '<th class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
     echo `<th style="width: 36px;"></th>`;
