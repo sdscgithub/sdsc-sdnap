@@ -16,6 +16,9 @@ var dragSecondary = redTheme;
 // Pixel range for drag and drop
 var leftRightBuffer = 40;
 var upDownBuffer = 30;
+
+// Time in miliseconds between clicks to be considered a double click
+var doubleClickTime = 500;
 /********** End Constants **********/
 
 
@@ -28,7 +31,7 @@ var upDownBuffer = 30;
 function highlight(id){
   var date2 = new Date();
   var clickTime = date2.getTime();
-  if(clickTime - lastClickTime < 500 && id == lastId){
+  if(clickTime - lastClickTime < doubleClickTime && id == lastId){
     document.getElementById("editButton").disabled = false;
     rowDblClick();
     document.getElementById("editButton").disabled = true;
