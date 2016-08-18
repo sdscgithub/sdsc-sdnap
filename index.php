@@ -14,6 +14,7 @@ echo '<head>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script src="js/test.js"></script>
+        <script src="js/jquery.table2excel.js"></script>
     </head>';
 
 /* Add bootstrap styling */
@@ -34,6 +35,9 @@ echo '<div class = "btn-toolbar">
     </button>
     <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
      Add Column
+   </button>
+   <button id =export class="export btn btn-primary btn-sm" onclick="exportExcel();">
+   Export
    </button>
      </div>';
 
@@ -311,7 +315,7 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
 echo  '</tr></thead>';
 
 /*Genearte table footer*/
-echo '<tfoot><tr>';
+echo '<tfoot><tr class="noExl">';
 $data = $mysqli->query("SELECT * FROM `$primaryTable`");
 while($obj = $data->fetch_field()){
   if($obj->name != "id")

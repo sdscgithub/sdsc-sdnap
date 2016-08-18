@@ -191,3 +191,12 @@ function addValues(){
 function rowDblClick(){
  document.getElementById("editButton").click();
 }
+
+
+function exportExcel() {
+  var file = "SDNAP " + new Date().toLocaleString();
+  $("#example").table2excel({
+    name: "SDNAP Customers",
+    filename: file
+  });
+}
