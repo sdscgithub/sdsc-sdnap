@@ -193,6 +193,13 @@ function rowDblClick(){
 }
 
 
+
+/**********
+   Name: exportExcel
+   Purpose: Creates and downloads an excel file of the table.
+   Params: none
+   Return value: none
+**********/
 function exportExcel() {
   var file = "SDNAP " + new Date().toLocaleString();
   $("#example").table2excel({
