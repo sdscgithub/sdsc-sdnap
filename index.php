@@ -14,7 +14,12 @@ echo '<head>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
         <script src="js/test.js"></script>
-        <script src="js/jquery.table2excel.js"></script>
+        <script type="text/javascript" src="js/tableExport.js"></script>
+        <script type="text/javascript" src="js/jquery.base64.js"></script>
+        <script type="text/javascript" src="js/jspdf/libs/sprintf.js"></script>
+        <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
+        <script type="text/javascript" src="js/jspdf/libs/base64.js"></script>
+
     </head>';
 
 /* Add bootstrap styling */
@@ -36,7 +41,7 @@ echo '<div class = "btn-toolbar">
     <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
      Add Column
    </button>
-   <button id =export class="export btn btn-primary btn-sm" onclick="exportExcel();">
+   <button id =export class="export btn btn-primary btn-sm" onclick= "exportExcel();">
    Export
    </button>
      </div>';
@@ -160,7 +165,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="addColumnForm" action="myPHP/addColumn.php" method="post" onsubmit="return confirmColumnCreateion()">';
+                <form id="addColumnForm" action="myPHP/addColumn.php" method="post">';
                     /* Variables for labels' text */
                     $newCol = "New Column Name";
                     $dataType = "Input Type";
@@ -169,7 +174,7 @@ echo '<!-- Modal -->
                     /* Label */
                     echo '<label for=', "$newCol","input>","$newCol",'</label>';
                     /* Text entry box */
-                    echo '<input name="', "col",'" class="form-control" id="',$newCol,'" input placeholder=""','/>';
+                    echo '<input name="', "col",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
                     /* Label for  type of data */
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
                     /* Dropdown menu for types of data */
@@ -177,7 +182,7 @@ echo '<!-- Modal -->
                            <option value="TEXT">Text</option>
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
-                           <option value="DATE">Date</option>
+                           <option "DATE">Date</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
@@ -185,7 +190,7 @@ echo '<!-- Modal -->
 
                     /* End styling of popup window */
                     echo '</div>';
-            //echo '</div>';
+            echo '</div>';
 
             echo '<!-- Modal Footer -->
             <div class="modal-footer">',
@@ -199,7 +204,7 @@ echo '<!-- Modal -->
             </div>
         </div>
     </div>
-</div></div>';
+</div>';
 
 /* Add bootstrap stylized popup window for editting rows using the "Edit" button */
 echo '<!-- Modal -->
@@ -296,7 +301,7 @@ echo '<!-- Modal -->
             </div>
         </div>
     </div>
-</div></div>';
+</div>';
 
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
@@ -306,8 +311,8 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
     $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
-      /* Display name of columns; replace any ' ' with '_' */
-      echo '<th class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
+      /* Display name of columns; replace any '_' with ' ' */
+      echo '<th  onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
     echo `<th style="width: 36px;"></th>`;
@@ -315,7 +320,7 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
 echo  '</tr></thead>';
 
 /*Genearte table footer*/
-echo '<tfoot><tr class="noExl">';
+echo '<tfoot><tr>';
 $data = $mysqli->query("SELECT * FROM `$primaryTable`");
 while($obj = $data->fetch_field()){
   if($obj->name != "id")
