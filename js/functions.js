@@ -1,6 +1,27 @@
 var date = new Date();
 var lastClickTime = date.getTime();
 var lastId = "";
+var atIntersection = false;
+var atLast = false;
+
+/********** Constants **********/
+// Bootstrap colors
+var redTheme = "#d9534f";
+var blueTheme = "#428bca";
+
+// Highlight colors for drag and drop
+var dragPrimary = blueTheme;
+var dragSecondary = redTheme;
+
+// Pixel range for drag and drop
+var leftRightBuffer = 40;
+var upDownBuffer = 30;
+
+// Time in miliseconds between clicks to be considered a double click
+var doubleClickTime = 500;
+/********** End Constants **********/
+
+
 /**********
    Name: highlight
    Purpose: Highlight rows as they are clicked and unhighlight any rows that were previously clicked
@@ -10,7 +31,7 @@ var lastId = "";
 function highlight(id){
   var date2 = new Date();
   var clickTime = date2.getTime();
-  if(clickTime - lastClickTime < 500 && id == lastId){
+  if(clickTime - lastClickTime < doubleClickTime && id == lastId){
     document.getElementById("editButton").disabled = false;
     rowDblClick();
     document.getElementById("editButton").disabled = true;
@@ -205,6 +226,6 @@ function exportExcel() {
   });
   var a = document.createElement('a');
   a.href = d;
-  a.download = "SDNAP " + new Date().toLocaleString() + ".xls" 
+  a.download = "SDNAP " + new Date().toLocaleString() + ".xls"
   a.click();
 }
