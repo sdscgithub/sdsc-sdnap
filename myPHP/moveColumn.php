@@ -96,7 +96,9 @@ should be placed after
     $mysqli->query("UPDATE $primaryTable SET nameCopy=`$_POST[name]`");
     $mysqli->query("ALTER TABLE $primaryTable DROP COLUMN `$_POST[name]`");
     $mysqli->query("ALTER TABLE $primaryTable CHANGE nameCopy `$_POST[name]` $nameType");
-
   }
+
+  /* Header is not set here since this methods is called using $.post(), not with
+  a form submission. index.php is loaded in the callback of $.post() */
 
   ?>

@@ -9,7 +9,5 @@ $(document).ready(function() {
   /* Ge columns ready for drag and drop */
   setupHandlers();
 
-  //TODO Move the above code into a funciton in functions
-  //Add inline comments
-  //Add ability to reaname columns
+  //TODO Add ability to reaname columns
 });

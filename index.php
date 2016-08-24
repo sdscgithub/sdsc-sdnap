@@ -165,7 +165,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="addColumnForm" action="myPHP/addColumn.php" method="post">';
+                <form id="addColumnForm" action="myPHP/addColumn.php" method="post" onsubmit="return confirmColumnCreation();">';
                     /* Variables for labels' text */
                     $newCol = "New Column Name";
                     $dataType = "Input Type";
@@ -174,7 +174,7 @@ echo '<!-- Modal -->
                     /* Label */
                     echo '<label for=', "$newCol","input>","$newCol",'</label>';
                     /* Text entry box */
-                    echo '<input name="', "col",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
+                    echo '<input name="', "col",'" class="form-control" id ="',$newCol,' Input" placeholder=""','/>';
                     /* Label for  type of data */
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
                     /* Dropdown menu for types of data */
@@ -182,11 +182,74 @@ echo '<!-- Modal -->
                            <option value="TEXT">Text</option>
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
-                           <option "DATE">Date</option>
+                           <option value>"Date"</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
                     echo '<input id="dropdownText" type=\'hidden\' name="', "options",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
+
+                    /* End styling of popup window */
+                    echo '</div>';
+            echo '</div>';
+
+            echo '<!-- Modal Footer -->
+            <div class="modal-footer">',
+            '<div>
+             <button type="submit" class="btn btn-default" >Submit</button>
+           </div></form>',
+                '<button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>';
+
+/* Add bootstrap stylized popup window for editing columns using the "Edit" button */
+echo '<!-- Modal -->
+<div class="modal fade" id="editColumn" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Add New Entry
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">
+
+                <form id="editColumnForm" action="myPHP/editColumn.php" method="post">';
+                    /* Variables for labels' text */
+                    $newCol = "New Column Name";
+                    $dataType = "Input Type";
+
+                    echo '<div class="form-group">';
+                    echo '<input hidden name="oldName" id="oldName"/>';
+                    /* Label */
+                    echo '<label for=', "$newCol","input>","$newCol",'</label>';
+                    /* Text entry box */
+                    echo '<input name="newName" id="newName" class="form-control" placeholder=""','/>';
+                    /* Label for  type of data */
+                    echo '<label for=', "DataType","input>","$dataType",'</label>';
+                    /* Dropdown menu for types of data */
+                    echo  '<select disabled id="editDataTypeSelect" onchange="checkOption(id)" class="form-control" name="DataType">
+                           <option value="TEXT">Text</option>
+                           <option value="varchar(50)">Dropdown</option>
+                           <option value="INT">Numeric</option>
+                           <option "DATE">Date</option>
+                           </select> <br/>';
+                    /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
+                    echo '<label id="editDropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
+                    echo '<input id="editDropdownText" type=\'hidden\' name="', "options",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
 
                     /* End styling of popup window */
                     echo '</div>';
@@ -311,8 +374,8 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
     $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     while($obj = $data->fetch_field()){
       if($obj->name != "id")
-      /* Display name of columns; replace any '_' with ' ' */
-      echo '<th  onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
+      /* Display name of columns; replace any ' ' with '_' */
+      echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
     echo `<th style="width: 36px;"></th>`;
@@ -344,7 +407,7 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     $data->data_seek($rowNum - 1);
     /* Fetch the array the second time */
     $stuff2 = $data->fetch_assoc();
-    echo "<tr class='canClick' ondblclick='rowDblClick(id)' onclick='highlight(id)' id='$stuff2[id]'>";
+    echo "<tr class='canClick' onclick='highlight(id)' id='$stuff2[id]'>";
     $counter = 0;
     /* Traverse the data in every row */
     while($counter < $data->field_count){
