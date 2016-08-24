@@ -266,7 +266,6 @@ function addValues(){
 **********/
 function rowDblClick(){
  var editBttn = document.getElementById("editButton");
- editBttn.disabled = false;
  editBttn.click();
  checkHighlight();
 }
