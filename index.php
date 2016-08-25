@@ -238,18 +238,22 @@ echo '<!-- Modal -->
                     echo '<label for=', "$newCol","input>","$newCol",'</label>';
                     /* Text entry box */
                     echo '<input name="newName" id="newName" class="form-control" placeholder=""','/>';
+                    /* Label */
+                    echo '<label hidden="true" id="newOptionsLabel" for=', "$newCol","input>", "* Enter options for the dropdown menu seperated by commas" ,'</label>';
+                    /* Text entry box */
+                    echo '<input type="hidden" name="newOptions" id="newOptions" class="form-control" placeholder=""','/>';
                     /* Label for  type of data */
-                    echo '<label for=', "DataType","input>","$dataType",'</label>';
+                    //echo '<label for=', "DataType","input>","$dataType",'</label>';
                     /* Dropdown menu for types of data */
-                    echo  '<select disabled id="editDataTypeSelect" onchange="checkOption(id)" class="form-control" name="DataType">
+                    /*echo  '<select disabled id="editDataTypeSelect" onchange="checkOption(id)" class="form-control" name="DataType">
                            <option value="TEXT">Text</option>
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
                            <option "DATE">Date</option>
-                           </select> <br/>';
+                           </select> <br/>';*/
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
-                    echo '<label id="editDropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
-                    echo '<input id="editDropdownText" type=\'hidden\' name="', "options",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
+                    //echo '<label id="editDropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
+                    //echo '<input id="editDropdownText" type=\'hidden\' name="', "options",'" class="form-control" id =',$newCol,'input placeholder=""','/>';
 
                     /* End styling of popup window */
                     echo '</div>';
@@ -321,7 +325,7 @@ echo '<!-- Modal -->
                     if($dataType == "select"){
                       echo '<div class="form-group">';
                       echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
-                      echo  '<select id="addSelect" class="form-control inputField" name="',$row['Field'],'">';
+                      echo  '<select id="',$row['Field'] , " Select" ,'" class="form-control inputField" name="',$row['Field'],'">';
                       /* Remove any whitespace from the begining and ending */
                       $notWhiteSpace = rtrim(ltrim($row['Field']));
                       /* Get the string of comma seperated optinos from $secondaryTable */

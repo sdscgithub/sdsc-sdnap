@@ -238,11 +238,22 @@ function confirmDeletion(){
 
 /**********
    Name: addValues
-   Purpose: Fills in the edit form with the data that the row has
+   Purpose: Fills in the edit form with the data that the row/column has
    Params: none
    Return value: none
 **********/
 function addValues(){
+  /* There are fields on the edit column form that should only appear if the
+  column has a dropdown for input. Make the hidden now; show them later
+  if needed */
+  if($("#newOptionsLabel") != null){
+    $("#newOptionsLabel").attr("hidden", true);
+  }
+  if(document.getElementById("newOptions") != null){
+    document.getElementById("newOptions").setAttribute("type", "hidden");
+  }
+
+  /* This means that a row was selected */
   if(document.getElementById("editButton").getAttribute("data-target") == "#edit"){
     /* Find the row that has the id that is the same as "alterId's" value */
     var id = document.getElementById("alterId").getAttribute("value");
@@ -252,9 +263,38 @@ function addValues(){
     for(var i = 0; i < children.length; i++){
       document.getElementsByClassName("inputField")[i].value = children[i].innerHTML;
     }
+  /* This means that a column was selected */
   }else{
+    /* The element with id "oldName" is set to have the name of the column that was
+    selected. This happens in highlight/highlightCol */
     var oldName = document.getElementById("oldName").getAttribute("value");
+    /* Set the input for the columns name. Users may edit this input to change the column name */
     document.getElementById("newName").setAttribute("value", oldName);
+
+    /* Find the select element that has all the options for this column (if it exists) */
+    var selectOptions = document.getElementById(oldName + " Select");
+    if(selectOptions != null){
+      /* Fill this string with the select options for this column (seperated by commas) */
+      var optionsString = "";
+      var options = selectOptions.childNodes;
+      /* Get each of the options (they are the children of the select element) */
+      for(i = 0; i < options.length;i++){
+        /* Format the string */
+        if(i == 0){
+          optionsString = optionsString + options[i].innerHTML;
+          continue;
+        }
+        optionsString = optionsString + "," + options[i].innerHTML;
+      }
+      /* The input field for the column's select options */
+      var optionsInput = document.getElementById("newOptions");
+      /* Make it visible */
+      optionsInput.setAttribute("type", "text");
+      /* Set the inputs text value */
+      $("#newOptions").val( optionsString);
+      /* Make it visible */
+      $("#newOptionsLabel").attr("hidden", false);
+    }
   }
 }
 
