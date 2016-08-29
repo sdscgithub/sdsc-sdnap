@@ -2,7 +2,7 @@
 <html>
 
 <?php
-  /* Connect to the server */
+  /* Connect to the database */
   include_once("myPHP/db.php");
 
 
@@ -182,7 +182,7 @@ echo '<!-- Modal -->
                            <option value="TEXT">Text</option>
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
-                           <option value>"Date"</option>
+                           <option value="Date">Date</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
