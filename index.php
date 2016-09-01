@@ -19,9 +19,11 @@ echo '<head>
         <script type="text/javascript" src="js/jspdf/libs/sprintf.js"></script>
         <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
         <script type="text/javascript" src="js/jspdf/libs/base64.js"></script>
-
+        <title>SD-NAP Tracker </title>
     </head>';
 
+/* Add bootstrap styling */
+echo '<a href="https://holonet.sdsc.edu/"> <center> <img src="images/SDSClogo.jpg" alt="SDSC Logo" vspace="25"> </center> </a>';
 /* Add bootstrap styling */
 echo `<body><div class="container">`;
 
