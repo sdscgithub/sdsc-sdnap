@@ -8,11 +8,13 @@ Description: connect to the sql server
   /* The page that the user will be directed to after adding,
   editing or deleteing */
   //$redirectPage = "Location: https://holonet.sdsc.edu/sdnap/";
-  $redirectPage = "Location: http://localhost:8888";
+  $redirectPage = "Location: http://localhost";
   /* Holds information on data in the rows */
   $primaryTable = "user_data";
   /* Holds informatin for dropdown menus */
   $secondaryTable = "select_options";
+  /* Holds information on files in the rows */
+  $fileTable = "files";
   //$mysqli = new mysqli( "localhost", "sdnapdbuser", '_Apm$wsM4',"sdnapdb");
-  $mysqli = new mysqli( "localhost:8889", "root", 'root',"test");
+  $mysqli = new mysqli( "localhost", "root", '',"test");
  ?>

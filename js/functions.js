@@ -261,7 +261,18 @@ function addValues(){
     var children = document.getElementById(id).childNodes;
     /* Change the "value" of the input filds to the innerHTML of the respective children */
     for(var i = 0; i < children.length; i++){
-      document.getElementsByClassName("inputField")[i].value = children[i].innerHTML;
+      /* Variable for current child */
+      var child = document.getElementsByClassName("inputField")[i];
+      /* Change file inputs differently than other inputs */
+      if(child.className.includes("editFileButton")){
+        if(children[i].innerHTML != ""){
+          child.innerHTML = children[i].innerHTML;
+        }else{
+          child.innerHTML = "No file selected";
+        }
+      }else{
+        child.value = children[i].innerHTML;
+      }
     }
   /* This means that a column was selected */
   }else{
@@ -295,6 +306,24 @@ function addValues(){
       /* Make it visible */
       $("#newOptionsLabel").attr("hidden", false);
     }
+  }
+}
+
+/**********
+   Name: fileChanged
+   Purpose: Change name on button for file slection when file is selected
+   Params: input - the html input element that has changed
+           event - the change event
+   Return value: none
+**********/
+function fileChanged(input, event){
+  console.log(event);
+  var button = document.getElementById(input.name + " button edit");
+  var file = event.srcElement.files[0];
+  if(file){
+    button.innerHTML = file.name;
+  }else{
+    button.innerHTML = "No file selected";
   }
 }
 

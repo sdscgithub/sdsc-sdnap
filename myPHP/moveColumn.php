@@ -34,7 +34,7 @@ should be placed after
 * Note: This function assumes that column names are all unique in the database
 */
 
-  /* Connect to the server */
+  /* Connect to the database */
   include_once("db.php");
 
   /* In order rename the columne, we must know what type of data it holds
@@ -98,7 +98,7 @@ should be placed after
     $mysqli->query("ALTER TABLE $primaryTable CHANGE nameCopy `$_POST[name]` $nameType");
   }
 
-  /* Header is not set here since this methods is called using $.post(), not with
-  a form submission. index.php is loaded in the callback of $.post() */
+  /* Header is not set here since this method is called using $.post(), not with
+  a form submission. index.php is re-loaded in the callback of $.post() */
 
   ?>

@@ -7,14 +7,20 @@ Description: deleteId and itemToDelete are both expected to be passed in the POS
              a row in the sql database OR the unique name of a column in the sql database.
              * itemToDelete is expected to be "row", "column" or "none"
 */
-  /* Connect to the server */
+//TODO Remove information from files when column is dropped
+  /* Connect to the database */
   include_once("db.php");
+  /* Post arguments */
   $id = $_POST["deleteId"];
   $item = $_POST["itemToDelete"];
 
 /* Delete a row */
   if($item == "row"){
     $stmt = $mysqli->prepare("DELETE FROM `$primaryTable` WHERE id=?");
+    $stmt->bind_param('s', $id);
+    $stmt->execute();
+
+    $stmt = $mysqli->prepare("DELETE FROM `$fileTable` WHERE id=?");
     $stmt->bind_param('s', $id);
     $stmt->execute();
  /* Delete a column */
@@ -25,6 +31,10 @@ Description: deleteId and itemToDelete are both expected to be passed in the POS
    $mysqli->query("ALTER TABLE `$primaryTable` DROP COLUMN `$keyMod`");
 
    $stmt2 = $mysqli->prepare("DELETE FROM `$secondaryTable` WHERE column_name=?");
+   $stmt2->bind_param('s', $keyMod);
+   $stmt2->execute();
+
+   $stmt2 = $mysqli->prepare("DELETE FROM `$fileTable` WHERE column_name=?");
    $stmt2->bind_param('s', $keyMod);
    $stmt2->execute();
  }

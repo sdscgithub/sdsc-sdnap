@@ -12,6 +12,7 @@ Description: edit the column's name and select options (if applicable)
   /* Connect to database */
   include_once("db.php");
 
+  /* Post arguments */
   $new = $_POST["newName"];
   $old = $_POST["oldName"];
   $options = $_POST["newOptions"];

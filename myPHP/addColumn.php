@@ -10,13 +10,15 @@ Description: adds a new column to the sql database
                   in order to  select values for this column
 */
 
-  /* Connect to the server */
+  /* Connect to the database */
   include_once("db.php");
 
   /* varchar(50) means that this column should have a dropbox menu to select its value.
      Therefore, $_POST[options] should be stored to the '$secondaryTable' datbase along
      with the column name of this new column. $_POST[options] is a comma delimited list
-     of options for the dropdown menu associated with this column
+     of options for the dropdown menu associated with this column. When adding or edditing
+     an entry for this column, the comma delimited list will be read from the secondary
+     table and will be used to set up a html select element
   */
 
   /* Add a column to "$primaryTable" and a row to '$secondaryTable' */

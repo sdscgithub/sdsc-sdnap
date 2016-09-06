@@ -4,7 +4,9 @@
 <?php
   /* Connect to the database */
   include_once("myPHP/db.php");
-
+//TODO Decide how to remove a file fomr sql SoapServer
+// add comments
+//Make the logo less clickable
 
 /* Add links to css and javascript files */
 echo '<head>
@@ -19,7 +21,8 @@ echo '<head>
         <script type="text/javascript" src="js/jspdf/libs/sprintf.js"></script>
         <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
         <script type="text/javascript" src="js/jspdf/libs/base64.js"></script>
-        <title>SD-NAP Tracker </title>
+        <title>SD-NAP Tracker</title>
+        <link rel="icon" href="images/favicon.ico">
     </head>';
 
 /* Add bootstrap styling */
@@ -70,7 +73,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="myForm" action="myPHP/postData.php" method="post">';
+                <form id="myForm" action="myPHP/postData.php" method="post" enctype="multipart/form-data">';
 
                 $sql = "SHOW COLUMNS FROM $primaryTable";
                 /* Query the database for all columns in $primaryTable */
@@ -91,6 +94,10 @@ echo '<!-- Modal -->
                         break;
                       case "varchar(50)":
                         $dataType = "select";
+                        break;
+                      case "mediumblob":
+                        $dataType = "file";
+                          break;
                       case "text":
                         break;
                     }
@@ -98,9 +105,9 @@ echo '<!-- Modal -->
                     /* Add a dropdown menu if needed */
                     if($dataType == "select"){
                       echo '<div class="form-group">';
-                      echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
+                      echo '<label for="',$row['Field'],' select">',$row['Field'],'</label>';
 
-                      echo  '<select id="addSelect" class="form-control" name="',$row['Field'],'">';
+                      echo  '<select id="',$row['Field'], ' select" class="form-control" name="',$row['Field'],'">';
                       /* Remove leading/trailng whitespace */
                       $notWhiteSpace = rtrim(ltrim($row['Field']));
                       /* Get the string of comma seperated optinos from $secondaryTable */
@@ -117,7 +124,15 @@ echo '<!-- Modal -->
 
                       echo '</div>';
                     /* Add a label and input box */
-                    }else{
+                  }else if($dataType == "file"){
+                    echo '<div class="form-group">';
+                    /* Label for the input box */
+                    echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
+                    /* Input box itself; Type is dependant on the type of data that it will hold */
+                    echo '<input onchange="fileChanged(this, event)" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control hidden" id ="',$row['Field'],' input" placeholder=""','/> <br>';
+                    echo "<span><i>Selected File: </i></span><button class='newFileButton' id='", $row['Field']," button' type='button' onclick='", "javascript: document.getElementById(\"", $row['Field'], " input\").click()","'> Choose File </button>";
+                    echo '</div>';
+                  }else{
                     echo '<div class="form-group">';
                     /* Label for the input box */
                     echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
@@ -185,6 +200,7 @@ echo '<!-- Modal -->
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
                            <option value="Date">Date</option>
+                           <option value="mediumblob">File</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
@@ -296,7 +312,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="myEdit" action="myPHP/updateData.php" method="post">
+                <form id="myEdit" action="myPHP/updateData.php" method="post" enctype="multipart/form-data">
                 <input name="alterId" id="alterId" type="int" hidden="true">';
 
                 $sql = "SHOW COLUMNS FROM $primaryTable";
@@ -310,6 +326,7 @@ echo '<!-- Modal -->
                   /* Do not do anything with the id field */
                   if($row['Field'] != 'id'){
                     /* Update dataType to reflect the type of data in each column */
+                    /* Datatype will be set to the "type" for the input field for this data */
                     switch($row['Type']){
                       case "int(11)":
                         $dataType = "number";
@@ -319,6 +336,10 @@ echo '<!-- Modal -->
                         break;
                       case "varchar(50)":
                         $dataType = "select";
+                        break;
+                      case "mediumblob":
+                        $dataType = "file";
+                          break;
                       case "text":
                         break;
                     }
@@ -326,8 +347,8 @@ echo '<!-- Modal -->
                     /* Add a dropdown menu if needed */
                     if($dataType == "select"){
                       echo '<div class="form-group">';
-                      echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
-                      echo  '<select id="',$row['Field'] , " Select" ,'" class="form-control inputField" name="',$row['Field'],'">';
+                      echo '<label for="',$row['Field'],' select">',$row['Field'],'</label>';
+                      echo  '<select id="',$row['Field'] , ' select"' ,' class="form-control inputField" name="',$row['Field'],'">';
                       /* Remove any whitespace from the begining and ending */
                       $notWhiteSpace = rtrim(ltrim($row['Field']));
                       /* Get the string of comma seperated optinos from $secondaryTable */
@@ -341,15 +362,22 @@ echo '<!-- Modal -->
                         echo   '<option>', "$value", '</option>';
                       }
                       echo  '</select> <br/>';
-
+                      echo '</div>';
+                    }else if($dataType == "file"){
+                      //TODO Give button id. Add on change listener to  file input and update button name on cahnge
+                      echo '<div class="form-group">';
+                      /* Label for the input box */
+                      echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
+                      echo '<input onchange="fileChanged(this, event)" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control hidden" id ="',$row['Field'],' input edit" placeholder=""','/> <br>';
+                      echo "<span><i>Selected File: </i></span><button class='editFileButton inputField' id='", $row['Field']," button edit' type='button' onclick='", "javascript: document.getElementById(\"", $row['Field'], " input edit\").click()","'> Choose File </button>";
                       echo '</div>';
                     /* Add a label and input box */
                     }else{
-                    echo '<div class="form-group">';
-                    echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
-                    echo '<input value="', "",'" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control inputField" id =',$row['Field'],'input placeholder=""','/>';
-                    echo '</div>';
-                  }
+                      echo '<div class="form-group">';
+                      echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
+                      echo '<input value="', "",'" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control inputField" id ="',$row['Field'],' input" placeholder=""','/>';
+                      echo '</div>';
+                    }
                   }
                   $counter = $counter = 1;
                 }
