@@ -15,6 +15,7 @@ echo '<head>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
+        <script type="text/javascript" src="js/dropzone.js"></script>
         <script src="js/test.js"></script>
         <script type="text/javascript" src="js/tableExport.js"></script>
         <script type="text/javascript" src="js/jquery.base64.js"></script>
@@ -411,6 +412,7 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
       /* Display name of columns; replace any ' ' with '_' */
       echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
+    echo '<th onclick="highlightCol(id)" id="file">Files</th>';
 
     echo `<th style="width: 36px;"></th>`;
 
@@ -424,6 +426,7 @@ while($obj = $data->fetch_field()){
   /* Display name of columns; replace any '_' with ' ' */
    echo '<th>',  $obj->name, '</th>';
 }
+echo '<th>Files</th>';
 
 echo  '</tr></tfoot>';
 
@@ -449,6 +452,7 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
       echo '<td>', $stuff[$counter], '</td>';
       $counter = $counter + 1;
     }
+    echo '<td> <form action="myPHP/uploadFile.php"class="dropzone" id="my-awesome-dropzone"></form> </td>';
     echo '</tr>';
   }
 

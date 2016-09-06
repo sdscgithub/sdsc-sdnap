@@ -1,3 +1,10 @@
 .canClick{
   cursor: pointer;
 }
+
+.dz-upload {
+    display: block;
+    background-color: #428bca;
+    height: 10px;
+    width: 0%;
+}
