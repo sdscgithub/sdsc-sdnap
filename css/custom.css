@@ -66,3 +66,17 @@
     background: #007299;
     box-shadow: none;
 }
+
+
+/*************
+ For Icon
+ ************/
+
+#title img {
+  /*position: absolute;*/
+  margin-top: 25px;
+  margin-bottom: 25px;
+  left: 0; right:0;
+  bottom:auto;
+
+}

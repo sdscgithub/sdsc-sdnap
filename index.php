@@ -15,19 +15,19 @@ echo '<head>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.css"/>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jqc-1.12.3/dt-1.10.12/af-2.1.2/b-1.2.1/b-colvis-1.2.1/b-print-1.2.1/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>
         <script type="text/javascript" src="js/functions.js"></script>
-        <script type="text/javascript" src="js/dropzone.js"></script>
         <script src="js/test.js"></script>
         <script type="text/javascript" src="js/tableExport.js"></script>
         <script type="text/javascript" src="js/jquery.base64.js"></script>
         <script type="text/javascript" src="js/jspdf/libs/sprintf.js"></script>
         <script type="text/javascript" src="js/jspdf/jspdf.js"></script>
         <script type="text/javascript" src="js/jspdf/libs/base64.js"></script>
+        <script src="js/dropzone.js"></script>
         <title>SD-NAP Tracker</title>
         <link rel="icon" href="images/favicon.ico">
     </head>';
 
 /* Add bootstrap styling */
-echo '<a href="https://holonet.sdsc.edu/"> <center> <img src="images/SDSClogo.jpg" alt="SDSC Logo" vspace="25"> </center> </a>';
+echo '<div id="title" ><center><a href="https://holonet.sdsc.edu/"> <img src="images/SDSClogo.jpg" alt="SDSC Logo"> </a></center></div>';
 /* Add bootstrap styling */
 echo `<body><div class="container">`;
 
@@ -412,7 +412,6 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
       /* Display name of columns; replace any ' ' with '_' */
       echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
-    echo '<th onclick="highlightCol(id)" id="file">Files</th>';
 
     echo `<th style="width: 36px;"></th>`;
 
@@ -426,7 +425,6 @@ while($obj = $data->fetch_field()){
   /* Display name of columns; replace any '_' with ' ' */
    echo '<th>',  $obj->name, '</th>';
 }
-echo '<th>Files</th>';
 
 echo  '</tr></tfoot>';
 
@@ -448,11 +446,16 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     $counter = 0;
     /* Traverse the data in every row */
     while($counter < $data->field_count){
-      if($stuff[$counter] != $stuff2["id"])
-      echo '<td>', $stuff[$counter], '</td>';
+      if($stuff[$counter] != $stuff2["id"]) {
+        if ($counter == $data->field_count - 1) {
+          echo "<td >","<form action='myPHP/uploadFile.php' method='post' class='dropzone' id='my-awesome-dropzone'>",'<div id="preview-template" style="display: none;"></div>', "</form>" ,$stuff[$counter], '</td>';
+        }
+        else {
+          echo '<td>', $stuff[$counter], '</td>';
+        }
+      }
       $counter = $counter + 1;
     }
-    echo '<td> <form action="myPHP/uploadFile.php"class="dropzone" id="my-awesome-dropzone"></form> </td>';
     echo '</tr>';
   }
 
