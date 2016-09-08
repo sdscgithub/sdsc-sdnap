@@ -3,6 +3,8 @@ var lastClickTime = date.getTime();
 var lastId = "";
 var atIntersection = false;
 var atLast = false;
+var postD = null;
+var EditD = null;
 
 /********** Constants **********/
 // Bootstrap colors
@@ -255,12 +257,13 @@ function addValues(){
 
   /* This means that a row was selected */
   if(document.getElementById("editButton").getAttribute("data-target") == "#edit"){
+    getUploadedFiles();
     /* Find the row that has the id that is the same as "alterId's" value */
     var id = document.getElementById("alterId").getAttribute("value");
     /* Find the children */
     var children = document.getElementById(id).childNodes;
     /* Change the "value" of the input filds to the innerHTML of the respective children */
-    for(var i = 0; i < children.length; i++){
+    for(var i = 0; i < document.getElementsByClassName("inputField").length; i++){
       /* Variable for current child */
       var child = document.getElementsByClassName("inputField")[i];
       /* Change file inputs differently than other inputs */
@@ -337,6 +340,76 @@ function rowDblClick(){
  var editBttn = document.getElementById("editButton");
  editBttn.click();
  checkHighlight();
+}
+
+function setupDropzones(){
+  Dropzone.prototype.defaultOptions.dictDefaultMessage = "<i>Click or Drag Files Here</i>";
+  Dropzone.prototype.defaultOptions.addRemoveLinks = false;
+  Dropzone.prototype.defaultOptions.createImageThumbnails = false;
+  Dropzone.prototype.defaultOptions.previewTemplate = "<div></div>";
+  Dropzone.autoDiscover = false;
+
+    editD = $("#editDropzone").dropzone({
+          url: "myPHP/uploadFile.php",
+          success: function (file,response) {
+              var fileName = response;
+              file.previewElement.classList.add("dz-success");
+              addFileToSelectedRow(fileName, document.getElementById("alterId").getAttribute("value"));
+              addToPreviouslyUploaded(fileName);
+          },
+          error: function (file, response) {
+              file.previewElement.classList.add("dz-error");
+          }
+      });
+
+    postD = $("#postDropzone").dropzone({
+          url: "myPHP/uploadFile.php",
+          success: function (file, response) {
+              var fileName = response;
+              file.previewElement.classList.add("dz-success");
+              updateHiddenFiles(fileName);
+          },
+          error: function (file, response) {
+              file.previewElement.classList.add("dz-error");
+          }
+      });
+
+
+      $(".columnDropzone").dropzone({
+            url: "myPHP/uploadFile.php",
+            success: function (file,response) {
+                var fileName = response;
+                file.previewElement.classList.add("dz-success");
+                addFileToSelectedRow(fileName, this.element.getAttribute("parentId"));
+                reloadPage();
+            },
+            error: function (file, response) {
+                file.previewElement.classList.add("dz-error");
+            },
+            init: function () {
+                this.element.setAttribute("parentid", this.element.parentElement.getAttribute("id"));
+            },
+            dictDefaultMessage: ""
+        });
+
+}
+
+function addFileToSelectedRow(fileName, id){
+  $.post("myPHP/addFileToDatabase.php", {fileName: fileName, id: id}, function(fileAdded){
+    if(!fileAdded){
+      alert("There was an error uploading the file");
+      $.post("myPHP/removeFile.php", {fileName: filename, id: id});
+    }
+  });
+}
+
+function updateHiddenFiles(fileName){
+  var fileInput = document.getElementById("hiddenFiles");
+  if(fileInput.getAttribute("value") == "" || fileInput.getAttribute("value") == null){
+    fileInput.setAttribute("value", fileName );
+  }else{
+    fileInput.setAttribute("value", fileInput.getAttribute("value") + ":" + fileName);
+  }
 }
 
 /********** Drag handling methods **********/
@@ -557,4 +630,110 @@ function exportExcel() {
   a.href = d;
   a.download = "SDNAP " + new Date().toLocaleString() + ".xls"
   a.click();
+}
+
+
+function getUploadedFiles(){
+  var id = document.getElementById("alterId").getAttribute("value");
+  var prev = document.getElementById("previouslyUploaded");
+  while (prev.firstChild) {
+    prev.removeChild(prev.firstChild);
+  }
+
+  var noneText = document.createElement("i");
+  prev.appendChild(noneText);
+
+  var uploads = document.getElementsByClassName("dz-preview");
+
+  for(var i = 0; i < uploads.length; i++){
+    while(uploads[i].firstChild){
+      uploads[i].removeChild(uploads[i].firstChild);
+    }
+  }
+
+  var list = document.createElement("ul");
+  list.classList.add("list-group");
+  list.setAttribute("id", "previouslyUploadedUl")
+  prev.appendChild(list);
+  $.post("myPHP/getFiles.php", {id: id}, function(data){
+
+    if(data == ""){
+      prev.innerHTML = "<i>None</i>";
+      return;
+    }
+    var files = data.split(":");
+    for(var i = 0; i < files.length; i++){
+      var li = document.createElement("li");
+      var span = document.createElement("span");
+
+      var fileName = files[i];
+
+      li.innerHTML = fileName;
+      li.classList.add("list-group-item");
+      li.setAttribute("id", fileName + " List Item" );
+
+      span.innerHTML = "<button class='btn btn-danger btn-sm' style='float: right;' onclick='removeFile(" + "\"" + fileName  + "\""  + "," + id + ")'>Remove</button>";
+
+      li.appendChild(span);
+      list.appendChild(li);
+    }
+  });
+}
+
+function removeFile(fileName, id){
+  window.$.post("myPHP/removeFile.php", {name : fileName, ID : id}, function(wasDeleted){
+    if(wasDeleted){
+      var listItem = document.getElementById(fileName + " List Item");
+      listItem.parentElement.removeChild(listItem);
+      if(document.getElementById("previouslyUploadedUl").children.length == 0){
+        document.getElementById("previouslyUploaded").firstChild.innerHTML = "None";
+        document.getElementById("previouslyUploadedUl").parentElement.removeChild(document.getElementById("previouslyUploadedUl"));
+      }
+    }else{
+      alert("There was a problem deleteing the file.");
+    }
+  });
+}
+
+function addToPreviouslyUploaded(fileName){
+  var prev = document.getElementById("previouslyUploaded");
+  var list = document.getElementById("previouslyUploadedUl");
+  if(!list){
+    var list = document.createElement("ul");
+    list.classList.add("list-group");
+    list.setAttribute("id", "previouslyUploadedUl")
+    prev.appendChild(list);
+  }
+  if(prev.firstChild.innerHTML == "None"){
+    prev.firstChild.innerHTML = "";
+  }
+
+  var li = document.createElement("li");
+  var span = document.createElement("span");
+  var id = document.getElementById("alterId").getAttribute("value");
+
+  li.innerHTML = fileName;
+  li.classList.add("list-group-item");
+  li.setAttribute("id", fileName + " List Item" );
+
+  span.innerHTML = "<button class='btn btn-danger btn-sm' style='float: right;' onclick='removeFile(" + "\"" + fileName  + "\""  + "," + id + ")'>Remove</button>";
+
+  li.appendChild(span);
+  list.appendChild(li);
+}
+
+function reloadPage(){
+  location.reload();
+}
+
+function setupPage(){
+  /* Get columns ready for drag and drop */
+  setupHandlers();
+  /* Initialize the dropzones */
+  setupDropzones();
+
+  /* Reload the page whenever a file may have been uploaded (when   the edit modal is hidden)*/
+  $('#edit').on('hide.bs.modal', function (e) {
+    reloadPage();
+  })
 }

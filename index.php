@@ -47,7 +47,7 @@ echo '<div class = "btn-toolbar">
     <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
      Add Column
    </button>
-   <button id =export class="export btn btn-primary btn-sm" onclick= "exportExcel();">
+   <button id=export class="export btn btn-primary btn-sm" onclick= "exportExcel();">
    Export
    </button>
      </div>';
@@ -83,7 +83,7 @@ echo '<!-- Modal -->
                 while($row = $result->fetch_array()){
                   $dataType = "text";
                   /* Do not do anything with the id field */
-                  if($row['Field'] != 'id'){
+                  if($row['Field'] != 'id' && $row['Field'] != 'files'){
                     /* Update dataType to reflect the type of data in each column */
                     /* Datatype will be set to the "type" for the input field for this data */
                     switch($row['Type']){
@@ -121,7 +121,7 @@ echo '<!-- Modal -->
                       foreach($dropdownOptions as $value){
                         echo   '<option>', "$value", '</option>';
                       }
-                      echo  '</select> <br/>';
+                      echo  '</select>';
 
                       echo '</div>';
                     /* Add a label and input box */
@@ -138,16 +138,22 @@ echo '<!-- Modal -->
                     /* Label for the input box */
                     echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
                     /* Input box itself; Type is dependant on the type of data that it will hold */
-                    echo '<input type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control" id =',$row['Field'],'input placeholder=""','/>';
+                    echo '<input type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control" id=',$row['Field'],'input placeholder=""','/>';
                     echo '</div>';
                   }
                   }
                 }
+
+            /* Add a hidden input for file */    
+            echo '<input type="hidden" id="hiddenFiles" name="files" </input>';
             /* End styling of popup window */
             /* Submit button for form */
-            echo '<div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div></form>';
+            echo '<div><button type="submit" class="btn btn-default">Submit</button></div></form><br>';
+
+            echo '<div class="form-group">';
+            echo '<label for="Upload Files">Upload Files</label>';
+            echo '<div class="panel panel-default"><div align="center" id="postDropzone" class="panel-body dropzone isDropzone"></div>';
+            echo '</div></form></div>';
             echo '</div>';
 
             /* Close button for form */
@@ -192,7 +198,7 @@ echo '<!-- Modal -->
                     /* Label */
                     echo '<label for=', "$newCol","input>","$newCol",'</label>';
                     /* Text entry box */
-                    echo '<input name="', "col",'" class="form-control" id ="',$newCol,' Input" placeholder=""','/>';
+                    echo '<input name="', "col",'" class="form-control" id="',$newCol,' Input" placeholder=""','/>';
                     /* Label for  type of data */
                     echo '<label for=', "DataType","input>","$dataType",'</label>';
                     /* Dropdown menu for types of data */
@@ -315,7 +321,6 @@ echo '<!-- Modal -->
 
                 <form id="myEdit" action="myPHP/updateData.php" method="post" enctype="multipart/form-data">
                 <input name="alterId" id="alterId" type="int" hidden="true">';
-
                 $sql = "SHOW COLUMNS FROM $primaryTable";
                 /* Query the database for all columns in $primaryTable */
                 $result = $mysqli->query($sql);
@@ -325,7 +330,7 @@ echo '<!-- Modal -->
                 while($row = $result->fetch_array()){
                   $dataType = "text";
                   /* Do not do anything with the id field */
-                  if($row['Field'] != 'id'){
+                  if($row['Field'] != 'id' && $row['Field'] != 'files'){
                     /* Update dataType to reflect the type of data in each column */
                     /* Datatype will be set to the "type" for the input field for this data */
                     switch($row['Type']){
@@ -362,7 +367,7 @@ echo '<!-- Modal -->
                       foreach($dropdownOptions as $value){
                         echo   '<option>', "$value", '</option>';
                       }
-                      echo  '</select> <br/>';
+                      echo  '</select>';
                       echo '</div>';
                     }else if($dataType == "file"){
                       //TODO Give button id. Add on change listener to  file input and update button name on cahnge
@@ -384,9 +389,15 @@ echo '<!-- Modal -->
                 }
             /* End styling of popup window */
             /* Submit button for form*/
-            echo '<div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </div></form>';
+            echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form><br>';
+            echo '<div class="form-group">';
+            echo '<label for="Upload Files">Previously Uploaded Files</label> <br>';
+            echo '<div class="panel panel-default"><div id="previouslyUploaded" class="panel-body"></div></div>';
+            echo '<label for="Upload Files">Upload Files</label>';
+            echo '<div class="panel panel-default"><div align="center" id="editDropzone" class="panel-body dropzone isDropzone"></div>';
+
+            echo '</div></form></div>';
+
             echo '</div>';
 
             /* Close button for form */
@@ -408,9 +419,9 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
 /* Generate table headers */
     $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     while($obj = $data->fetch_field()){
-      if($obj->name != "id")
+      if($obj->name != "id" && $obj->name != "files")
       /* Display name of columns; replace any ' ' with '_' */
-      echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
+        echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
     echo '<th onclick="highlightCol(id)" id="file">Files</th>';
 
@@ -422,7 +433,7 @@ echo  '</tr></thead>';
 echo '<tfoot><tr>';
 $data = $mysqli->query("SELECT * FROM `$primaryTable`");
 while($obj = $data->fetch_field()){
-  if($obj->name != "id")
+  if($obj->name != "id" && $obj->name != "files")
   /* Display name of columns; replace any '_' with ' ' */
    echo '<th>',  $obj->name, '</th>';
 }
@@ -446,13 +457,27 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
     $stuff2 = $data->fetch_assoc();
     echo "<tr class='canClick' onclick='highlight(id)' id='$stuff2[id]'>";
     $counter = 0;
+    /* This array will hold the keys of stuff2 (which is the same array as stuff, its
+    just associated)*/
+    $keys = array_keys($stuff2);
     /* Traverse the data in every row */
     while($counter < $data->field_count){
-      if($stuff[$counter] != $stuff2["id"])
-      echo '<td>', $stuff[$counter], '</td>';
+      /* Don't display any data from "files" or "id" */
+      if($keys[$counter] != "id" && $keys[$counter] != "files"){
+        echo '<td>', $stuff[$counter], '</td>';
+      }
       $counter = $counter + 1;
     }
-    echo '<td> <form action="myPHP/uploadFile.php"class="dropzone" id="my-awesome-dropzone"></form> </td>';
+    //echo '<td> <form action="myPHP/uploadFile.php"class="dropzone" id="my-awesome-dropzone"></form> </td>';
+    $dataFiles = $mysqli->query("SELECT * FROM `$primaryTable` WHERE id=$stuff2[id]");
+    $arrayFiles = $dataFiles->fetch_assoc();
+    $arrayFiles = $arrayFiles["files"];
+    $arrayFiles = explode(":", $arrayFiles);
+    echo '<td class="dropzone isDropzone columnDropzone">';
+    foreach($arrayFiles as $string){
+      echo "<a download href='files/" . $string . "'>" . $string . "<a/> <br>";
+    }
+    echo '</td>';
     echo '</tr>';
   }
 
