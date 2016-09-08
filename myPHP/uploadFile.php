@@ -15,6 +15,7 @@ if (!empty($_FILES)) {
 
     $targetPath = $path . $ds. $storeFolder . $ds;
 
+
     $targetFile =  $targetPath. $_FILES['file']['name']; // destination of where file will be uploaded to
 
     /* Add an ending to the file if the file exists on the server : file.txt -> file(1).txt */
@@ -29,7 +30,6 @@ if (!empty($_FILES)) {
       /* This echoed string is used in a call to addFileToDatabase.php to update the "files" column */
       echo basename($targetFile);
     }
-
 }
 
 // Store filename and file path to sql table to be used a download link.
