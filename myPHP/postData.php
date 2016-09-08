@@ -18,8 +18,8 @@ Description: a new row is added to the database. The new row may contain values
 
 /* Update the newly created row with any value(s) that were passed with the POST request */
   foreach($_POST as $key=>$value){
-    $keyMod = str_replace('_', ' ', $key);
-    $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
+      $keyMod = str_replace('_', ' ', $key);
+      $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
   }
 
   $fileNames = [];

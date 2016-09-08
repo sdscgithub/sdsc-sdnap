@@ -15,10 +15,21 @@ if (!empty($_FILES)) {
 
     $targetPath = $path . $ds. $storeFolder . $ds;
 
-    $targetFile =  $targetPath. $_FILES['file']['name']; // destination of where file will be uploaded to 
 
-    move_uploaded_file($tempFile,$targetFile);
+    $targetFile =  $targetPath. $_FILES['file']['name']; // destination of where file will be uploaded to
 
+    /* Add an ending to the file if the file exists on the server : file.txt -> file(1).txt */
+    $path_parts = pathinfo($targetFile);
+    $counter = 1;
+    while(file_exists($targetFile)){
+      $targetFile = $path_parts['dirname'] . $ds . $path_parts['filename'] . "(" . $counter . ")" . "." . $path_parts['extension'];
+      $counter = $counter + 1;
+    }
+
+    if(move_uploaded_file($tempFile,$targetFile)){
+      /* This echoed string is used in a call to addFileToDatabase.php to update the "files" column */
+      echo basename($targetFile);
+    }
 }
 
 // Store filename and file path to sql table to be used a download link.
