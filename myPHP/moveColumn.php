@@ -1,9 +1,13 @@
 <?php
 /*
-TODO
 File: moveColumn.php
+POST Parameters: type - the type of move
+                 name - the name of a column used in move
+                 name2 - the name of the second column used in the move
 Purpose: move columns around in the database
 Description: Either swaps two columns or moves a single column
+Return value: none
+
 $_POST[type] will be "swap", "right" or "left"
 * Swapping
 - Two column names are passed into the function as name and name2

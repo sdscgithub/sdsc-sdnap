@@ -1,4 +1,13 @@
 <?php
+/*
+File: uploadFile.php
+Purpose: add file to the server (to the "files" folder)
+POST Parameters: file - the file to be uploaded
+Description: Uploads file to the "files" folder. If a file of the same name
+             already exists, the new file is renamed
+Return Value: The name of the file as it is on the server (may be different than
+              the name of the file passed. For example file.txt may become file(1).txt)
+*/
 
 /* Connect to the database */
 include_once("db.php");
@@ -30,53 +39,5 @@ if (!empty($_FILES)) {
       /* This echoed string is used in a call to addFileToDatabase.php to update the "files" column */
       echo basename($targetFile);
     }
-}
-
-// Store filename and file path to sql table to be used a download link.
-
-// $filename = $_FILES['file']['name'];
-// $fileSize = $_FILES['file']['size'];
-//
-// include 'library/config.php';
-// include 'library/opendb.php';
-//
-//
-// $mysqli->query("INSERT INTO `$fileTable` (id) VALUES(DEFAULT)");
-// $id = $mysqli->insert_id;
-//
-//
-// $mysqli->query("INSERT INTO `$fileTable` (name,location) VALUES('$filename','$targetPath')");
-//
-// include 'library/closedb.php';
-
-
-
-
-if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
-{
-$fileName = $_FILES['userfile']['name'];
-$tmpName  = $_FILES['userfile']['tmp_name'];
-$fileSize = $_FILES['userfile']['size'];
-$fileType = $_FILES['userfile']['type'];
-
-$fp      = fopen($tmpName, 'r');
-$content = fread($fp, filesize($tmpName));
-$content = addslashes($content);
-fclose($fp);
-
-if(!get_magic_quotes_gpc())
-{
-    $fileName = addslashes($fileName);
-}
-include 'library/config.php';
-include 'library/opendb.php';
-
-$query = "INSERT INTO $fileTable (name, size, type, content ) ".
-"VALUES ('$fileName', '$fileSize', '$fileType', '$content')";
-
-mysql_query($query) or die('Error, query failed');
-include 'library/closedb.php';
-
-echo "<br>File $fileName uploaded<br>";
 }
 ?>

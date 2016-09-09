@@ -13,8 +13,6 @@ Description: connect to the sql server
   $primaryTable = "user_data";
   /* Holds informatin for dropdown menus */
   $secondaryTable = "select_options";
-  /* Holds information on files in the rows */
-  $fileTable = "files";
   //$mysqli = new mysqli( "localhost", "sdnapdbuser", '_Apm$wsM4',"sdnapdb");
   $mysqli = new mysqli( "localhost", "root", '',"test");
  ?>

@@ -2,11 +2,11 @@
 /*
 File: editColumn.php
 Purpose: edit the data of a column in the database
-Description: edit the column's name and select options (if applicable)
-             * "newName", "oldName" and "newOptions" are expected to be passed with the request
+POST parameters:"newName", "oldName" and "newOptions" are expected to be passed with the request
                - "newName" is the name that the column will be changed to
                - "oldName" is the name that that is currently in the database and will be changed
                - "newOptions" are the newOptions for the select element (not all columns will have this)
+Description: edit the column's name and select options (if applicable)
 */
 
   /* Connect to database */

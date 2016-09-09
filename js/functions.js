@@ -1,8 +1,13 @@
+/* Variables used in functions */
+
+//Used to time a double click in highlight and highlightCol
 var date = new Date();
 var lastClickTime = date.getTime();
+//Used in highligh and highlightCol to tell if both clicks come from the same element
 var lastId = "";
+//Used in drag and drop to tell if cursor is near intersectin of dropping locations
 var atIntersection = false;
-var atLast = false;
+//Holds information on dropzone in post and edit modals
 var postD = null;
 var EditD = null;
 
@@ -167,8 +172,20 @@ function checkOption(id){
    Return value: false if column name contains a '_', otherwise true
 **********/
 function confirmColumnCreation(){
-  if(document.getElementById("New Column Name Input").value.includes("_")){
+  var colName = document.getElementById("New Column Name Input").value;
+  var existingNames = $("th");
+  var isUnique = true;
+  for(var i = 0; i < existingNames.length; i++){
+    if(existingNames[i].innerHTML.toLowerCase() == colName.toLowerCase()){
+      isUnique = false;
+    }
+  }
+  /* Check for illegal names */
+  if(colName.includes("_")){ // must not contain an underscore
     alert("Column names cannot contain '_'");
+    return false;
+  }else if(! isUnique){ //name must not already exist
+    alert("There is already a column with that name");
     return false;
   }else{
     return true;
@@ -196,9 +213,16 @@ function confirmDeletion(){
   /* Check if it is a column */
   if( isNaN(itemId.getAttribute("value")) ){
 
+    /* Check for illegal deletions */
+
     /* Do not delete the last column */
     if($("th").length == 2){
       alert("You cannot delete the last column.");
+      return false;
+    }
+    /* Do not delete the "Files" */
+    if(document.getElementById( document.getElementById("deleteId").getAttribute("value") ).innerHTML == "Files"){
+      alert("You cannot delete the Files column.");
       return false;
     }
 
@@ -207,8 +231,6 @@ function confirmDeletion(){
     itemName = itemName.replace( /_/g , " ");
     /* Ask for user confirmation */
     return confirm("Are you sure that you want to remove the column titled \"" + itemName + "\"?");
-
-
   /* Must be a row if not a column*/
   }else{
     /* Children should be the all the data of the row */
@@ -217,16 +239,34 @@ function confirmDeletion(){
     var printCounter = 0;
     /* Format data of the row to print */
     for(i = 0; i < children.length; i++){
-      if(children[i].innerHTML == ""){
+      var cellData = children[i].innerHTML;
+
+      /* Special formatting for "Files" column. Only print innerHTML of download links */
+      if(i + 1 == children.length){ //Files should always be the last index
+        cellData = "";
+        for(var index = 0; index < children[i].childNodes.length; index++){
+          var currentChild = children[i].childNodes[index];
+          if(currentChild.tagName == 'A'){
+            if(index == 0){
+              cellData = currentChild.innerHTML;
+            }else{
+              cellData = cellData + ", " + currentChild.innerHTML;
+            }
+          }
+        }
+      }
+
+
+      if(cellData == ""){
         continue;
       }
       if(printCounter == 0){
         /* Print the name of the item if it is the first item */
-        itemName =  itemName + children[i].innerHTML;
+        itemName =  itemName + cellData;
         printCounter++;
       }else{
         /* Print a comma followed by the name of the item */
-        itemName =  itemName + ", " + children[i].innerHTML ;
+        itemName =  itemName + ", " + cellData ;
       }
     }
     /* Ask for user confirmation */
@@ -257,6 +297,8 @@ function addValues(){
 
   /* This means that a row was selected */
   if(document.getElementById("editButton").getAttribute("data-target") == "#edit"){
+
+    /* Update the "Previouly Uploaded File" area */
     getUploadedFiles();
     /* Find the row that has the id that is the same as "alterId's" value */
     var id = document.getElementById("alterId").getAttribute("value");
@@ -342,6 +384,12 @@ function rowDblClick(){
  checkHighlight();
 }
 
+/**********
+   Name: setupDropzones
+   Purpose: Programically sets up drozones for add/edit modals and "Files" column
+   Params: none
+   Return value: none
+**********/
 function setupDropzones(){
   Dropzone.prototype.defaultOptions.dictDefaultMessage = "<i>Click or Drag Files Here</i>";
   Dropzone.prototype.defaultOptions.addRemoveLinks = false;
@@ -349,6 +397,7 @@ function setupDropzones(){
   Dropzone.prototype.defaultOptions.previewTemplate = "<div></div>";
   Dropzone.autoDiscover = false;
 
+    /* Set up edit modal dropzone */
     editD = $("#editDropzone").dropzone({
           url: "myPHP/uploadFile.php",
           success: function (file,response) {
@@ -361,7 +410,7 @@ function setupDropzones(){
               file.previewElement.classList.add("dz-error");
           }
       });
-
+    /* Set up add modal dropzone */
     postD = $("#postDropzone").dropzone({
           url: "myPHP/uploadFile.php",
           success: function (file, response) {
@@ -374,7 +423,7 @@ function setupDropzones(){
           }
       });
 
-
+      /* Set up "Files" column dropzones */
       $(".columnDropzone").dropzone({
             url: "myPHP/uploadFile.php",
             success: function (file,response) {
@@ -394,6 +443,13 @@ function setupDropzones(){
 
 }
 
+/**********
+   Name: addFileToSelectedRow
+   Purpose: Add the newly updated file's name to "files" in the sqldatabase
+   Params: fileName - the name of the file
+           id - the row id where "files" should be updated
+   Return value: none
+**********/
 function addFileToSelectedRow(fileName, id){
   $.post("myPHP/addFileToDatabase.php", {fileName: fileName, id: id}, function(fileAdded){
     if(!fileAdded){
@@ -403,8 +459,20 @@ function addFileToSelectedRow(fileName, id){
   });
 }
 
+/**********
+   Name: updateHiddenFiles
+   Purpose: fileName is a file that has been uploaded to the sever already.
+            This function updates the sql table to reflect that this file has
+            been uploaded
+   Params: fileName - the newly uploaded file
+   Return value: none
+**********/
 function updateHiddenFiles(fileName){
+
+  /* The input from the add entry modal */
   var fileInput = document.getElementById("hiddenFiles");
+  /* Set the column equl to the fileName if the table is empty, otherwise append a
+  colon ":" and then the fileName */
   if(fileInput.getAttribute("value") == "" || fileInput.getAttribute("value") == null){
     fileInput.setAttribute("value", fileName );
   }else{
@@ -632,17 +700,29 @@ function exportExcel() {
   a.click();
 }
 
-
+/**********
+   Name: getUploadedFiles
+   Purpose: Get file names from the sql table and display them
+   Params: none
+   Return value: none
+**********/
 function getUploadedFiles(){
+  /* id is the sql table id of the selected row */
   var id = document.getElementById("alterId").getAttribute("value");
+  /* The div the will hold a list of the files that are on the server */
   var prev = document.getElementById("previouslyUploaded");
+  /*Remove any files that may be in the list (it may have been populated for another row) */
   while (prev.firstChild) {
     prev.removeChild(prev.firstChild);
   }
 
+  /* Add an empty <i> node. This node will be set to 'None' if there are no files
+     on the server */
   var noneText = document.createElement("i");
   prev.appendChild(noneText);
 
+  /* Remove the div that usually shows the uploaded file (we will instead show
+     them in the div with id of "previouslyUploaded") */
   var uploads = document.getElementsByClassName("dz-preview");
 
   for(var i = 0; i < uploads.length; i++){
@@ -651,16 +731,26 @@ function getUploadedFiles(){
     }
   }
 
+  /* Add an unordered list to the div. Files will be put in here */
   var list = document.createElement("ul");
   list.classList.add("list-group");
   list.setAttribute("id", "previouslyUploadedUl")
   prev.appendChild(list);
+  /* Retrieve colon delimited list of files to display (based on id)*/
   $.post("myPHP/getFiles.php", {id: id}, function(data){
 
+
     if(data == ""){
-      prev.innerHTML = "<i>None</i>";
+      noneText.innerHTML = "None";
+      /* Remove the empty list */
+      prev.removeChild(list);
       return;
     }
+
+    /* Files are delimited by ":". Get the files' names in an array */
+    /* Add a li and button to remove the li for each file */
+    /***Note: I was having trouble with adding a button directly(couldn't get the onclick to work),
+        so I added a button within a span as a workaround */
     var files = data.split(":");
     for(var i = 0; i < files.length; i++){
       var li = document.createElement("li");
@@ -672,6 +762,7 @@ function getUploadedFiles(){
       li.classList.add("list-group-item");
       li.setAttribute("id", fileName + " List Item" );
 
+      /* Work around. See note above */
       span.innerHTML = "<button class='btn btn-danger btn-sm' style='float: right;' onclick='removeFile(" + "\"" + fileName  + "\""  + "," + id + ")'>Remove</button>";
 
       li.appendChild(span);
@@ -680,7 +771,15 @@ function getUploadedFiles(){
   });
 }
 
+/**********
+   Name: removeFile
+   Purpose: remove the file from the server and from the sql table
+   Params: fileName - the file to remove
+           id - the row to remove the file from
+   Return value: none
+**********/
 function removeFile(fileName, id){
+  /* Remove the file from the server, sql table and list */
   window.$.post("myPHP/removeFile.php", {name : fileName, ID : id}, function(wasDeleted){
     if(wasDeleted){
       var listItem = document.getElementById(fileName + " List Item");
@@ -695,19 +794,52 @@ function removeFile(fileName, id){
   });
 }
 
+/**********
+   Name: cancelRowCreation
+   Purpose: remove files from the server since the row creation was cancelled
+   Params: fileNames - the files to remove (a stirng of filen names, sepereated by :)
+   Return value: none
+**********/
+function cancelRowCreation(){
+  var fileNames = document.getElementById("hiddenFiles").getAttribute("value");
+  if(fileNames == null){
+    return;
+  }
+  var files = fileNames.split(":");
+  for(var i = 0; i < files.length; i++){
+    var fileName = files[i];
+    window.$.post("myPHP/removeFile.php", {name : fileName}, function(wasDeleted){
+      if(!wasDeleted){
+        alert("There was an error removing the file");
+      }
+      document.getElementById("hiddenFiles").setAttribute("value", "");
+    });
+  }
+}
+
+/**********
+   Name: addToPreviouslyUploaded
+   Purpose: add a <li> to the <ul> in the "previoulsyUploaded" div
+   Params: fileName - the file to add
+   Return value: none
+**********/
 function addToPreviouslyUploaded(fileName){
   var prev = document.getElementById("previouslyUploaded");
   var list = document.getElementById("previouslyUploadedUl");
+  /* create the <ul> if it does not exist yet */
   if(!list){
     var list = document.createElement("ul");
     list.classList.add("list-group");
     list.setAttribute("id", "previouslyUploadedUl")
     prev.appendChild(list);
   }
+  /* Hide the "None" text so that the new file can be shown */
   if(prev.firstChild.innerHTML == "None"){
     prev.firstChild.innerHTML = "";
   }
 
+  /***Note: I was having trouble with adding a button directly(couldn't get the onclick to work),
+      so I added a button within a span as a workaround */
   var li = document.createElement("li");
   var span = document.createElement("span");
   var id = document.getElementById("alterId").getAttribute("value");
@@ -716,16 +848,29 @@ function addToPreviouslyUploaded(fileName){
   li.classList.add("list-group-item");
   li.setAttribute("id", fileName + " List Item" );
 
+  /* Work around. See note above */
   span.innerHTML = "<button class='btn btn-danger btn-sm' style='float: right;' onclick='removeFile(" + "\"" + fileName  + "\""  + "," + id + ")'>Remove</button>";
 
   li.appendChild(span);
   list.appendChild(li);
 }
 
+/**********
+   Name: reloadPage
+   Purpose: reloads the page (mainly used to update "files" column)
+   Params: none
+   Return value: none
+**********/
 function reloadPage(){
   location.reload();
 }
 
+/**********
+   Name: setupPage
+   Purpose: calls methods that are needed to make page function normally
+   Params: none
+   Return value: none
+**********/
 function setupPage(){
   /* Get columns ready for drag and drop */
   setupHandlers();
@@ -735,5 +880,10 @@ function setupPage(){
   /* Reload the page whenever a file may have been uploaded (when   the edit modal is hidden)*/
   $('#edit').on('hide.bs.modal', function (e) {
     reloadPage();
-  })
+  });
+
+  /* Delete files when row creation is canceled */
+  $('#myModalNorm').on('hide.bs.modal', function (e) {
+    cancelRowCreation();
+  });
 }

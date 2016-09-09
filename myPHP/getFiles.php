@@ -2,9 +2,10 @@
 /*
 File: getFiles.php
 Purpose: return the contents of the "files" column from the primaryTable
-POST variables: id - the id of the row that you will get "files" values for
-Description: simply returns the data contained "files" where the id matches the
+POST parameters: id - the id of the row that you will get "files" values for
+Description: simply returns the data contained in "files" where the id matches the
              id passed in the POST request
+Return Value: Colon delimited stirng of file names
 */
   /* Connect to the database */
   include_once("db.php");

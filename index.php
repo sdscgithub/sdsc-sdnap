@@ -145,7 +145,7 @@ echo '<!-- Modal -->
                 }
 
             /* Add a hidden input for file */
-            echo '<input type="hidden" id="hiddenFiles" name="files" </input>';
+            echo '<input type="hidden" id="hiddenFiles" name="files"/>';
             /* End styling of popup window */
             /* Submit button for form */
             echo '<div><button type="submit" class="btn btn-default">Submit</button></div></form><br>';
@@ -424,6 +424,7 @@ echo '<table id="example" class="table table-striped table-bordered" cellspacing
         echo '<th  class="draggableColumn" draggable="true" onclick="highlightCol(id)" id="', str_replace(' ', '_', $obj->name),'">', $obj->name, '</th>';
     }
 
+    /* Add in the "Files" header. It will always be the last column */
     echo '<th onclick="highlightCol(id)" id="file">Files</th>';
 
 
@@ -439,7 +440,7 @@ while($obj = $data->fetch_field()){
   /* Display name of columns; replace any '_' with ' ' */
    echo '<th>',  $obj->name, '</th>';
 }
-
+ /* Add in the "Files" footer. It will always be the last column */
 echo '<th>Files</th>';
 
 echo  '</tr></tfoot>';
@@ -471,14 +472,14 @@ $data = $mysqli->query("SELECT * FROM `$primaryTable`");
       }
       $counter = $counter + 1;
     }
-    //echo '<td> <form action="myPHP/uploadFile.php"class="dropzone" id="my-awesome-dropzone"></form> </td>';
+    /* Add a download link for all files in the "Files" column */
     $dataFiles = $mysqli->query("SELECT * FROM `$primaryTable` WHERE id=$stuff2[id]");
     $arrayFiles = $dataFiles->fetch_assoc();
     $arrayFiles = $arrayFiles["files"];
     $arrayFiles = explode(":", $arrayFiles);
     echo '<td class="dropzone isDropzone columnDropzone">';
     foreach($arrayFiles as $string){
-      echo "<a download href='files/" . $string . "'>" . $string . "<a/> <br>";
+      echo "<a download href='files/" . $string . "'>" . $string . "</a> <br>";
     }
     echo '</td>';
     echo '</tr>';
