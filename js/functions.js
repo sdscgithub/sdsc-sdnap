@@ -403,25 +403,16 @@ function setupDropzones(){
           success: function (file,response) {
               var fileName = response;
               file.previewElement.classList.add("dz-success");
-              addFileToSelectedRow(fileName, document.getElementById("alterId").getAttribute("value"));
+              if(document.getElementById("rowDataForm").getAttribute("mode") == "edit"){
+                addFileToSelectedRow(fileName, document.getElementById("alterId").getAttribute("value"));
+              }
               addToPreviouslyUploaded(fileName);
           },
           error: function (file, response) {
               file.previewElement.classList.add("dz-error");
           }
       });
-    /* Set up add modal dropzone */
-    postD = $("#postDropzone").dropzone({
-          url: "myPHP/uploadFile.php",
-          success: function (file, response) {
-              var fileName = response;
-              file.previewElement.classList.add("dz-success");
-              updateHiddenFiles(fileName);
-          },
-          error: function (file, response) {
-              file.previewElement.classList.add("dz-error");
-          }
-      });
+
 
       /* Set up "Files" column dropzones */
       $(".columnDropzone").dropzone({
@@ -454,7 +445,7 @@ function addFileToSelectedRow(fileName, id){
   $.post("myPHP/addFileToDatabase.php", {fileName: fileName, id: id}, function(fileAdded){
     if(!fileAdded){
       alert("There was an error uploading the file");
-      $.post("myPHP/removeFile.php", {fileName: filename, id: id});
+      $.post("myPHP/removeFile.php", {fileName: filename, ID : id});
     }
   });
 }
@@ -788,6 +779,12 @@ function removeFile(fileName, id){
         document.getElementById("previouslyUploaded").firstChild.innerHTML = "None";
         document.getElementById("previouslyUploadedUl").parentElement.removeChild(document.getElementById("previouslyUploadedUl"));
       }
+      if(document.getElementById("rowDataForm").getAttribute("mode") == "post"){
+        var hiddenFilesInput = document.getElementById("hiddenFiles");
+        var hiddenFilesInputValue = hiddenFilesInput.getAttribute("value");
+        hiddenFilesInputValue = hiddenFilesInputValue.replace(fileName, "");
+        hiddenFilesInput.setAttribute("value", hiddenFilesInputValue);
+      }
     }else{
       alert("There was a problem deleteing the file.");
     }
@@ -797,7 +794,7 @@ function removeFile(fileName, id){
 /**********
    Name: cancelRowCreation
    Purpose: remove files from the server since the row creation was cancelled
-   Params: fileNames - the files to remove (a stirng of filen names, sepereated by :)
+   Params: fileNames - the files to remove (a stirng of file names, sepereated by :)
    Return value: none
 **********/
 function cancelRowCreation(){
@@ -808,7 +805,7 @@ function cancelRowCreation(){
   var files = fileNames.split(":");
   for(var i = 0; i < files.length; i++){
     var fileName = files[i];
-    window.$.post("myPHP/removeFile.php", {name : fileName}, function(wasDeleted){
+    window.$.post("myPHP/removeFile.php", {name : fileName, ID : -1}, function(wasDeleted){
       if(!wasDeleted){
         alert("There was an error removing the file");
       }
@@ -842,7 +839,10 @@ function addToPreviouslyUploaded(fileName){
       so I added a button within a span as a workaround */
   var li = document.createElement("li");
   var span = document.createElement("span");
-  var id = document.getElementById("alterId").getAttribute("value");
+  var id = -1;
+  if(document.getElementById("rowDataForm").getAttribute("mode") == "edit"){
+    id = document.getElementById("alterId").getAttribute("value");
+  }
 
   li.innerHTML = fileName;
   li.classList.add("list-group-item");
@@ -853,6 +853,10 @@ function addToPreviouslyUploaded(fileName){
 
   li.appendChild(span);
   list.appendChild(li);
+
+  if(document.getElementById("rowDataForm").getAttribute("mode") == "post"){
+    updateHiddenFiles(fileName);
+  }
 }
 
 /**********
@@ -877,13 +881,66 @@ function setupPage(){
   /* Initialize the dropzones */
   setupDropzones();
 
-  /* Reload the page whenever a file may have been uploaded (when   the edit modal is hidden)*/
+  /* Reload the page whenever a file may have been uploaded (when the edit modal is hidden)*/
   $('#edit').on('hide.bs.modal', function (e) {
+    if(document.getElementById("rowDataForm").getAttribute("mode") == "post"){
+      cancelRowCreation();
+    }
     reloadPage();
   });
+}
 
-  /* Delete files when row creation is canceled */
-  $('#myModalNorm').on('hide.bs.modal', function (e) {
-    cancelRowCreation();
-  });
+/**********
+   Name: changeRowModal
+   Purpose: sets up the modal for either posting or editing
+   Params: modalType - a string that is either "edit" or "post"
+   Return value: none
+**********/
+function changeRowModal(modalType){
+  /* The form on the modal */
+  var form = document.getElementById("rowDataForm");
+  /* The input for files that are uploaded on the post modal */
+  var hiddenFiles = document.getElementById("hiddenFiles");
+  /* Expected value is either "edit" or "post" */
+  switch (modalType){
+    case "edit":
+      /* Keep track of what mode the modal is in */
+      form.setAttribute("mode", "edit");
+      /* Set form action */
+      form.setAttribute("action", "myPHP/updateData.php");
+      /* Update title */
+      document.getElementById("modalLabel").innerHTML = "Edit Entry";
+      /* Remove hiddenFiles if it exists (only used in "post" mode) */
+      if(hiddenFiles != null){
+        hiddenFiles.parentElement.removeChild(hiddenFiles);
+      }
+      /* Add existing values to the input filds */
+      addValues();
+      break;
+
+    case "post":
+      /* Keep track of what mode the modal is in */
+      form.setAttribute("mode", "post");
+      /* Set form action */
+      form.setAttribute("action", "myPHP/postData.php");
+      /* Update title */
+      document.getElementById("modalLabel").innerHTML = "Add Entry";
+      /* Add hiddenFiles if it doesn't exist (only used in "post" mode) */
+      if(hiddenFiles == null){
+        hiddenFiles = document.createElement("input");
+        hiddenFiles.setAttribute("name", "files");
+        hiddenFiles.setAttribute("id", "hiddenFiles");
+        hiddenFiles.setAttribute("type", "hidden");
+        form.appendChild(hiddenFiles);
+      }
+      /* Make sure that the "previouslyUploaded" div shows the text "None" if no
+         files have been uploaded */
+      var prev = document.getElementById("previouslyUploaded");
+      if(prev.childNodes.length == 0){
+        var noneText = document.createElement("i");
+        noneText.innerHTML = "None";
+        prev.appendChild(noneText);
+      }
+      break;
+  }
 }

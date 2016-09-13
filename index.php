@@ -4,9 +4,6 @@
 <?php
   /* Connect to the database */
   include_once("myPHP/db.php");
-//TODO Decide how to remove a file fomr sql SoapServer
-// add comments
-//Make the logo less clickable
 
 /* Add links to css and javascript files */
 echo '<head>
@@ -33,7 +30,7 @@ echo `<body><div class="container">`;
 
 /* Adds the buttons for "Add", "Delete", "Edit" and "Add Column" */
 echo '<div class = "btn-toolbar">
-      <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNorm">
+      <button onclick="changeRowModal(\'post\')" class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#edit">
        Add Entry
      </button>
 
@@ -41,7 +38,7 @@ echo '<div class = "btn-toolbar">
      <input name="deleteId" id="deleteId" type="int" hidden="true">
      <input name="itemToDelete" id="itemToDelete" type="string" hidden="true">
      <button disabled id="deleteButton" class="delete btn btn-danger btn-sm">Delete</button> </form>
-     <button disabled onclick="addValues()" id="editButton" class="edit btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
+     <button disabled onclick="changeRowModal(\'edit\')" id="editButton" class="edit btn btn-warning btn-sm" data-toggle="modal" data-target="#edit">
       Edit
     </button>
     <button class="add btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalNormCol">
@@ -52,121 +49,6 @@ echo '<div class = "btn-toolbar">
    </button>
      </div>';
 
-
-/* Add bootstrap stylized popup window for adding rows using the "Add" button */
-echo '<!-- Modal -->
-  <div class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close"
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Add New Entry
-                </h4>
-            </div>
-
-            <!-- Modal Body -->
-            <div class="modal-body">
-
-                <form id="myForm" action="myPHP/postData.php" method="post" enctype="multipart/form-data">';
-
-                $sql = "SHOW COLUMNS FROM $primaryTable";
-                /* Query the database for all columns in $primaryTable */
-                $result = $mysqli->query($sql);
-                /* Traverse the columns */
-                while($row = $result->fetch_array()){
-                  $dataType = "text";
-                  /* Do not do anything with the id field */
-                  if($row['Field'] != 'id' && $row['Field'] != 'files'){
-                    /* Update dataType to reflect the type of data in each column */
-                    /* Datatype will be set to the "type" for the input field for this data */
-                    switch($row['Type']){
-                      case "int(11)":
-                        $dataType = "number";
-                        break;
-                      case "date":
-                        $dataType = "date";
-                        break;
-                      case "varchar(50)":
-                        $dataType = "select";
-                        break;
-                      case "mediumblob":
-                        $dataType = "file";
-                          break;
-                      case "text":
-                        break;
-                    }
-
-                    /* Add a dropdown menu if needed */
-                    if($dataType == "select"){
-                      echo '<div class="form-group">';
-                      echo '<label for="',$row['Field'],' select">',$row['Field'],'</label>';
-
-                      echo  '<select id="',$row['Field'], ' select" class="form-control" name="',$row['Field'],'">';
-                      /* Remove leading/trailng whitespace */
-                      $notWhiteSpace = rtrim(ltrim($row['Field']));
-                      /* Get the string of comma seperated optinos from $secondaryTable */
-                      $data = $mysqli->query("SELECT * FROM `$secondaryTable` WHERE column_name='$notWhiteSpace'");
-                      $optionsString = $data->fetch_row();
-                      /* $optionsString[0] is a list of optins for the dropdown menu, sperated by commas */
-                      /* Split option values up into an array */
-                      $dropdownOptions = explode(",", $optionsString[0]);
-                      /* Go though the strings and make them options for the dropdown menu */
-                      foreach($dropdownOptions as $value){
-                        echo   '<option>', "$value", '</option>';
-                      }
-                      echo  '</select>';
-
-                      echo '</div>';
-                    /* Add a label and input box */
-                  }else if($dataType == "file"){
-                    echo '<div class="form-group">';
-                    /* Label for the input box */
-                    echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
-                    /* Input box itself; Type is dependant on the type of data that it will hold */
-                    echo '<input onchange="fileChanged(this, event)" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control hidden" id ="',$row['Field'],' input" placeholder=""','/> <br>';
-                    echo "<span><i>Selected File: </i></span><button class='newFileButton' id='", $row['Field']," button' type='button' onclick='", "javascript: document.getElementById(\"", $row['Field'], " input\").click()","'> Choose File </button>";
-                    echo '</div>';
-                  }else{
-                    echo '<div class="form-group">';
-                    /* Label for the input box */
-                    echo '<label for=',$row['Field'],"input>",$row['Field'],'</label>';
-                    /* Input box itself; Type is dependant on the type of data that it will hold */
-                    echo '<input type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control" id=',$row['Field'],'input placeholder=""','/>';
-                    echo '</div>';
-                  }
-                  }
-                }
-
-            /* Add a hidden input for file */
-            echo '<input type="hidden" id="hiddenFiles" name="files"/>';
-            /* End styling of popup window */
-            /* Submit button for form */
-            echo '<div><button type="submit" class="btn btn-default">Submit</button></div></form><br>';
-
-            echo '<div class="form-group">';
-            echo '<label for="Upload Files">Upload Files</label>';
-            echo '<div class="panel panel-default"><div align="center" id="postDropzone" class="panel-body dropzone isDropzone"></div>';
-            echo '</div></form></div>';
-            echo '</div>';
-
-            /* Close button for form */
-            echo '<!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default"
-                        data-dismiss="modal">
-                            Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>';
 
 /* Add bootstrap stylized popup window for adding columns using the "Add Column" button */
 echo '<!-- Modal -->
@@ -207,7 +89,6 @@ echo '<!-- Modal -->
                            <option value="varchar(50)">Dropdown</option>
                            <option value="INT">Numeric</option>
                            <option value="Date">Date</option>
-                           <option value="mediumblob">File</option>
                            </select> <br/>';
                     /* Hidden label and text field that are displayed if "Dropdown" option is chosen */
                     echo '<label id="dropdownLabel" for=', "dropdownText","input hidden='true'>","* Enter options for the dropdown menu seperated by commas",'</label>';
@@ -311,7 +192,7 @@ echo '<!-- Modal -->
                        <span aria-hidden="true">&times;</span>
                        <span class="sr-only">Close</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">
+                <h4 class="modal-title" id="modalLabel">
                     Edit Entry
                 </h4>
             </div>
@@ -319,7 +200,7 @@ echo '<!-- Modal -->
             <!-- Modal Body -->
             <div class="modal-body">
 
-                <form id="myEdit" action="myPHP/updateData.php" method="post" enctype="multipart/form-data">
+                <form id="rowDataForm" action="myPHP/updateData.php" method="post" enctype="multipart/form-data">
                 <input name="alterId" id="alterId" type="int" hidden="true">';
                 $sql = "SHOW COLUMNS FROM $primaryTable";
                 /* Query the database for all columns in $primaryTable */
@@ -343,9 +224,6 @@ echo '<!-- Modal -->
                       case "varchar(50)":
                         $dataType = "select";
                         break;
-                      case "mediumblob":
-                        $dataType = "file";
-                          break;
                       case "text":
                         break;
                     }
@@ -369,15 +247,6 @@ echo '<!-- Modal -->
                       }
                       echo  '</select>';
                       echo '</div>';
-                    }else if($dataType == "file"){
-                      //TODO Give button id. Add on change listener to  file input and update button name on cahnge
-                      echo '<div class="form-group">';
-                      /* Label for the input box */
-                      echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
-                      echo '<input onchange="fileChanged(this, event)" type="',$dataType ,'"', ' name="', $row['Field'],'" class="form-control hidden" id ="',$row['Field'],' input edit" placeholder=""','/> <br>';
-                      echo "<span><i>Selected File: </i></span><button class='editFileButton inputField' id='", $row['Field']," button edit' type='button' onclick='", "javascript: document.getElementById(\"", $row['Field'], " input edit\").click()","'> Choose File </button>";
-                      echo '</div>';
-                    /* Add a label and input box */
                     }else{
                       echo '<div class="form-group">';
                       echo '<label for="',$row['Field'],' input">',$row['Field'],'</label>';
@@ -389,14 +258,16 @@ echo '<!-- Modal -->
                 }
             /* End styling of popup window */
             /* Submit button for form*/
-            echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form><br>';
+            //echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form><br>';
             echo '<div class="form-group">';
-            echo '<label for="Upload Files">Previously Uploaded Files</label> <br>';
+            echo '<center><label><b><i>Files</i></b></label></center><br>';
+            echo '<label>Previously Uploaded Files</label><br>';
             echo '<div class="panel panel-default"><div id="previouslyUploaded" class="panel-body"></div></div>';
             echo '<label for="Upload Files">Upload Files</label>';
-            echo '<div class="panel panel-default"><div align="center" id="editDropzone" class="panel-body dropzone isDropzone"></div>';
+            echo '<div class="panel panel-default"><div align="center" id="editDropzone" class="panel-body dropzone isDropzone"></div></div>';
+            echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form>';
+            echo '</form></div>';
 
-            echo '</div></form></div>';
 
             echo '</div>';
 

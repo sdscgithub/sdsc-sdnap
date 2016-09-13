@@ -32,7 +32,7 @@ $path =  ".." . DIRECTORY_SEPARATOR . "files" . DIRECTORY_SEPARATOR . $name;
 if(file_exists($path)){
   /* Get the files associated with this id */
 
-  if($id != ""){
+  if($id != -1){
     $data = $mysqli->query("SELECT files FROM $primaryTable WHERE id=$id");
     $data = $data->fetch_row();
     $data = $data[0];
@@ -55,7 +55,7 @@ if(file_exists($path)){
     /* Update "files" for the row coresponding with the id passed as an argument */
     $mysqli->query("UPDATE $primaryTable SET files='$updatedFiles' WHERE id=$id");
   }
-  
+
   unlink($path);
   echo true;
   return;
