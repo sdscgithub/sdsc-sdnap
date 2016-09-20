@@ -8,7 +8,6 @@ var lastId = "";
 //Used in drag and drop to tell if cursor is near intersectin of dropping locations
 var atIntersection = false;
 //Holds information on dropzone in post and edit modals
-var postD = null;
 var EditD = null;
 
 /********** Constants **********/
@@ -789,6 +788,7 @@ function removeFile(fileName, id){
       alert("There was a problem deleteing the file.");
     }
   });
+
 }
 
 /**********

@@ -18,12 +18,12 @@ Return value: none
 
     /* Update any fields that were passed with the POST request */
     foreach($_POST as $key=>$value){
-      if($key != 'alterId' && !in_array($key, $fileNames)){
+      if($key != 'alterId'){
         $keyMod = str_replace('_', ' ', $key);
         $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
       }
     }
-  
+
   /* Display updated webpage */
   header($redirectPage ) ;
   ?>

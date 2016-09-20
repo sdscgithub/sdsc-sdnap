@@ -256,6 +256,7 @@ echo '<!-- Modal -->
                   }
                   $counter = $counter = 1;
                 }
+                echo '</form>';
             /* End styling of popup window */
             /* Submit button for form*/
             //echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form><br>';
@@ -265,8 +266,7 @@ echo '<!-- Modal -->
             echo '<div class="panel panel-default"><div id="previouslyUploaded" class="panel-body"></div></div>';
             echo '<label for="Upload Files">Upload Files</label>';
             echo '<div class="panel panel-default"><div align="center" id="editDropzone" class="panel-body dropzone isDropzone"></div></div>';
-            echo '<div> <button type="submit" class="btn btn-default">Submit</button></div></form>';
-            echo '</form></div>';
+            echo '</div>';
 
 
             echo '</div>';
@@ -274,14 +274,12 @@ echo '<!-- Modal -->
             /* Close button for form */
             echo '<!-- Modal Footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default"
+                <button style="float:right;" type="button" class="btn btn-default"
                         data-dismiss="modal">
                             Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>';
+                </button>';
+                echo '<div> <button style="float:left;"" form="rowDataForm" type="submit" class="btn btn-default">Submit</button></div>';
+            echo '</div></div></div></div>';
 
 
 echo '<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
