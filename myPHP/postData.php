@@ -24,6 +24,7 @@ Return value: none
 /* Update the newly created row with any value(s) that were passed with the POST request */
   foreach($_POST as $key=>$value){
       $keyMod = str_replace('_', ' ', $key);
+      $value = str_replace('\'', '\\\'', $value);
       $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
   }
 
