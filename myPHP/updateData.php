@@ -20,6 +20,7 @@ Return value: none
     foreach($_POST as $key=>$value){
       if($key != 'alterId'){
         $keyMod = str_replace('_', ' ', $key);
+        $value = str_replace('\'', '\\\'', $value);
         $mysqli->query("UPDATE `$primaryTable` SET `$keyMod`='$value' WHERE id=$id");
       }
     }
