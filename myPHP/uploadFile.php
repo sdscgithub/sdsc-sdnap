@@ -17,6 +17,7 @@ $ds = DIRECTORY_SEPARATOR;
 
 $storeFolder = 'files'; // folder for uploaded files
 $path = $_SERVER['DOCUMENT_ROOT'];
+$path = $path . "/sdnap";
 
 if (!empty($_FILES)) {
 
