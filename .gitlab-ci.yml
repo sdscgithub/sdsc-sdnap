@@ -1,0 +1,47 @@
+image: golang:1.10.3-stretch
+
+before_script:
+  - uname -a
+  - whoami
+    #  - GITLAB_TOKEN="vYSe8_Dkyf2sQNFDnG8M"
+    #  - GITLAB_USERNAME="gitlab-ci-token"
+  - GITLAB_TOKEN="zznrLXLr1skpUWCmn9s_"
+  - GITLAB_USERNAME="gitlab-aha"
+        
+stages:
+  - build
+  - deploy
+
+build_site:
+    stage: build
+    image: gitlab.sdsc.edu:4567/j2dangelo/docker-devops:latest
+    variables:
+      DOCKER_HOST: tcp://localhost:2375
+    services:
+      - docker:dind
+    script:
+      - docker info
+      - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
+      - docker build -t gitlab.sdsc.edu:4567/holonet/sdnap:latest .
+      - docker push gitlab.sdsc.edu:4567/holonet/sdnap:latest 
+
+deploy_cluster:
+    stage: deploy
+    image: gitlab.sdsc.edu:4567/j2dangelo/docker-devops:latest
+    variables:
+      DOCKER_HOST: tcp://localhost:2375
+    services:
+      - docker:dind
+    script:
+      - docker info
+      - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
+      - kubectl version
+      - kubectl cluster-info
+      - kubectl get node
+      - kubectl apply -f ./manifests/hostpath-pv.yaml --record
+      - kubectl apply -f ./manifests/hostpath-pvc.yaml --record
+        #- kubectl apply -f ./manifests/mw-deploy.yaml --record
+        #- kubectl apply -f ./manifests/mw-svc.yaml --record
+      - kubectl apply -f ./manifests/sdnap-deploy.yaml --record
+      - kubectl apply -f ./manifests/sdnap-svc.yaml --record
+      - kubectl apply -f ./manifests/ingresses.yaml --record

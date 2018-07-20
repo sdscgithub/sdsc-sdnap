@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>SDSC WINDOWS/VM</title>
+			<link rel='icon' href='../../images/favicon.ico'>
+			<style>
+				td.data{
+					border-right:solid black 1px; 
+					border-bottom:solid black 1px; 
+					padding:5px					
+				}
+				td.dataRightSide{
+					border-bottom:solid black 1px;
+					padding:5px;
+				}
+				td.header{
+					border-right:solid black 1px;
+					border-bottom:solid black 1px;
+					padding:5px;									
+				}
+				td.headerRightSide{
+					border-bottom:solid black 1px;
+					padding:5px;
+				}
+			</style>
+			<script>
+				function showTable(x)
+				{
+					var y = document.getElementById(x).style.display;
+					if(y == 'inline-table')
+					{
+						document.getElementById(x).style.display='none';
+					}
+					else
+					{
+						document.getElementById(x).style.display='inline-table';
+					}
+				}
+				function highlightSelection(tableRow, checkBox, color)
+				{
+					if(checkBox.checked)
+					{
+						document.getElementById(tableRow).style.backgroundColor='#3399FF';
+					}
+					else
+					{
+						document.getElementById(tableRow).style.backgroundColor=color;
+					}
+				}
+				function uncheckAllBoxes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					for(var i=0; i < inputs.length; i++)
+					{
+						if (inputs[i].type == 'checkbox')
+						{			
+							if(inputs[i].checked)
+							{
+								inputs[i].checked = false;	
+								inputs[i].onchange();
+							}
+						}
+					}
+				}
+				function changeIndexes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					var checked = [];
+					for(var i=0; i < inputs.length; i++)
+					{
+						if(inputs[i].type=='checkbox')
+						{
+							if(inputs[i].checked)
+							{
+								checked.push(inputs[i]);
+							}
+						}
+					}
+					
+					for(var i=0; i < checked.length; i++)
+					{
+						// Do whatever to change indexes
+					}					
+				}
+				function rowClicked(x)
+				{
+					var checkbox = document.getElementById(x);
+					if(checkbox.checked)
+					{
+						checkbox.checked = false;
+					}
+					else
+					{
+						checkbox.checked = true;
+					}
+					document.getElementById(x).onchange();
+				}
+				function applyToSelection()
+				{
+					var inputs = document.getElementsByTagName('input');
+					for(var i = 0; i < inputs.length; i++)
+					{
+						if(inputs[i].type == 'checkbox')
+						{
+							if(inputs[i].checked)
+							{
+								inputs[i].id; //Get the id
+								// Remove 'cb' from the string
+								// Add some string to the id to get the input box associated with that string
+							}
+						}
+					}
+				}
+			</script>
+		</head>
+		<body>
+		<p><a href='https://holonet.sdsc.edu/Bounces/'><-- Back</a><br><br>
+		<u>Seller</u>: <b>SDSC WINDOWS/VM</b><br>		
+		Changes occuring between 12/31/2016 and 1/31/2017</p>
+		<input type='submit' value='Clear All' onclick='uncheckAllBoxes()'>
+		<input type='submit' value='Change Indexes' onclick='changeIndexes()'><br>
+		<input type='text'>
+		<input type='submit' value='Apply to Selection' onclick='applyToSelection()'>
+		</body>
+	</html>

@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>SDSC WINDOWS/VM</title>
+			<link rel='icon' href='../../images/favicon.ico'>
+			<style>
+				td.data{
+					border-right:solid black 1px; 
+					border-bottom:solid black 1px; 
+					padding:5px					
+				}
+				td.dataRightSide{
+					border-bottom:solid black 1px;
+					padding:5px;
+				}
+				td.header{
+					border-right:solid black 1px;
+					border-bottom:solid black 1px;
+					padding:5px;									
+				}
+				td.headerRightSide{
+					border-bottom:solid black 1px;
+					padding:5px;
+				}
+			</style>
+			<script>
+				function showTable(x)
+				{
+					var y = document.getElementById(x).style.display;
+					if(y == 'inline-table')
+					{
+						document.getElementById(x).style.display='none';
+					}
+					else
+					{
+						document.getElementById(x).style.display='inline-table';
+					}
+				}
+				function highlightSelection(tableRow, checkBox, color)
+				{
+					if(checkBox.checked)
+					{
+						document.getElementById(tableRow).style.backgroundColor='#3399FF';
+					}
+					else
+					{
+						document.getElementById(tableRow).style.backgroundColor=color;
+					}
+				}
+				function uncheckAllBoxes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					for(var i=0; i < inputs.length; i++)
+					{
+						if (inputs[i].type == 'checkbox')
+						{			
+							if(inputs[i].checked)
+							{
+								inputs[i].checked = false;	
+								inputs[i].onchange();
+							}
+						}
+					}
+				}
+				function changeIndexes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					var checked = [];
+					for(var i=0; i < inputs.length; i++)
+					{
+						if(inputs[i].type=='checkbox')
+						{
+							if(inputs[i].checked)
+							{
+								checked.push(inputs[i]);
+							}
+						}
+					}
+					
+					for(var i=0; i < checked.length; i++)
+					{
+						// Do whatever to change indexes
+					}					
+				}
+				function rowClicked(x)
+				{
+					var checkbox = document.getElementById(x);
+					if(checkbox.checked)
+					{
+						checkbox.checked = false;
+					}
+					else
+					{
+						checkbox.checked = true;
+					}
+					document.getElementById(x).onchange();
+				}
+				function applyToSelection()
+				{
+					var inputs = document.getElementsByTagName('input');
+					for(var i = 0; i < inputs.length; i++)
+					{
+						if(inputs[i].type == 'checkbox')
+						{
+							if(inputs[i].checked)
+							{
+								inputs[i].id; //Get the id
+								// Remove 'cb' from the string
+								// Add some string to the id to get the input box associated with that string
+							}
+						}
+					}
+				}
+			</script>
+		</head>
+		<body>
+		<p><a href='https://holonet.sdsc.edu/Bounces/'><-- Back</a><br><br>
+		<u>Seller</u>: <b>SDSC WINDOWS/VM</b><br>		
+		Changes occuring between 11/30/2016 and 12/31/2016</p>
+		<input type='submit' value='Clear All' onclick='uncheckAllBoxes()'>
+		<input type='submit' value='Change Indexes' onclick='changeIndexes()'><br>
+		<input type='text'>
+		<input type='submit' value='Apply to Selection' onclick='applyToSelection()'>
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('fixed')"><img src='../../images/PlusButton.png' height='20px' width='auto' onmouseover="this.src='../../images/PlusButton_Selected.png'" onmouseout="this.src='../../images/PlusButton.png'">   <u>The following tickets have been fixed since the last month</u>:</h2>
+			<p><u>Number of fixed tickets</u>: 144</p>
+			<table width='100%' style='border-collapse:collapse; display:inline-table;' id='fixed'>
+				<tr>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td align='center' class='header'><b>Close Date</b></td>
+					<td align='center' class='header'><b>Buyer</b></td>
+					<td align='center' class='header'><b>Ticket #</b></td>
+					<td align='center' class='header'><b>Reason</b></td>
+					<td align='center' class='header'><b>Index</b></td>
+					<td align='center' class='header'><b>Index %</b></td>
+					<td align='center' class='header'><b>PID</b></td>
+					<td align='center' class='header'><b>Product Code</b></td>
+					<td align='center' class='header'><b>Raw Quantity</b></td>
+					<td align='center' class='header'><b>Quantity</b></td>
+					<td align='center' class='header'><b>Rate</b></td>
+					<td align='center' class='headerRightSide'><b>Cost</b></td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed0'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>ABEYTA, ED</td>
+					<td class='data' align='center'>77436</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>EXOSRSU</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>0</td>
+					<td class='data'>PASS THRU</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$3,179.75</td>
+					<td class='dataRightSide' align='center'>$3,179.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed1'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>76887</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed2'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>76887</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed3'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>JAIME, HENRY</td>
+					<td class='data' align='center'>76977</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>NEU97DC</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>6931</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed4'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>77095</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed5'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>76886</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed6'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>76886</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - ADDL MACH</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>$38.83</td>
+					<td class='dataRightSide' align='center'>$116.49</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed7'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>75743</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed8'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>75743</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed9'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>JAIME, HENRY</td>
+					<td class='data' align='center'>75833</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>NEU97DC</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>6931</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed10'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>75951</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed11'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>75742</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed12'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>75742</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - ADDL MACH</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>$38.83</td>
+					<td class='dataRightSide' align='center'>$116.49</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed13'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>74670</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed14'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>74670</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed15'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>JAIME, HENRY</td>
+					<td class='data' align='center'>74768</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>NEU97DC</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>6931</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed16'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>74885</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed17'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>74669</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed18'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2016</td>
+					<td class='data'>SMALLEN, SHAVA</td>
+					<td class='data' align='center'>74669</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>2204</td>
+					<td class='data'>VM - ADDL MACH</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>3</td>
+					<td class='data' align='center'>$38.83</td>
+					<td class='dataRightSide' align='center'>$116.49</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed19'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>73602</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed20'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>73602</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed21'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>GAASTERLAND, TERRY</td>
+					<td class='data' align='center'>73438</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>MBR54TG</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>0</td>
+					<td class='data'>SERVER MAINT</td>
+					<td class='data' align='center'>5.54</td>
+					<td class='data' align='center'>5.54</td>
+					<td class='data' align='center'>$96.00</td>
+					<td class='dataRightSide' align='center'>$531.84</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed22'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>GAASTERLAND, TERRY</td>
+					<td class='data' align='center'>73438</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>MBR54TG</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>0</td>
+					<td class='data'>FILE SYS MGMT</td>
+					<td class='data' align='center'>.318</td>
+					<td class='data' align='center'>.318</td>
+					<td class='data' align='center'>$382.92</td>
+					<td class='dataRightSide' align='center'>$121.77</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed23'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>JAIME, HENRY</td>
+					<td class='data' align='center'>73700</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>NEU97DC</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>6931</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed24'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2016</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>73818</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed25'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>72528</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed26'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>72528</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed27'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>GAASTERLAND, TERRY</td>
+					<td class='data' align='center'>72364</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>MBR54TG</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>0</td>
+					<td class='data'>FILE SYS MGMT</td>
+					<td class='data' align='center'>.318</td>
+					<td class='data' align='center'>.318</td>
+					<td class='data' align='center'>$382.92</td>
+					<td class='dataRightSide' align='center'>$121.77</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed28'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>GAASTERLAND, TERRY</td>
+					<td class='data' align='center'>72364</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>MBR54TG</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>0</td>
+					<td class='data'>SERVER MAINT</td>
+					<td class='data' align='center'>5.54</td>
+					<td class='data' align='center'>5.54</td>
+					<td class='data' align='center'>$96.00</td>
+					<td class='dataRightSide' align='center'>$531.84</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed29'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>JAIME, HENRY</td>
+					<td class='data' align='center'>72632</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>NEU97DC</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>6931</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed30'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2016</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>72754</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed31'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>71379</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed32'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>71379</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed33'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>71379</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed34'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>70294</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed35'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>70294</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed36'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>70294</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed37'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>69225</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed38'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>69225</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed39'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>69225</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed40'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>69049</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed41'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>69049</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed42'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>69272</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed43'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>69272</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed44'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>68137</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed45'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>68137</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed46'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>68137</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed47'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>67958</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed48'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>67958</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed49'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>68184</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed50'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>68184</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed51'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>67045</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed52'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>67045</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed53'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>67045</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed54'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>66864</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed55'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>66864</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed56'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>67092</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed57'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>67092</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed58'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/29/2016</td>
+					<td class='data'>FERBERT, DAVID</td>
+					<td class='data' align='center'>67298</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>4087</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed59'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>65945</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed60'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>65945</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed61'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>65945</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed62'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>65764</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed63'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>65764</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed64'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>65992</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed65'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>65992</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed66'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2016</td>
+					<td class='data'>FERBERT, DAVID</td>
+					<td class='data' align='center'>66199</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACRCTI</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>4087</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed67'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>64649</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed68'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>64649</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed69'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>64649</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed70'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>64465</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed71'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>64465</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed72'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>64696</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed73'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>64696</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed74'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>64903</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed75'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>64903</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed76'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>64903</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed77'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>63506</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed78'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>63506</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed79'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>63506</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed80'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>63315</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed81'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>63315</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed82'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>63772</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed83'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>63772</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed84'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>63772</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed85'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>61511</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed86'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>61511</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed87'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>61511</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed88'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>61320</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed89'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>61320</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed90'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>61777</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed91'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>61777</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed92'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>61777</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed93'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>60490</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed94'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>60490</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed95'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>60490</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed96'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>60299</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed97'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>60299</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed98'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>60756</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed99'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>60756</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed100'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>9/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>60756</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed101'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>59425</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed102'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>59425</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed103'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>59425</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed104'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>59234</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed105'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>59234</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed106'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>59691</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed107'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>59691</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed108'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>8/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>59691</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed109'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>58334</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed110'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>58334</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed111'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>CARSON, LEONARD</td>
+					<td class='data' align='center'>58334</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACXDSD</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>7150</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed112'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>58139</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCOM1</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed113'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>COOPER, TREVOR</td>
+					<td class='data' align='center'>58139</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CAC103G</td>
+					<td class='data' align='center'>0 %</td>
+					<td class='data' align='center'>18941</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>.5</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$34.88</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed114'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>58612</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed115'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>58612</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed116'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>7/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>58612</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed117'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>57555</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed118'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>57555</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed119'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>6/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>57555</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed120'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>56354</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed121'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>56354</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed122'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>5/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>56354</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed123'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>55302</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed124'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>55302</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed125'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>4/30/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>55302</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed126'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>54318</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed127'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>54318</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed128'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>3/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>54318</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed129'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/28/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>53203</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed130'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/28/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>53203</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed131'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>2/28/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>53203</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed132'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>52068</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed133'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>52068</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed134'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>1/31/2015</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>52068</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed135'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>51199</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed136'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>51199</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed137'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>12/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>51199</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed138'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>50205</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed139'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>50205</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed140'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>11/30/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>50205</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed141'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>49227</td>
+					<td class='data'>Invalid SDSC buyer</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='removed142'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>49227</td>
+					<td class='data'>Invalid close date</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='removed143'>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td class='data'>10/31/2014</td>
+					<td class='data'>KULLBERG, MATTHEW</td>
+					<td class='data' align='center'>49227</td>
+					<td class='data'>Invalid index</td>
+					<td class='data'>CACCORT</td>
+					<td class='data' align='center'>100 %</td>
+					<td class='data' align='center'>223</td>
+					<td class='data'>VM - FIRST MACH</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>1</td>
+					<td class='data' align='center'>$69.75</td>
+					<td class='dataRightSide' align='center'>$69.75</td>
+				</tr>
+		</table>
+		</body>
+	</html>

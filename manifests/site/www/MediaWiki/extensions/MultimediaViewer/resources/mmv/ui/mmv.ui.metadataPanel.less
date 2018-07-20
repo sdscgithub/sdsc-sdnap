@@ -1,0 +1,285 @@
+@import "../mmv.globals";
+@import "../mmv.mixins";
+
+@info-box-color: #FFFFFF;
+@info-box-border-color: #DDDDDD;
+@info-box-border-shadow-color: #C9C9C9;
+
+@secondary-text-color: rgb(136, 136, 136);
+
+.mw-mmv-info-box {
+	display: inline-block;
+	overflow: hidden;
+
+	border: 1px solid @info-box-border-color;
+	border-bottom: 2px solid @info-box-border-shadow-color;
+	.box-round(3px);
+
+	background-color: @info-box-color;
+}
+
+.mw-mmv-title-contain {
+	position: relative;
+}
+
+.mw-mmv-title-para {
+	margin: 0;
+	padding: 10px 0 0;
+}
+.mw-mmv-credit {
+	margin: 0;
+	padding: 5px 0;
+}
+
+.mw-mmv-title {
+	font-size: 1.2em;
+	max-width: 60%;
+}
+
+.mw-mmv-image-metadata {
+	width: 100%;
+	background-color: #fbfbfb;
+	position: relative;
+	padding-top: 10px;
+}
+
+.jq-fullscreened .mw-mmv-image-metadata {
+	display: none;
+}
+
+.mw-mmv-image-desc-div {
+	overflow-y: auto;
+}
+
+.mw-mmv-image-desc-div,
+.mw-mmv-image-links-div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.mw-mmv-image-desc-div {
+	max-height: 150px;
+	margin-bottom: 15px;
+}
+
+@littlefont: 0.85em;
+@mediumfont: 1em;
+
+.mw-mmv-caption,
+.mw-mmv-image-desc {
+	font-size: @mediumfont;
+	color: #555555;
+}
+
+.mw-mmv-image-links {
+	margin: 0 20px;
+	li {
+		list-style: none;
+		font-size: @littlefont;
+		color: #3f4040;
+
+		&.empty {
+			display: none;
+		}
+
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			height: 16px;
+			width: 16px;
+			content: ' ';
+			margin-right: 10px;
+			background-size: contain;
+			background-position: right center;
+			background-repeat: no-repeat;
+		}
+
+		&.mw-mmv-datetime-li:before {
+			/* @embed */
+			background-image: url(img/time.svg);
+		}
+
+		&.mw-mmv-username-li:before {
+			/* @embed */
+			background-image: url(img/user-ltr.svg);
+		}
+
+		&.mw-mmv-location-li:before {
+			/* @embed */
+			background-image: url(img/location.svg);
+		}
+
+		&.mw-mmv-repo-li:before {
+			display: none;
+		}
+
+		&.empty:before {
+			background-image: none !important;
+		}
+	}
+}
+
+.mw-mmv-repo-li {
+	@padding: 5px;
+	@icon-size: 16px;
+
+	display: block;
+	min-height: @icon-size;
+	border: 1px solid @info-box-border-color;
+	.box-round(5px);
+	padding: @padding;
+	padding-left: @icon-size + 2 * @padding;
+	margin-top: 10px;
+
+	/* @embed */
+	background-image: url(img/repo.svg);
+	background-repeat: no-repeat;
+	background-size: auto @icon-size;
+	// icon should be positioned with consistent padding, but using absolute lengths is not RTL-compatible
+	// so we use percentages (looks a bit off) for older browsers and four-value syntax for newer ones;
+	// MediaWiki flips 'left' keywords automatically
+	background-position: 2% center;
+	background-position: left @padding center;
+
+	background-color: @info-box-color;
+
+	line-height: 1.3;
+
+	&.commons { // there is an extra subtitle for Commons images, box should be larger
+		/* @embed */
+		background-image: url(img/commons.svg);
+		@icon-size: 32px;
+		min-height: @icon-size;
+		padding-left: @icon-size + 2 * @padding;
+		background-size: auto @icon-size;
+		background-position: 3% center;
+		background-position: left @padding+4px center;
+	}
+
+	.mw-mmv-repo,
+	.mw-mmv-repo-subtitle {
+		display: block;
+	}
+
+	.mw-mmv-repo-subtitle {
+		color: @secondary-text-color;
+		font-size: small;
+	}
+}
+
+.mw-mmv-title-credit {
+
+	height: @metadatabar-above-fold-height;
+	.jq-fullscreened & {
+		height: @metadatabar-above-fold-fullscreen-height;
+	}
+	.mw-mmv-untruncated & {
+		height: auto;
+	}
+}
+
+.mw-mmv-license {
+	color: #888888;
+	font-size: 0.9em;
+	padding: 0 10px; // pad both sides; depending on the language of the image name, this might end up on either side
+
+	&.empty {
+		display: none;
+	}
+
+	&.cc-license:before {
+		background-size: contain;
+		/* @embed */
+		background-image: url(img/cc.svg);
+		display: inline-block;
+		vertical-align: text-bottom;
+		height: 20px;
+		width: 20px;
+		content: ' ';
+		/* @noflip */ margin-right: 5px; // :before is not flipped either
+	}
+}
+
+.mw-mmv-license-contain,
+.mw-mmv-license {
+	text-align: right;
+}
+
+// These are single-line; make sure it looks sane when they are too long (we truncate the text by character
+// limit, but that's still no guarantee it will fit in one line)
+.mw-mmv-title-para,
+.mw-mmv-credit {
+	overflow: hidden;
+	padding-right: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	// in untruncated mode, the text can be multiline
+	.mw-mmv-untruncated & {
+		overflow: visible; // needed so the stripe button floats can run into the block and the text can flow around them
+		white-space: normal;
+	}
+}
+
+.mw-mmv-title-para,
+.mw-mmv-credit,
+.mw-mmv-image-desc,
+.mw-mmv-caption {
+	padding-left: 20px;
+}
+
+.mw-mmv-image-desc-div.empty .mw-mmv-image-desc {
+	color: @secondary-text-color;
+	font-style: italic;
+}
+
+.mw-mmv-caption.empty {
+	display: none;
+}
+
+.mw-mmv-about-links {
+	font-size: @littlefont;
+	padding: 20px;
+	width: 50%;
+}
+
+.mw-mmv-label {
+	color: #333333;
+	margin-left: 6px;
+	.box-round(3px);
+	padding: 2px 5px;
+	background-color: #dddddd;
+	font-size: 0.9em;
+	&:hover {
+		background-color: #c9c9c9;
+	}
+}
+
+.mw-mmv-image-metadata-column {
+	float: left;
+}
+
+.mw-mmv-image-metadata-desc-column {
+	width: 66.5%;
+}
+
+.mw-mmv-image-metadata-links-column {
+	width: 33.5%;
+}
+
+.mw-mmv-permission-link {
+	cursor: pointer;
+
+	.jq-fullscreened & {
+		display: none;
+	}
+}
+
+.mw-mmv-optout-link.pending {
+	cursor: wait;
+	color: #555;
+}
+
+.mw-mmv-about-links {
+	clear: both;
+}

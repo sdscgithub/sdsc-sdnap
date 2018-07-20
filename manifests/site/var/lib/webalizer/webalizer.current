@@ -1,0 +1,213 @@
+# Webalizer V2.21-02 Incremental Data - 05/06/2018 08:11:06
+2018 5 6 8 11 6
+5620 4 4 1 10 31 1952441 4720 10 0
+1 1 5613 1 6
+1 0 312 1 1 1
+1 0 312 1 1 1
+1 0 312 1 1 1
+2 0 624 2 2 2
+5614 4 1950569 3 4714 4
+1 0 312 1 1 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+6 0 1872 6
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+5614 4 1950569 4714
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0
+0
+0
+4
+0
+0
+0
+0
+0
+0
+0
+5545
+0
+0
+0
+0
+0
+57
+0
+0
+2
+11
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+0
+# -urls- 
+/
+0 4 0 0 2 0
+# End Of Table - urls
+# -sites- (monthly)
+::1
+0 3 3 0 1 1525531796
+/
+sc-ath038.ad.ucsd.edu
+0 1 0 312 1 1525445384
+-
+netops-security-4.ucsd.edu
+0 5610 1 1950257 2 1525531741
+/
+wup.sdsc.edu
+0 6 0 1872 6 1525594266
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+wup.sdsc.edu
+0 1 0 312 1 1525594266
+/
+# End Of Table - sites (daily)
+# -referrers- 
+http://132.239.1.200
+0 4
+- (Direct Request)
+0 5606
+https://172.25.119.20:80/
+0 1
+http://172.25.119.20/myaccount/login.asp
+0 1
+http://172.25.119.20/
+0 1
+https://172.25.119.20/
+0 1
+http://holonet-clone.ucsd.edu/guestbook.html
+0 2
+http://holonet-clone.ucsd.edu
+0 1
+http://172.25.119.20/c99.php
+0 2
+http://172.25.119.20:80/
+0 1
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+0 1
+Gecko/20100914
+0 1
+Java/1.8.0_161
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:46.0) Gecko/20100101 Firefox/46.0
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:55.0) Gecko/20100101 Firefox/55.0
+0 1
+Mozilla/5.0
+0 1
+Apache/2.2.15 (CentOS) (internal dummy connection)
+0 3
+Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Firefox/52.0
+0 2
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+0 3
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.1.4322)
+0 3
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.18) Gecko/2010020220 Firefox/3.0.18 (.NET CLR 3.5.30729)
+0 8
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.18) Gecko/2010020220 Firefox/3.0.18 (.NET CLR 3.5.30729);
+0 1
+Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0
+0 2
+curl/7.47.0
+0 28
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:59.0) Gecko/20100101 Firefox/59.0
+0 4
+Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:58.0) Gecko/20100101 Firefox/58.0
+0 1
+Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0
+0 3
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0
+0 1
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:45.0) Gecko/20100101 Firefox/45.0
+0 2
+gSOAP/2.8
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0
+0 151
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.14)
+0 5
+QualysGuard
+0 1
+Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0
+0 9
+Java/1.8.0_102
+0 1
+ZX-80 SPECTRUM
+0 1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:53.0) Gecko/20100101 Firefox/53.0
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

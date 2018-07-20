@@ -1,0 +1,167 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>SDSC Bounce Reports</title>
+		<script>
+			function showDropDown()
+			{
+				var newId = document.getElementById('firstDropDown').value;
+				var selects = document.getElementsByClassName('secondDropDown');
+				for(var i = 0; i < selects.length; i++)
+				{
+					selects[i].style.display='none';
+				}
+				document.getElementById(newId).style.display='inline';				
+			}
+			function navigate(x)
+			{
+				if(x.value != 'none')
+				{
+					var y = 'https://holonet.sdsc.edu/Bounces/' + x.value;
+					document.location.href = y;
+				}
+			}
+		</script>
+		<link rel='icon' href='../images/favicon.ico'>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu'><-- Back</a><br><br>
+		<table cellpadding='20px'>
+			<tr>
+				<td>
+					<select onchange='showDropDown()' id='firstDropDown'>
+						<option value='none'>- Select a Seller -</option> 
+						<option value='COMMVAULT'>COMMVAULT</option> 
+						<option value='ITRFCONSULTING'>ITRFCONSULTING</option> 
+						<option value='ITRFDESKTOP'>ITRFDESKTOP</option> 
+						<option value='SRFCLOUD'>SRFCLOUD</option> 
+						<option value='SRFPROJECT'>SRFPROJECT</option> 
+						<option value='UNIX'>UNIX</option> 
+						<option value='WINDOWSVM'>WINDOWSVM</option>
+					</select>
+				</td>
+				<td>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='COMMVAULT'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='COMMVAULT/2015.09.html'>2015.09.html</option> 
+						<option value='COMMVAULT/2015.12.html'>2015.12.html</option> 
+						<option value='COMMVAULT/2016.01.html'>2016.01.html</option> 
+						<option value='COMMVAULT/2016.02.html'>2016.02.html</option> 
+						<option value='COMMVAULT/2016.03.html'>2016.03.html</option> 
+						<option value='COMMVAULT/2016.04.html'>2016.04.html</option> 
+						<option value='COMMVAULT/2016.05.html'>2016.05.html</option> 
+						<option value='COMMVAULT/2016.06.html'>2016.06.html</option> 
+						<option value='COMMVAULT/2016.07.html'>2016.07.html</option> 
+						<option value='COMMVAULT/2016.08.html'>2016.08.html</option> 
+						<option value='COMMVAULT/2016.09.html'>2016.09.html</option> 
+						<option value='COMMVAULT/2016.10.html'>2016.10.html</option> 
+						<option value='COMMVAULT/2016.12.html'>2016.12.html</option> 
+						<option value='COMMVAULT/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='ITRFCONSULTING'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='ITRFCONSULTING/2015.09.html'>2015.09.html</option> 
+						<option value='ITRFCONSULTING/2015.12.html'>2015.12.html</option> 
+						<option value='ITRFCONSULTING/2016.01.html'>2016.01.html</option> 
+						<option value='ITRFCONSULTING/2016.02.html'>2016.02.html</option> 
+						<option value='ITRFCONSULTING/2016.03.html'>2016.03.html</option> 
+						<option value='ITRFCONSULTING/2016.04.html'>2016.04.html</option> 
+						<option value='ITRFCONSULTING/2016.05.html'>2016.05.html</option> 
+						<option value='ITRFCONSULTING/2016.06.html'>2016.06.html</option> 
+						<option value='ITRFCONSULTING/2016.07.html'>2016.07.html</option> 
+						<option value='ITRFCONSULTING/2016.08.html'>2016.08.html</option> 
+						<option value='ITRFCONSULTING/2016.09.html'>2016.09.html</option> 
+						<option value='ITRFCONSULTING/2016.10.html'>2016.10.html</option> 
+						<option value='ITRFCONSULTING/2016.12.html'>2016.12.html</option> 
+						<option value='ITRFCONSULTING/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='ITRFDESKTOP'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='ITRFDESKTOP/2015.09.html'>2015.09.html</option> 
+						<option value='ITRFDESKTOP/2015.12.html'>2015.12.html</option> 
+						<option value='ITRFDESKTOP/2016.01.html'>2016.01.html</option> 
+						<option value='ITRFDESKTOP/2016.02.html'>2016.02.html</option> 
+						<option value='ITRFDESKTOP/2016.03.html'>2016.03.html</option> 
+						<option value='ITRFDESKTOP/2016.04.html'>2016.04.html</option> 
+						<option value='ITRFDESKTOP/2016.05.html'>2016.05.html</option> 
+						<option value='ITRFDESKTOP/2016.06.html'>2016.06.html</option> 
+						<option value='ITRFDESKTOP/2016.07.html'>2016.07.html</option> 
+						<option value='ITRFDESKTOP/2016.08.html'>2016.08.html</option> 
+						<option value='ITRFDESKTOP/2016.09.html'>2016.09.html</option> 
+						<option value='ITRFDESKTOP/2016.10.html'>2016.10.html</option> 
+						<option value='ITRFDESKTOP/2016.12.html'>2016.12.html</option> 
+						<option value='ITRFDESKTOP/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='SRFCLOUD'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='SRFCLOUD/2015.09.html'>2015.09.html</option> 
+						<option value='SRFCLOUD/2015.12.html'>2015.12.html</option> 
+						<option value='SRFCLOUD/2016.01.html'>2016.01.html</option> 
+						<option value='SRFCLOUD/2016.02.html'>2016.02.html</option> 
+						<option value='SRFCLOUD/2016.03.html'>2016.03.html</option> 
+						<option value='SRFCLOUD/2016.04.html'>2016.04.html</option> 
+						<option value='SRFCLOUD/2016.05.html'>2016.05.html</option> 
+						<option value='SRFCLOUD/2016.06.html'>2016.06.html</option> 
+						<option value='SRFCLOUD/2016.07.html'>2016.07.html</option> 
+						<option value='SRFCLOUD/2016.08.html'>2016.08.html</option> 
+						<option value='SRFCLOUD/2016.09.html'>2016.09.html</option> 
+						<option value='SRFCLOUD/2016.10.html'>2016.10.html</option> 
+						<option value='SRFCLOUD/2016.12.html'>2016.12.html</option> 
+						<option value='SRFCLOUD/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='SRFPROJECT'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='SRFPROJECT/2015.09.html'>2015.09.html</option> 
+						<option value='SRFPROJECT/2015.12.html'>2015.12.html</option> 
+						<option value='SRFPROJECT/2016.01.html'>2016.01.html</option> 
+						<option value='SRFPROJECT/2016.02.html'>2016.02.html</option> 
+						<option value='SRFPROJECT/2016.03.html'>2016.03.html</option> 
+						<option value='SRFPROJECT/2016.04.html'>2016.04.html</option> 
+						<option value='SRFPROJECT/2016.05.html'>2016.05.html</option> 
+						<option value='SRFPROJECT/2016.06.html'>2016.06.html</option> 
+						<option value='SRFPROJECT/2016.07.html'>2016.07.html</option> 
+						<option value='SRFPROJECT/2016.08.html'>2016.08.html</option> 
+						<option value='SRFPROJECT/2016.09.html'>2016.09.html</option> 
+						<option value='SRFPROJECT/2016.10.html'>2016.10.html</option> 
+						<option value='SRFPROJECT/2016.12.html'>2016.12.html</option> 
+						<option value='SRFPROJECT/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='UNIX'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='UNIX/2015.09.html'>2015.09.html</option> 
+						<option value='UNIX/2015.12.html'>2015.12.html</option> 
+						<option value='UNIX/2016.01.html'>2016.01.html</option> 
+						<option value='UNIX/2016.02.html'>2016.02.html</option> 
+						<option value='UNIX/2016.03.html'>2016.03.html</option> 
+						<option value='UNIX/2016.04.html'>2016.04.html</option> 
+						<option value='UNIX/2016.05.html'>2016.05.html</option> 
+						<option value='UNIX/2016.06.html'>2016.06.html</option> 
+						<option value='UNIX/2016.07.html'>2016.07.html</option> 
+						<option value='UNIX/2016.08.html'>2016.08.html</option> 
+						<option value='UNIX/2016.09.html'>2016.09.html</option> 
+						<option value='UNIX/2016.10.html'>2016.10.html</option> 
+						<option value='UNIX/2016.12.html'>2016.12.html</option> 
+						<option value='UNIX/2017.01.html'>2017.01.html</option>
+					</select>
+					<select style='display:none' class='secondDropDown' onchange='navigate(this)' id='WINDOWSVM'>
+						<option value='none'>- Select an Entry -</option> 
+						<option value='WINDOWSVM/2015.09.html'>2015.09.html</option> 
+						<option value='WINDOWSVM/2015.12.html'>2015.12.html</option> 
+						<option value='WINDOWSVM/2016.01.html'>2016.01.html</option> 
+						<option value='WINDOWSVM/2016.02.html'>2016.02.html</option> 
+						<option value='WINDOWSVM/2016.03.html'>2016.03.html</option> 
+						<option value='WINDOWSVM/2016.04.html'>2016.04.html</option> 
+						<option value='WINDOWSVM/2016.05.html'>2016.05.html</option> 
+						<option value='WINDOWSVM/2016.06.html'>2016.06.html</option> 
+						<option value='WINDOWSVM/2016.07.html'>2016.07.html</option> 
+						<option value='WINDOWSVM/2016.08.html'>2016.08.html</option> 
+						<option value='WINDOWSVM/2016.09.html'>2016.09.html</option> 
+						<option value='WINDOWSVM/2016.10.html'>2016.10.html</option> 
+						<option value='WINDOWSVM/2016.12.html'>2016.12.html</option> 
+						<option value='WINDOWSVM/2017.01.html'>2017.01.html</option>
+					</select> 	
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

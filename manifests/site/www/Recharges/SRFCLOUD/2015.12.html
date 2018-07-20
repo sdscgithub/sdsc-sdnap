@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SRF CLOUD</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'inline-table')
+				{
+					document.getElementById(x).style.display='none';
+				}
+				else
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SRF CLOUD<br><br>	
+		<u>12/31/2015 revenue</u> = $23,542.33<br>
+		<u>11/30/2015 revenue</u> = $38,669.59<br><h2 align='center' style='cursor:pointer;' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u>Number of added charges</u>: 69<br><br>
+		<table width='100%' style='border-collapse:collapse; display:inline-table;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr id='added0' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">ADIDA, CLAIRE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">[Cloud Storage] Usage Charges (cadida&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">IRP6458</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added1' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">AUGHINBAUGH, EMILY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">[Cloud Storage] Usage Charges (ucsd_admissions&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">REGNRTF</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added1')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added2' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">BALKENHOL, BOB</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$32.16</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">[Cloud Storage] Usage Charges (smnusr001&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">CAC3390</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">1</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added2')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added3' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">BARSHOP, BRUCE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">[Cloud Storage] Usage Charges (less_than_50&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">PED1249</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added3')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added4' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">BARSHOP, BRUCE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">[Cloud Storage] Usage Charges (ucsd_biochemical_genetics&#58</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">PED1249</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added4')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added5' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">BEJAR, RAFAEL</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$17.37</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">[Cloud Storage] Usage Charges (bejarlab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">CCT1630</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">.54</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added5')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added6' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">BORDA, SUSAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">[Cloud Storage] Usage Charges (sborda&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">CACCLDX</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added6')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added7' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">CHIEN, SHU</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">[Cloud Storage] Usage Charges (shuchien&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">EMI9277</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added7')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added8' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">CHOURASIA, AMIT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$21.23</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">[Cloud Storage] Usage Charges (sciviscontest&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">CACSTPP</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">.66</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added8')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added9' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">CREWS ROBERTSON, LES</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">[Cloud Storage] Usage Charges (lcrews&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">CCTCJCD</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added9')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added10' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">CRIST, KATIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">[Cloud Storage] Usage Charges (cwphs&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">CIT2270</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added10')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added11' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">DAWSON, MIKE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">[Cloud Storage] Usage Charges (ucm_faculty&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">CAC2UCM</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added11')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added12' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">DURAZO, YVETTE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">[Cloud Storage] Usage Charges (kagnofflab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">MED3045</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added12')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added13' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">EWOLDSEN, KURT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$18.97</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">[Cloud Storage] Usage Charges (cdltemp&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">CACSCDL</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">.59</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added13')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added14' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">EWOLDSEN, KURT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">[Cloud Storage] Usage Charges (wasdev&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">CACSCDL</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added14')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added15' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">FERBERT, ANDREW</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$718.13</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">[Cloud Storage] Usage Charges (itunix-backup&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">CACCORT</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">22.33</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added15')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added16' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">GAERTNER, BJOERN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">[Cloud Storage] Usage Charges (sanderlab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">PED2641</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added16')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added17' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">GERRITSEN, ERIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$9,776.00</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">[Cloud Storage] Usage Charges (jpl-pz-1&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">CAC3390</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">303.98</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added17')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added18' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">GERRITSEN, ERIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$2,600.14</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">[Cloud Storage] Usage Charges (jpl-pz-2&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">CAC3390</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">80.85</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added18')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added19' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">GERRITSEN, ERIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$1,280.61</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">[Cloud Storage] Usage Charges (jpl-pz-3&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">CAC3390</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">39.82</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added19')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added20' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">GERRITSEN, ERIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">[Cloud Storage] Usage Charges (jpl-pz-4&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">CAC3390</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added20')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added21' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">GRAHAM, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">[Cloud Storage] Usage Charges (jjgraham&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">IDIMISC</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added21')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added22' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">GUTIERREZ, TRAVIS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">[Cloud Storage] Usage Charges (ucr-academic-senate&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">CAC3UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added22')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added23' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">KELTNER, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">[Cloud Storage] Usage Charges (keltner-ucsd-cloud&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">PST6719</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added23')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added24' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">KIM, RYAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">[Cloud Storage] Usage Charges (ctan&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">CCT4782</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added24')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added25' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">KRITZIK, MARCIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">[Cloud Storage] Usage Charges (imaging&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">PHRTRSU</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added25')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added26' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">KULLBERG, MATT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">[Cloud Storage] Usage Charges (sysadmin-l&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">CACCLDX</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added26')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added27' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">LEUNG, ALBERT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">[Cloud Storage] Usage Charges (leung_research_group&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">ANS00AL</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added27')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added28' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">LEVY, KATHERINE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">[Cloud Storage] Usage Charges (dacor&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">IGCDWPG</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added28')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added29' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">LEVY, KATHERINE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">[Cloud Storage] Usage Charges (philippines&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">IGCDWPG</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added29')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added30' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">LI, HAIBIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">[Cloud Storage] Usage Charges (haibinl&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">CACTGCS</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added30')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added31' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">LUBIN, DAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">$103.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">[Cloud Storage] Usage Charges (ux453261&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">CAPDL14</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">3.23</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added31')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added32' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">LUBIN, DAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">$100.93</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">[Cloud Storage] Usage Charges (ux453261&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">CAPDL59</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">3.14</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added32')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added33' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added33')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added33')">LUBIN, DAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added33')">$100.93</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added33')">[Cloud Storage] Usage Charges (ux453261&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added33')">CAPDL88</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added33')">3.14</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added33')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added33')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added34' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added34')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added34')">MENDEZ, JOSE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added34')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added34')">[Cloud Storage] Usage Charges (djmoore&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added34')">CNTN910</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added34')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added34')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added34')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added35' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added35')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added35')">MENDEZ, JOSE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added35')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added35')">[Cloud Storage] Usage Charges (dofranklin&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added35')">PSTAG40</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added35')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added35')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added35')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added36' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added36')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added36')">MENDEZ, JOSE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added36')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added36')">[Cloud Storage] Usage Charges (jmarquie&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added36')">PSTHN12</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added36')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added36')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added36')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added37' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added37')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added37')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added37')">$81.69</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added37')">[Cloud Storage] Usage Charges (acid&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added37')">CACRSTO</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added37')">2.54</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added37')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added37')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added38' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added38')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added38')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added38')">$44.38</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added38')">[Cloud Storage] Usage Charges (cycorecalit2&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added38')">CIT4853</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added38')">1.38</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added38')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added38')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added39' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added39')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added39')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added39')">$29.27</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added39')">[Cloud Storage] Usage Charges (cycoresdsc&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added39')">CIT4853</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added39')">.91</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added39')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added39')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added40' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added40')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added40')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added40')">$22.51</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added40')">[Cloud Storage] Usage Charges (delphi&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added40')">CIT7813</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added40')">.7</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added40')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added40')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added41' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added41')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added41')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added41')">$334.79</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added41')">[Cloud Storage] Usage Charges (opentopography&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added41')">CACTOPO</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added41')">10.41</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added41')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added41')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added42' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added42')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added42')">NEWKIRK, ANITA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added42')">$111.27</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added42')">[Cloud Storage] Usage Charges (bella&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added42')">CACCLBL</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added42')">3.46</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added42')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added42')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added43' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added43')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added43')">NGUYEN, NELSON</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added43')">$18.52</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added43')">[Cloud Storage] Usage Charges (csh-it&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added43')">CCT2050</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added43')">.58</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added43')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added43')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added44' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added44')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added44')">NGUYEN, NELSON</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added44')">$4.63</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added44')">[Cloud Storage] Usage Charges (csh-it&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added44')">CCT3050</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added44')">.14</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added44')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added44')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added45' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added45')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added45')">NORMAN, MIKE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added45')">$2,867.39</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added45')">[Cloud Storage] Usage Charges (normanlab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added45')">CACRSTO</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added45')">89.16</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added45')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added45')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added46' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added46')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added46')">POSAKONY, JIM</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added46')">$20.58</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added46')">[Cloud Storage] Usage Charges (posakony_lab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added46')">BIO9546</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added46')">.64</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added46')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added46')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added47' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added47')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added47')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added47')">$57.57</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added47')">[Cloud Storage] Usage Charges (ucrback&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added47')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added47')">1.79</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added47')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added47')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added48' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added48')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added48')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added48')">$24.12</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added48')">[Cloud Storage] Usage Charges (ucrback1&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added48')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added48')">.75</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added48')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added48')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added49' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added49')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added49')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added49')">$46.31</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added49')">[Cloud Storage] Usage Charges (ucrback2&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added49')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added49')">1.44</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added49')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added49')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added50' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added50')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added50')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added50')">$77.51</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added50')">[Cloud Storage] Usage Charges (ucrback3&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added50')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added50')">2.41</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added50')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added50')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added51' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added51')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added51')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added51')">$76.86</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added51')">[Cloud Storage] Usage Charges (ucrback4&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added51')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added51')">2.39</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added51')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added51')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added52' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added52')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added52')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added52')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added52')">[Cloud Storage] Usage Charges (ucrback5&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added52')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added52')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added52')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added52')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added53' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added53')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added53')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added53')">$17.37</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added53')">[Cloud Storage] Usage Charges (ucrback6&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added53')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added53')">.54</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added53')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added53')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added54' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added54')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added54')">PULIDO, FREDY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added54')">$39.24</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added54')">[Cloud Storage] Usage Charges (ucrback7&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added54')">CAC2UCR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added54')">1.22</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added54')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added54')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added55' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added55')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added55')">RAAB, FREDRIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added55')">$41.49</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added55')">[Cloud Storage] Usage Charges (palms&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added55')">CIT2270</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added55')">1.29</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added55')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added55')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added56' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added56')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added56')">REYA, TANNISHTHA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added56')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added56')">[Cloud Storage] Usage Charges (reyalab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added56')">PHRTRSU</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added56')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added56')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added56')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added57' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added57')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added57')">ROCH, MARIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added57')">$70.11</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added57')">[Cloud Storage] Usage Charges (dclde&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added57')">MPLJH1P</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added57')">2.18</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added57')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added57')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added58' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added58')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added58')">SCHIEBER, BRIAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added58')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added58')">[Cloud Storage] Usage Charges (spg&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added58')">IOD1896</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added58')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added58')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added58')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added59' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added59')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added59')">SMITH, JEFFREY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added59')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added59')">[Cloud Storage] Usage Charges (brownlab&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added59')">PHRICHR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added59')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added59')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added59')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added60' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added60')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added60')">STILLWAGEN, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added60')">$81.36</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added60')">[Cloud Storage] Usage Charges (liai_irt&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added60')">VCRLIAI</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added60')">2.53</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added60')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added60')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added61' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added61')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added61')">STRANDE, SHAWN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added61')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added61')">[Cloud Storage] Usage Charges (gordon&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added61')">CAC103G</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added61')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added61')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added61')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added62' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added62')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added62')">SWEENEY, AARON</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added62')">$230.59</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added62')">[Cloud Storage] Usage Charges (gdc&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added62')">GRDNSSO</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added62')">7.17</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added62')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added62')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added63' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added63')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added63')">WAGNER, RICK</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added63')">$210.65</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added63')">[Cloud Storage] Usage Charges (cadac&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added63')">CACTGCS</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added63')">6.55</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added63')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added63')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added64' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added64')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added64')">WOLTER, NICOLE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added64')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added64')">[Cloud Storage] Usage Charges (nickel&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added64')">CACON77</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added64')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added64')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added64')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added65' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added65')">12/22/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added65')">WOLTER, NICOLE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added65')">$16.08</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added65')">[Cloud Storage] Usage Charges (pace&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added65')">CACON77</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added65')">.5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added65')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added65')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added66' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added66')">12/21/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added66')">EWOLDSEN, KURT</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added66')">$1,573.27</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added66')">[Cloud Storage] Usage Charges (merrit and wasprod&#58;Dec)</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added66')">CACSCDL</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added66')">48.92</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added66')">$32.16</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added66')">ON DEMAND TRIPLE COPY</td>			
+			</tr>
+			<tr id='added67' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added67')">11/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added67')">INAL, TUGAY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added67')">$1,216.88</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added67')">Commvault Invoice - Rady-Storage-Policy - Nov Commvault Invoice - Rady-Storage-Policy - Nov </td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added67')">MGTFNIT</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added67')">34.6</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added67')">$35.17</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added67')">COMMVAULT STORAGE</td>			
+			</tr>
+			<tr id='added68' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added68')">10/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added68')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added68')">-$6.33</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added68')">Commvault Invoice - wcga - Oct Commvault Invoice - wcga - Oct </td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added68')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added68')">-.18</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added68')">$35.17</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added68')">COMMVAULT STORAGE</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u>Number of removed recharges</u>: 98<br><br>
+		<table width='100%' style='border-collapse:collapse; display:inline-table;' id='removed'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+		<tr id='removed0' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">ADIDA, CLAIRE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">[Cloud Storage] Usage Charges  (cadida&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">IRP6458</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed0')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed1' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">AUGHINBAUGH, EMILY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">[Cloud Storage] Usage Charges  (ucsd_admissions&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">REGNRTF</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed1')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed2' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">BALKENHOL, BOB</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">[Cloud Storage] Usage Charges  (smnusr001&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">CAC3390</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed2')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed3' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">BARSHOP, BRUCE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">[Cloud Storage] Usage Charges  (less_than_50&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">PED1249</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed3')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed4' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">BARSHOP, BRUCE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">[Cloud Storage] Usage Charges  (ucsd_biochemical_genetics&#5</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">PED1249</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed4')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed5' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">BEJAR, RAFAEL</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$17.51</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">[Cloud Storage] Usage Charges  (bejarlab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">CCT1630</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">.54</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed5')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed6' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">BORDA, SUSAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">[Cloud Storage] Usage Charges  (sborda&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">CACCLDX</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed6')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed7' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">CHIEN, SHU</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">[Cloud Storage] Usage Charges  (shuchien&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">EMI9277</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed7')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed8' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">CHOURASIA, AMIT</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$21.21</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">[Cloud Storage] Usage Charges  (sciviscontest&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">CACSTPP</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">.66</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed8')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed9' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">DAVID, LOY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$18.91</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">[Cloud Storage] Usage Charges  (cdltemp&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">CACSCDL</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">.59</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed9')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed10' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">DAVID, LOY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$1,548.83</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">[Cloud Storage] Usage Charges (merrit and wasprod&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">CACSCDL</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">48.16</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed10')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed11' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">DURAZO, YVETTE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">[Cloud Storage] Usage Charges  (kagnofflab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">MEDMKDS</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed11')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed12' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">FERBERT, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">$701.69</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">[Cloud Storage] Usage Charges  (itunix-backup&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">CACCORT</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">21.82</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed12')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed13' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">FRABETTI, JO</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">[Cloud Storage] Usage Charges  (pace&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">CACON77</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed13')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed14' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed14')">FRANKLIN, DONALD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed14')">[Cloud Storage] Usage Charges  (dofranklin&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">PSTAG40</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed14')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed15' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed15')">FUTALAN, DIAHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed15')">[Cloud Storage] Usage Charges  (ctan&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">CCT4782</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed15')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed16' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed16')">GAERTNER, BJOERN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed16')">[Cloud Storage] Usage Charges  (sanderlab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">PED2641</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed16')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed17' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed17')">GERRITSEN, ERIC</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">$10,063.90</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed17')">[Cloud Storage] Usage Charges  (jpl-pz-1&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">CAC3390</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">312.93</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed17')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed18' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed18')">GEVSMZUJL, GEVSMZUJL</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed18')">[Cloud Storage] Usage Charges  (sysadmin-l&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">CACCLDX</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed18')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed19' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed19')">GRAHAM, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed19')">[Cloud Storage] Usage Charges  (jjgraham&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">IDIMISC</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed19')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed20' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed20')">GUEST, PACE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed20')">[Cloud Storage] Usage Charges  (nickel&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">CACON77</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed20')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed21' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed21')">GUTIERREZ, TRAVIS</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed21')">[Cloud Storage] Usage Charges  (ucr-academic-senate&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">CAC3UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed21')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed22' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed22')">HUGHES, DOUGLAS</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">$2,694.69</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed22')">[Cloud Storage] Usage Charges  (jpl-pz-2&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">CAC3390</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">83.79</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed22')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed23' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed23')">KELTNER, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed23')">[Cloud Storage] Usage Charges  (keltner-ucsd-cloud&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">PST6719</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed23')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed24' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed24')">KRITZIK, MARCIE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed24')">[Cloud Storage] Usage Charges  (imaging&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">PHRTRSU</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed24')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed25' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed25')">LEUNG, ALBERT</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed25')">[Cloud Storage] Usage Charges  (leung_research_group&#58;Nov</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">ANS00AL</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed25')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed26' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed26')">LEVY, KATHERINE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed26')">[Cloud Storage] Usage Charges  (dacor&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">IGCDWPG</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed26')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed27' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed27')">LEVY, KATHERINE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed27')">[Cloud Storage] Usage Charges  (philippines&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">IGCDWPG</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed27')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed28' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed28')">LI, HAIBIN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed28')">[Cloud Storage] Usage Charges  (haibinl&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">CACTGCS</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed28')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed29' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed29')">LUBIN, DAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">$104.03</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed29')">[Cloud Storage] Usage Charges  (ux453261&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">CAPDL14</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">3.23</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed29')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed30' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed30')">LUBIN, DAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">$100.98</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed30')">[Cloud Storage] Usage Charges  (ux453261&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">CAPDL56</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">3.14</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed30')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed31' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed31')">LUBIN, DAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">$100.98</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed31')">[Cloud Storage] Usage Charges  (ux453261&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">CAPDL59</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">3.14</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed31')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed32' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed32')">MARQUIE, JENNIFER</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed32')">[Cloud Storage] Usage Charges  (jmarquie&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">PSTHN12</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed32')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed33' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed33')">MOORE, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed33')">[Cloud Storage] Usage Charges  (djmoore&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">CNTN910</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed33')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed34' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed34')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">$81.53</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed34')">[Cloud Storage] Usage Charges  (acid&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">CACRSTO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">2.54</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed34')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed35' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed35')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">$43.69</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed35')">[Cloud Storage] Usage Charges  (cycorecalit2&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">CIT4853</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">1.36</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed35')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed36' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed36')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">$27.45</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed36')">[Cloud Storage] Usage Charges  (cycoresdsc&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">CIT4853</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">.85</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed36')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed37' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed37')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed37')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed37')">$19.71</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed37')">[Cloud Storage] Usage Charges  (delphi&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed37')">CIT7813</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed37')">.61</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed37')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed37')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed38' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed38')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed38')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed38')">$334.57</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed38')">[Cloud Storage] Usage Charges  (opentopography&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed38')">CACTOPO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed38')">10.4</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed38')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed38')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed39' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed39')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed39')">NEWKIRK, ANITA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed39')">$110.73</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed39')">[Cloud Storage] Usage Charges  (bella&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed39')">CACCLBL</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed39')">3.44</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed39')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed39')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed40' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed40')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed40')">NGUYEN, NELSON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed40')">$18.33</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed40')">[Cloud Storage] Usage Charges  (csh-it&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed40')">CCT2050</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed40')">.57</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed40')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed40')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed41' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed41')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed41')">NGUYEN, NELSON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed41')">$4.58</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed41')">[Cloud Storage] Usage Charges  (csh-it&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed41')">CCT3050</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed41')">.14</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed41')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed41')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed42' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed42')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed42')">NORMAN, MICHAEL</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed42')">$2,867.40</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed42')">[Cloud Storage] Usage Charges  (normanlab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed42')">CACRSTO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed42')">89.16</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed42')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed42')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed43' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed43')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed43')">POSAKONY, JIM</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed43')">$20.70</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed43')">[Cloud Storage] Usage Charges  (posakony_lab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed43')">BIO9546</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed43')">.64</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed43')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed43')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed44' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed44')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed44')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed44')">$63.80</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed44')">[Cloud Storage] Usage Charges  (ucrback&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed44')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed44')">1.98</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed44')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed44')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed45' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed45')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed45')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed45')">$23.73</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed45')">[Cloud Storage] Usage Charges  (ucrback1&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed45')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed45')">.74</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed45')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed45')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed46' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed46')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed46')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed46')">$49.50</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed46')">[Cloud Storage] Usage Charges  (ucrback2&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed46')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed46')">1.54</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed46')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed46')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed47' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed47')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed47')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed47')">$79.99</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed47')">[Cloud Storage] Usage Charges  (ucrback3&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed47')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed47')">2.49</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed47')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed47')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed48' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed48')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed48')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed48')">$79.16</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed48')">[Cloud Storage] Usage Charges  (ucrback4&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed48')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed48')">2.46</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed48')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed48')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed49' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed49')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed49')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed49')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed49')">[Cloud Storage] Usage Charges  (ucrback5&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed49')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed49')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed49')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed49')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed50' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed50')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed50')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed50')">$18.98</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed50')">[Cloud Storage] Usage Charges  (ucrback6&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed50')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed50')">.59</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed50')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed50')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed51' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed51')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed51')">PULIDO, FREDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed51')">$38.37</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed51')">[Cloud Storage] Usage Charges  (ucrback7&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed51')">CAC2UCR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed51')">1.19</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed51')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed51')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed52' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed52')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed52')">RAAB, FREDRIC</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed52')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed52')">[Cloud Storage] Usage Charges  (cwphs&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed52')">CIT2270</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed52')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed52')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed52')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed53' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed53')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed53')">RAAB, FREDRIC</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed53')">$38.39</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed53')">[Cloud Storage] Usage Charges  (palms&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed53')">CIT2270</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed53')">1.19</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed53')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed53')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed54' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed54')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed54')">REYA, TANNISHTHA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed54')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed54')">[Cloud Storage] Usage Charges  (reyalab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed54')">PHRTRSU</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed54')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed54')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed54')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed55' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed55')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed55')">REYES, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed55')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed55')">[Cloud Storage] Usage Charges  (wasdev&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed55')">CACSCDL</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed55')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed55')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed55')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed56' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed56')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed56')">ROBERTSON, LESLIE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed56')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed56')">[Cloud Storage] Usage Charges  (lcrews&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed56')">CCTCJCD</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed56')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed56')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed56')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed57' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed57')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed57')">ROCH, MARIE</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed57')">$69.97</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed57')">[Cloud Storage] Usage Charges  (dclde&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed57')">MPLJH1P</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed57')">2.18</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed57')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed57')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed58' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed58')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed58')">SCHIEBER, BRIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed58')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed58')">[Cloud Storage] Usage Charges  (spg&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed58')">IOD1896</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed58')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed58')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed58')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed59' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed59')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed59')">SMITH, JEFFREY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed59')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed59')">[Cloud Storage] Usage Charges  (brownlab&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed59')">PHRICHR</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed59')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed59')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed59')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed60' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed60')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed60')">STILLWAGEN, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed60')">$81.32</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed60')">[Cloud Storage] Usage Charges  (liai_irt&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed60')">VCRLIAI</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed60')">2.53</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed60')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed60')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed61' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed61')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed61')">STRANDE, SHAWN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed61')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed61')">[Cloud Storage] Usage Charges  (gordon&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed61')">CAC103G</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed61')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed61')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed61')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed62' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed62')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed62')">SWEENEY, AARON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed62')">$230.49</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed62')">[Cloud Storage] Usage Charges  (gdc&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed62')">GRDNSSO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed62')">7.17</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed62')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed62')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed63' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed63')">11/20/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed63')">WAGNER, RICK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed63')">$210.49</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed63')">[Cloud Storage] Usage Charges  (cadac&#58;Nov)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed63')">CACTGCS</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed63')">6.55</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed63')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed63')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed64' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed64')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed64')">AZAM, KENAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed64')">$346.25</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed64')">Commvault Invoice - mapk - Nov Commvault Invoice - mapk - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed64')">BNG7962</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed64')">9.85</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed64')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed64')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed65' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed65')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed65')">AZAM, KENAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed65')">$346.25</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed65')">Commvault Invoice - mapk - Nov Commvault Invoice - mapk - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed65')">CAC3435</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed65')">9.85</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed65')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed65')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed66' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed66')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed66')">BALDERSTON, BRIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed66')">$902.11</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed66')">Commvault Invoice - CORE-windows - Nov Commvault Invoice - CORE-windows - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed66')">CACCORT</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed66')">25.65</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed66')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed66')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed67' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed67')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed67')">CERDA, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed67')">$571.86</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed67')">Commvault Invoice - Ophthalmology - Nov Commvault Invoice - Ophthalmology - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed67')">OPH2324</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed67')">16.26</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed67')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed67')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed68' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed68')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed68')">FERBERT, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed68')">$377.37</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed68')">Commvault Invoice - EHS1-WEB-INC - Nov Commvault Invoice - EHS1-WEB-INC - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed68')">EHS2730</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed68')">10.73</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed68')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed68')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed69' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed69')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed69')">FERBERT, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed69')">$1,068.46</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed69')">Commvault Invoice - RMP - Nov Commvault Invoice - RMP - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed69')">ADCRMIT</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed69')">30.38</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed69')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed69')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed70' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed70')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed70')">FIGUEROA, JOSH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed70')">$95.31</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed70')">Commvault Invoice - ucsd-figueroa - Nov Commvault Invoice - ucsd-figueroa - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed70')">CHE9377</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed70')">2.71</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed70')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed70')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed71' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed71')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed71')">GILMER, TODD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed71')">$369.64</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed71')">Commvault Invoice - atlas - Nov Commvault Invoice - atlas - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed71')">CFMTG05</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed71')">10.51</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed71')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed71')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed72' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed72')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed72')">HATFIELD, WENDY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed72')">$2,437.28</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed72')">Commvault Invoice - UCR-EVC-Default - Nov Commvault Invoice - UCR-EVC-Default - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed72')">CACCVUR</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed72')">69.3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed72')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed72')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed73' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed73')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed73')">HUSSAIN, SAFA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed73')">$107.97</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed73')">Commvault Invoice - UCD-ITS - Nov Commvault Invoice - UCD-ITS - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed73')">CACVERM</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed73')">3.07</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed73')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed73')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed74' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed74')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed74')">HUSSAIN, SAFA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed74')">$70.34</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed74')">Commvault Invoice - UCD-ITS-UCOP - Nov Commvault Invoice - UCD-ITS-UCOP - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed74')">CACVERM</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed74')">2</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed74')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed74')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed75' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed75')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed75')">KIEU, MARC</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed75')">$1,463.07</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed75')">Commvault Invoice - ESPP - Nov Commvault Invoice - ESPP - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed75')">EXISCSG</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed75')">41.6</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed75')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed75')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed76' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed76')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed76')">LEE, CYNTHIA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed76')">$266.24</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed76')">Commvault Invoice - ethority - Nov Commvault Invoice - ethority - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed76')">CACHECB</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed76')">7.57</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed76')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed76')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed77' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed77')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed77')">LOPES, ALANN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed77')">$387.93</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed77')">Commvault Invoice - chembio-dedupe - Nov Commvault Invoice - chembio-dedupe - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed77')">CHECOMP</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed77')">11.03</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed77')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed77')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed78' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed78')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed78')">LORENTZ, BRIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed78')">$2.11</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed78')">Commvault Invoice - hr-dev - Nov Commvault Invoice - hr-dev - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed78')">ADCHRGF</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed78')">.06</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed78')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed78')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed79' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed79')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed79')">LORENTZ, BRIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed79')">$634.82</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed79')">Commvault Invoice - hr-prod - Nov Commvault Invoice - hr-prod - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed79')">ADCHRGF</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed79')">18.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed79')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed79')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed80' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed80')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed80')">MENDOZA, DAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed80')">$133.65</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed80')">Commvault Invoice - EHS-ALL - Nov Commvault Invoice - EHS-ALL - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed80')">EHS2730</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed80')">3.8</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed80')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed80')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed81' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed81')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed81')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed81')">$6.33</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed81')">Commvault Invoice - opentopo - Nov Commvault Invoice - opentopo - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed81')">CACTOPO</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed81')">.18</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed81')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed81')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed82' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed82')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed82')">ONG, SHYUE-PING</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed82')">$1,559.09</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed82')">Commvault Invoice - ong-lab - Nov Commvault Invoice - ong-lab - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed82')">NANSOS4</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed82')">44.33</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed82')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed82')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed83' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed83')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed83')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed83')">$641.44</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed83')">Commvault Invoice - MPL - Nov Commvault Invoice - MPL - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed83')">CIMET81</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed83')">18.24</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed83')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed83')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed84' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed84')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed84')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed84')">$189.21</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed84')">Commvault Invoice - MPL - Nov Commvault Invoice - MPL - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed84')">MPLET60</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed84')">5.38</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed84')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed84')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed85' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed85')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed85')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed85')">$189.21</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed85')">Commvault Invoice - MPL - Nov Commvault Invoice - MPL - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed85')">MPLET77</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed85')">5.38</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed85')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed85')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed86' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed86')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed86')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed86')">$872.28</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed86')">Commvault Invoice - MPL - Nov Commvault Invoice - MPL - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed86')">MPLETNH</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed86')">24.8</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed86')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed86')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed87' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed87')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed87')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed87')">$344.31</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed87')">Commvault Invoice - mpl-cimet81 - Nov Commvault Invoice - mpl-cimet81 - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed87')">CIMET81</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed87')">9.79</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed87')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed87')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed88' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed88')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed88')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed88')">$1,119.64</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed88')">Commvault Invoice - mpl-sandbar - Nov Commvault Invoice - mpl-sandbar - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed88')">MPLET60</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed88')">31.84</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed88')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed88')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed89' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed89')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed89')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed89')">$1,119.64</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed89')">Commvault Invoice - mpl-sandbar - Nov Commvault Invoice - mpl-sandbar - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed89')">MPLET77</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed89')">31.84</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed89')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed89')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed90' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed90')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed90')">TAPERT, SUSAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed90')">$571.51</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed90')">Commvault Invoice - tapertlab - Nov Commvault Invoice - tapertlab - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed90')">PST6330</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed90')">16.25</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed90')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed90')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed91' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed91')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed91')">WANETICK, JERRY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed91')">$227.55</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed91')">Commvault Invoice - cis-conners - Nov Commvault Invoice - cis-conners - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed91')">IOD13KB</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed91')">6.47</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed91')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed91')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed92' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed92')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed92')">WANETICK, JERRY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed92')">$690.74</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed92')">Commvault Invoice - cis-neoco - Nov Commvault Invoice - cis-neoco - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed92')">MPLETND</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed92')">19.64</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed92')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed92')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed93' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed93')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed93')">WANETICK, JERRY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed93')">$112.54</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed93')">Commvault Invoice - SIODO-Mac - Nov Commvault Invoice - SIODO-Mac - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed93')">DIRSYS4</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed93')">3.2</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed93')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed93')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed94' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed94')">11/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed94')">ZASLAVSKY, ILYA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed94')">$47.83</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed94')">Commvault Invoice - River - Nov Commvault Invoice - River - Nov </td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed94')">CACSCZO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed94')">1.36</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed94')">$35.17</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed94')">COMMVAULT STORAGE</td>			
+		</tr>
+		<tr id='removed95' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed95')">11/1/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed95')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed95')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed95')">[Cloud Storage] Usage Charges (delphi&#58;Jul) Re-bill</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed95')">CIT7813</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed95')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed95')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed95')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed96' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed96')">9/22/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed96')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed96')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed96')">[Cloud Storage] Usage Charges (delphi&#58;Sep) Re-bill</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed96')">CIT7813</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed96')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed96')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed96')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+		<tr id='removed97' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed97')">8/24/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed97')">NANDIGAM, VISWANATH</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed97')">$16.08</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed97')">[Cloud Storage] Usage Charges (delphi&#58;Aug) Re-bill</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed97')">CIT7813</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed97')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed97')">$32.16</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed97')">ON DEMAND TRIPLE COPY</td>			
+		</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			
+	</body>
+	</html>

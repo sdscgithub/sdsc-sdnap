@@ -1,0 +1,77 @@
+<html>
+  <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script src="https://trello.com/1/client.js?key=a830de01f56ccae5387145980360ce65"></script>
+    <script>
+	  	var userId = "";
+		var authenticationSuccess = function() { console.log('Successful authentication');  Trello.members.get("me", setID, failure); };
+		var authenticationFailure = function() { console.log('Failed authentication'); };
+
+		function setID(data){
+		  userId = data.id;
+		}
+		function success(data){
+		  console.log("Success!");
+		  console.log(data);
+		}
+
+		function failure(data){
+		  console.log("Failure!");
+		  console.log(data);
+		}
+
+		function getBoards(){
+		  return Trello.members.get("me", getBoardsCallback, getBoardsCallback);
+		}
+
+		function getBoardsCallback(data){
+		  var userBoards = data.idBoards;
+
+		  userBoards.forEach(function(id){
+		    Trello.boards.get(id + "/cards", getCardsCallback, getCardsCallback);
+		  });
+		}
+
+		function getCardsCallback(cards){
+		  cards.forEach(function(card){
+		    card.idMembers.forEach(function(member){
+		      if(member == userId){
+		        console.log(card);
+		        var div = document.createElement("div");
+		        var header = document.createElement("h2");
+		        var desc = document.createElement("p");
+		        var button = document.createElement("button");
+		        header.innerHTML = card.name;
+		        desc.innerHTML = card.desc;
+		        button.innerHTML = "Go to card";
+		        button.onclick = function(){window.open(card.url);};
+		        div.appendChild(header);
+		        div.appendChild(desc);
+		        div.appendChild(button);
+		        document.getElementById("content-div").appendChild(div);
+		      }
+		    });
+		  });
+		}
+
+		Trello.authorize({
+		  type: 'popup',
+		  name: 'Getting Started Application',
+		  scope: {
+		    read: 'true',
+		    write: 'true' },
+		  expiration: 'never',
+		  success: authenticationSuccess,
+		  error: authenticationFailure
+		});
+
+		getBoards();
+	</script>
+  </head>
+
+  <body>
+    <center> <h1> Trello API </h1> </center>
+    <div id="content-div"> </div>
+  </body>
+
+</html>

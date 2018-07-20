@@ -1,0 +1,12 @@
+kind:               PersistentVolumeClaim
+apiVersion:         v1
+metadata:
+  name:             holonet-pvc
+  namespace:        jx
+spec:
+  storageClassName: manual
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage:      200Mi

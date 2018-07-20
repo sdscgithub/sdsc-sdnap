@@ -1,0 +1,14 @@
+# ------------------- MW Service ------------------- #
+apiVersion: v1
+kind: Service
+metadata:
+    name: mediawiki
+    namespace: jx
+spec:
+  ports:
+    - nodePort: 32280
+      port: 80
+  selector:
+    role: web-frontend
+  type: NodePort
+

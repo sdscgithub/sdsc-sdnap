@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SDSC WINDOWS/VM</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'none')
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+				else
+				{
+					document.getElementById(x).style.display='none';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SDSC WINDOWS/VM<br><br>	
+		<u>2/28/2017 revenue</u> = $25,565.84<br>
+		<u>1/31/2017 revenue</u> = $33,672.50<br><h2 align='center' style='cursor:pointer' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u align='center'>Number of modified charges</u>: 2<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">2/28/2017<br>1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">HSU, CHUN-NAN<br>HSU, CHUN-NAN</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$15.53<br>$15.53</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">Service - VMware - Chun-Nan Hsu - textmining.ucsd.edu<br>Service - VMware - Chun-Nan Hsu - textmining.ucsd.edu</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>PEDCH77<br>MED5867</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">0.40<br>0.40</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">2/28/2017<br>1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">HSU, CHUN-NAN<br>HSU, CHUN-NAN</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$27.90<br>$27.90</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">Service - VMware - Chun-Nan Hsu - textmining.ucsd.edu<br>Service - VMware - Chun-Nan Hsu - textmining.ucsd.edu</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>PEDCH77<br>MED5867</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">0.40<br>0.40</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$69.75<br>$69.75</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">VM - FIRST MACH<br>VM - FIRST MACH</td>
+			</tr>	
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u align='center'>Number of removed recharges</u>: 8<br><br>
+	<table width='100%' style='border-collapse:collapse;' id='removed'>
+		<tr>
+			<td class='data' align='center'><b>Date</b></td>
+			<td class='data' align='center'><b>Buyer</b></td>
+			<td class='data' align='center'><b>Total Cost</b></td>
+			<td class='data' align='center'><b>Description</b></td>
+			<td class='data' align='center'><b>Index</b></td>
+			<td class='data' align='center'><b>Quantity</b></td>
+			<td class='data' align='center'><b>Unit Cost</b></td>
+			<td class='dataRightSide' align='center'><b>Product Number</b></td>
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed0'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">1/31/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">HO-WU, NANCY</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$4,608.00</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">Service - Consulting - Dept of Lit - Recurring IT Support</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">LITDEPT</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">48.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed1'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$919.53</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">Service - VMware - CNI Dev Environment [Manual December Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">23.68</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$38.83</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">VM - ADDL MACH</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed2'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$627.75</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">Service - VMware - CNI Dev Environment [Manual December Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">9.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed3'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$216.00</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">Service - VMware - CNI Dev Environment [Manual December Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">2.25</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed4'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$919.53</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">Service - VMware - CNI Dev Environment [Manual November Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">23.68</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$38.83</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">VM - ADDL MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed5'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$627.75</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">Service - VMware - CNI Dev Environment [Manual November Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">9.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed6'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">1/25/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">CHANDRA, SANDEEP</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$216.00</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">Service - VMware - CNI Dev Environment [Manual November Tick</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">CACCNDE</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">2.25</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed7'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">12/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">COON, BRYAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">-$27.90</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">Service - hli-aspera.sdsc.edu - VM - bcoon</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">CACHLI1</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">-0.40</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">VM - FIRST MACH</td>			
+		</tr>
+			<tr height='50px'>
+			</tr>
+		</table>		
+	</body>
+	</html>

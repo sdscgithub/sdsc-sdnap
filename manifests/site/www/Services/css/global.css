@@ -1,0 +1,230 @@
+html
+{
+    background: #fff;
+}
+
+body
+{
+    font-family: Arial;
+}
+
+/*.content
+{
+    margin: 0 auto;
+    width: 950px;
+}*/
+.vm-services
+{
+    width: 400px;
+    height: 20px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #D6635A;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 25px;
+}
+
+.service-name
+{
+    width: 328px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.service-price
+{
+    width: 50px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.service-title
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.add-button
+{
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.remove-button 
+{
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+}
+
+.endblock
+{
+    margin-bottom: 10px;
+}
+
+span
+{
+    display: inline-block;
+}
+
+input[type="text"].system-name
+{
+    width: 150px;
+}
+
+input[type="text"], .cpu_qty
+{
+/*    width: 60px;
+    margin: 0 auto;*/
+}
+
+.sub
+{
+    border: 0px;
+    background-color: transparent;
+}
+
+input[readonly].varprice
+{
+    width: 60px;
+    border: 0px;
+}
+
+input[readonly]
+{
+    /*width: 60%;*/
+    border: 0px;
+}
+
+/*strong
+{
+    text-decoration: underline;
+    margin-bottom: 10px;
+    display: block;
+    background-color: #fff;
+}*/
+
+.alert
+{
+    color: #FF0000;
+    font-size: 12px;
+}
+
+.subtotal-text
+{
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#vm-table td, #str-table td, #pa-table td, #backup-table td, #consult-table td, #sp-table td, #totals td, #cl-compute-table td, #vm-table-totals td
+{
+    /*padding: 0 14px;*/
+    font-size: 14px;
+}
+
+#vm-table, #str-table, #pa-table, #backup-table, #consult-table, #sp-table, #cl-compute-table, #vm-table-totals
+{
+    background-color: #fff;
+    width: 900px;
+/*    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;*/
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.total-table {
+    width:900px;
+    /*margin-top: 10px;*/
+}
+
+#vm-table tr:first-child > td, #str-table tr:first-child > td, #backup-table tr:first-child > td, #consult-table tr:first-child > td, #sp-table tr:first-child > td, #pa-table tr:first-child > td, #cl-compute-table tr:first-child > td
+{
+    /*background-color: #ccc; */
+    font-weight: bold;
+    font-size: 16px;
+    /*text-decoration: underline;*/
+/*    padding-top: 15px;
+    padding-bottom: 15px;*/
+}
+
+
+td.pad-bottom
+{
+    padding-bottom: 20px !important;
+}
+
+table td
+{
+    background: #fff;
+    vertical-align: top;
+}
+
+.smalltext
+{
+    font-size: 10px;
+}
+
+/*table#totals
+{
+    border: 0px;
+    width: 900px;
+    margin-top: 20px;
+}*/
+
+#quote-content
+{
+    background: #fff;
+    display: inline-block;
+}
+
+#product-col
+{
+    display: inline-block;
+    width: 480px;
+    vertical-align: top;
+}
+
+#table-title
+{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#totals td:first-child
+{
+    /*width: 650px;*/
+}
+
+.userinput input
+{
+    margin: 0 auto;
+}
+
+.ui-tooltip
+{
+    font-size: 12px;
+    font-family: Arial;
+}
+
+#pdfbutton
+{
+    background-color: #fff;
+    display: inline-block;
+}
+
+#sub-total, #onetime-total
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+#sub-total
+{
+    width: 100%;
+}
+
+/*.price-align
+{
+    text-align: right;
+} */

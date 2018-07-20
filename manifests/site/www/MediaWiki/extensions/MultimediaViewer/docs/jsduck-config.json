@@ -1,0 +1,10 @@
+{
+	"--title": "MultimediaViewer extension documentation",
+	"--categories": "./categories.json",
+	"--footer": "Documentation for MultimediaViewer, an extension to MediaWiki. Generated on {DATE} by {JSDUCK} {VERSION}.",
+	"--builtin-classes": true,
+	"--output": "./js",
+	"--": [
+		"./external.js"
+	]
+}

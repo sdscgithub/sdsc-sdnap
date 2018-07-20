@@ -1,0 +1,73 @@
+# Configuration to deploy release version of the Dashboard UI compatible with
+# Kubernetes 1.8.
+#
+# Example usage: kubectl create -f <this_file>
+# ------------------- MediaWiki Deployment ------------------- #
+
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+    labels:
+      k8s-app: sdnap
+    name: sdnap
+    namespace: jx
+spec:
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        role: sdnap-frontend
+    template:
+        metadata:
+            labels:
+                role: sdnap-frontend
+        spec:
+            containers:
+            - name: sdnap
+              image: sdscdocker/mediawiki:latest
+              ports: 
+              - containerPort: 80
+              volumeMounts:
+#              - mountPath: /etc
+#                name: phpconf
+              - mountPath: "/var/www/html"
+                name: holonetcontent 
+                subPath: "www/sdnap"
+#                subPath: "www/MediaWiki"
+              - mountPath: "/var/lib/mysql"
+                name: holonetcontent 
+                subPath: "var/lib/mysql"
+              - mountPath: "/var/lib/php"
+                name: holonetcontent 
+                subPath: "var/lib/php"
+              - mountPath: "/etc/httpd"
+                name: holonetcontent 
+                subPath: "etc/httpd"
+              - mountPath: "/etc/php.d"
+                name: holonetcontent 
+                subPath: "etc/php.d"
+              - mountPath: "/etc/pki"
+                name: holonetcontent 
+                subPath: "etc/pki"
+            volumes:
+            - name: holonetcontent
+              persistentVolumeClaim:
+                claimName: holonet-pvc
+            - name: phpconf
+              configMap:
+                name: phpconfig  # generated from configmap-create.sh 
+
+---
+# ------------------- SDNAP Service ------------------- #
+apiVersion: v1
+kind: Service
+metadata:
+    name: sdnap
+spec:
+  ports:
+    - nodePort: 32288
+      port: 80
+  selector:
+    role: sdnap-frontend
+  type: NodePort
+

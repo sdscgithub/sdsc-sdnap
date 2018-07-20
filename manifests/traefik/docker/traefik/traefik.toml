@@ -1,0 +1,37 @@
+logLevel = "DEBUG"
+
+defaultEntryPoints = ["http", "https"]
+
+[web]
+address = ":8080"
+  [web.auth.basic]
+  users = ["admin:$apr1$EFARvjdd$qm3hd4.DBRhaGLm1/tl0s1"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+      entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+    [entryPoints.https.tls]
+
+# ACME: protocol for Let's Encrypt certificates mgt
+[acme]
+email = "ath038@ucsd.edu"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+  [acme.httpChallenge]
+  entryPoint="http"
+onDemand = false
+#caServer = "http://traefik.boulder.com:4001/directory"
+
+
+[api]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "sdsc.edu"
+watch = true
+exposedByDefault = false

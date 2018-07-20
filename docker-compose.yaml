@@ -1,0 +1,16 @@
+#version: '3.2'
+version: '2.0'
+services:
+    sdnap:
+        container_name: sdsc-sdnap
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        image: gitlab.sdsc.edu:4567/holonet/sdnap:latest
+        restart: always
+        ports:
+        - "80:80"
+
+        command: ["apache2","-D","FOREGROUND"]
+
+

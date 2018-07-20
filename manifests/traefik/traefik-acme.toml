@@ -1,0 +1,9 @@
+# Let's encrypt configuration
+[acme]
+  email="aha@sdsc.edu"
+  storage="/etc/traefik/acme.json"
+  entryPoint="https"
+  acmeLogging=true
+  onDemand=true
+  onHostRule=true
+  dnsProvider="cloudflare"

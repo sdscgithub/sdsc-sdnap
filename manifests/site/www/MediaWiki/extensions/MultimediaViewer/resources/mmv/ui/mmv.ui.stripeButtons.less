@@ -1,0 +1,92 @@
+@import "../mmv.globals";
+@import "../mmv.mixins";
+
+@button-vertical-padding: 20px;
+@button-height: 25px;
+@repo-button-width: 50px;
+
+// The buttons need to be positioned to the bottom right corner of .mw-mmv-title-contain, and
+// other text in that element must not overlap them. Their width is not known (depends on the
+// translation) so we float them to the right and calculate the top margin required to make them
+// full height.
+.mw-mmv-stripe-button {
+	@button-text-color: rgb(136, 136, 136);
+	@border-text-color: #cccccc;
+
+	float: right;
+	height: @button-height;
+	margin-top: @metadatabar-above-fold-height - ( @button-height + 2 * @button-vertical-padding );
+	border-left: 1px solid @border-text-color;
+	padding: @button-vertical-padding 20px;
+	.jq-fullscreened & {
+		margin-top: @metadatabar-above-fold-fullscreen-height - ( @button-height + 2 * @button-vertical-padding );
+	}
+	.mw-mmv-untruncated & {
+		margin-top: 0;
+		border: 0;
+
+		.mw-mmv-stripe-button-text {
+		  display: none;
+		}
+	}
+
+	.unselectable;
+	font-size: 1.25em;
+	color: @button-text-color;
+	cursor: pointer;
+	.opacity(0.8);
+	transition: opacity 0.25s;
+
+	// when the button is a link, we need more selector specificity
+	a&, a&:visited, a&:hover {
+		color: @button-text-color;
+		text-decoration: none;
+	}
+
+	&.empty {
+		display: none;
+	}
+
+	&.open,
+	&:hover {
+		.opacity(1);
+	}
+
+	&:before {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+
+		// fix odd position caused by bottom of icon and bottom of SVG not being aligned
+		position: relative;
+		top: 0.1em;
+
+		background-size: 100% 100%;
+		content: ' ';
+		vertical-align: baseline;
+	}
+	&.has-label:before {
+		margin-right: 0.25em;
+		.mw-mmv-untruncated & {
+			margin-right: 0;
+		}
+	}
+}
+
+.mw-mmv-repo-button {
+	&-commons:before {
+		/* @embed */
+		background-image: url(img/commons_gray.svg);
+		background-position: 50% 40%; // visually it looks much better when the middle of the circle is centered
+		// make the Commons icon a tiny bit larger so people don't complain that the other icon is larger
+		padding: 1px;
+		top: -1px;
+	}
+	&-dynamic:before {
+		// for repos other than Wikimedia Commons we manipulate :before dynamically from JS; this is a fallback
+		.grayscale();
+		background-image: url(img/repo.svg);
+		width: 0.8em;
+		height: 0.8em;
+	}
+}

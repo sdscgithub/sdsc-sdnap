@@ -1,0 +1,62 @@
+version: "3"
+
+networks:
+  proxy:
+    external: true
+  internal:
+    external: false
+
+services:
+
+  traefik:
+    image: traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.toml:/etc/traefik/traefik.toml:ro
+      - ./traefik/acme:/etc/traefik/acme
+    ports:
+     - "80:80"
+     - "443:443"
+     - "8080:8080"
+
+  blog:
+    image: wordpress:4.7.5-apache
+    environment:
+      WORDPRESS_DB_PASSWORD:
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=blog"
+      - "traefik.frontend.rule=$(TRAEFIK_FRONTEND_RULE}" # export TRAEFIK_FRONTEND_RULE=Host:maersk.sdsc.edu
+      - "traefik.docker.network=proxy"
+#      - traefik.docker.network=proxy
+#      - traefik.port=80
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD:
+    networks:
+      - internal
+    labels:
+      - traefik.enable=false
+
+  adminer:
+    image: adminer:4.3.1-standalone
+    labels:
+      - "traefik.enable=true"
+      - "traefik.backend=adminer"
+      - "traefik.frontend.rule=$(TRAEFIK_FRONTEND_RULE}"
+      - "traefik.docker.network=proxy"
+#      - traefik.backend=adminer
+#      - traefik.frontend.rule=Host:db-admin.sdsc.com
+#      - traefik.port=8080
+    networks:
+      - internal
+      - proxy
+    depends_on:
+      - mysql

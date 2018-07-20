@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SRF PROJECT</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'inline-table')
+				{
+					document.getElementById(x).style.display='none';
+				}
+				else
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SRF PROJECT<br><br>	
+		<u>5/31/2016 revenue</u> = $24,293.03<br>
+		<u>4/30/2016 revenue</u> = $25,340.95<br><h2 align='center' style='cursor:pointer;' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u>Number of added charges</u>: 1<br><br>
+		<table width='100%' style='border-collapse:collapse; display:inline-table;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr id='added0' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">5/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">YEO, GENE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$782.08</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">Service - Project Storage Condo - ps-078&#58;/ps-data/yeolab</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">CMM2844</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">1</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$782.08</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">CONDO PROJECT STORAGE</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u>Number of modified charges</u>: 5<br><br>
+		<table width='100%' style='border-collapse:collapse; display:inline-table;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr id='modified0' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">5/31/2016<br>4/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">CHITRE, APURVA<br>CHITRE, APURVA</td>
+						
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>$1,372.50<br>$915.00</span></td>		
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">Service - Project Storage - ps-070&#58;/ps-data/palmer-lab<br>Service - Project Storage - ps-070&#58;/ps-data/palmer-lab</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">PSTSUAP<br>PSTSUAP</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>30<br>20</span></td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$45.75<br>$45.75</td>							
+					<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">ON DEMAND DUAL COPY<br>ON DEMAND DUAL COPY</td>
+				</tr>			
+				
+			<tr id='modified1' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">5/31/2016<br>4/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">GLASS, CHRISTOPHER<br>GLASS, CHRISTOPHER</td>
+						
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>$452.93<br>$437.83</span></td>		
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">Service - Project Storage - ps-029&#58;/ps-data/glasslab<br>Service - Project Storage - ps-029&#58;/ps-data/glasslab</td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">CMM3263<br>CMM3263</td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>9.9<br>9.57</span></td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$45.75<br>$45.75</td>							
+					<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">ON DEMAND DUAL COPY<br>ON DEMAND DUAL COPY</td>
+				</tr>			
+				
+			<tr id='modified2' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">5/31/2016<br>4/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">GLASS, CHRISTOPHER<br>GLASS, CHRISTOPHER</td>
+						
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>$466.65<br>$451.10</span></td>		
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">Service - Project Storage - ps-029&#58;/ps-data/glasslab<br>Service - Project Storage - ps-029&#58;/ps-data/glasslab</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">CMM5245<br>CMM5245</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>10.2<br>9.86</span></td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">$45.75<br>$45.75</td>							
+					<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified2')">ON DEMAND DUAL COPY<br>ON DEMAND DUAL COPY</td>
+				</tr>			
+				
+			<tr id='modified3' style='background-color:#D3D3D3;'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">5/31/2016<br>4/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">GLASS, CHRISTOPHER<br>GLASS, CHRISTOPHER</td>
+						
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>$452.93<br>$437.83</span></td>		
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">Service - Project Storage - ps-029&#58;/ps-data/glasslab<br>Service - Project Storage - ps-029&#58;/ps-data/glasslab</td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">CMMCGCA<br>CMMCGCA</td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>9.9<br>9.57</span></td>				
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">$45.75<br>$45.75</td>							
+					<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified3')">ON DEMAND DUAL COPY<br>ON DEMAND DUAL COPY</td>
+				</tr>			
+				
+			<tr id='modified4' style='background-color:#FFFFFF;'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">5/31/2016<br>4/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">SELVARAJ, SIDDARTH<br>SELVARAJ, SIDDARTH</td>
+						
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>$137.25<br>$91.50</span></td>		
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">Service - Project Storage - ps-069&#58;/ps-data/arima<br>Service - Project Storage - ps-069&#58;/ps-data/arima</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">CACPRAR<br>CACPRAR</td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>3<br>2</span></td>				
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">$45.75<br>$45.75</td>							
+					<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified4')">ON DEMAND DUAL COPY<br>ON DEMAND DUAL COPY</td>
+				</tr>			
+					
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u>Number of removed recharges</u>: 2<br><br>
+		<table width='100%' style='border-collapse:collapse; display:inline-table;' id='removed'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+		<tr id='removed0' style='background-color:#FFFFFF;'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">4/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">ANNESE, JACOPO</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$183.00</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">Service - Project Storage - ps-027&#58;/ps-data/brain_observ</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">CACIBSA</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">4</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$45.75</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'removed0')">ON DEMAND DUAL COPY</td>			
+		</tr>
+		<tr id='removed1' style='background-color:#D3D3D3;'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">4/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">HELLY, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$2,196.00</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">Service - Project Storage - ps-006&#58;/ps-data/cmmap</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">CACRSTO</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">48</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$45.75</td>		
+			<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'removed1')">ON DEMAND DUAL COPY</td>			
+		</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			
+	</body>
+	</html>

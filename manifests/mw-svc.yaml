@@ -1,0 +1,12 @@
+# ------------------- MW Service ------------------- #
+apiVersion: v1
+kind: Service
+metadata:
+  name: mediawiki
+spec:
+  ports:
+  - name: http
+    targetPort: 80
+    port: 80
+  selector:
+    app: mediawiki

@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sdnap
+  namespace: holonet
+  annotations:
+#   traefik.frontend.rule.type: PathPrefixStrip
+#   traefik.frontend.rule.type: HostRegexp
+    kubernetes.io/ingress.class: traefik
+spec:
+  rules:
+  - host: sdnap.sdsc.edu
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sdnap
+          servicePort: http
+

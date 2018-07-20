@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: holonet
+spec:
+  rules:
+  - host: holonet2.sdsc.edu
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: mediawiki
+          servicePort: http
+  - host:  holonet2.sdsc.edu
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: sdnap
+          servicePort: http
+  - host: holonet2.sdsc.edu
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: dashboard
+          servicePort: http
