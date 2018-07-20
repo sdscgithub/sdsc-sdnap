@@ -2,7 +2,7 @@ FROM gitlab.sdsc.edu:4567/aha/ubuntu1204-apache-php53:latest
 MAINTAINER Anthony Ha <aha@sdsc.edu>
 
 # Insert new site content
-ADD index.php /var/www/
+ADD sites/index.php /var/www/
 ADD sites/*/ /var/www/
 
 # Set users/owners
