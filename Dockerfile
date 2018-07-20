@@ -5,7 +5,7 @@ MAINTAINER Anthony Ha <aha@sdsc.edu>
 ADD * /var/www/
 
 # Set users/owners
-RUN useradd www-data
+# RUN useradd www-data
 RUN chown -R www-data:www-data /var/www
 
 
