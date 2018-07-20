@@ -26,8 +26,7 @@ spec:
         spec:
             containers:
             - name: sdnap
-              #image: gitlab.sdsc.edu:4567/j2dangelo/php_version_5.3:latest
-              image: gitlab.sdsc.edu:4567/holonet/sdnap:latest
+              image: gitlab.sdsc.edu:4567/aha/holonet-sdnap:latest
               #image: bylexus/apache-php53
               imagePullPolicy: Always
               ports: 
