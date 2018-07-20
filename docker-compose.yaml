@@ -6,7 +6,7 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
-        image: gitlab.sdsc.edu:4567/holonet/sdnap:latest
+        image: gitlab.sdsc.edu:4567/aha/holonet-sdnap:latest
         restart: always
         ports:
         - "80:80"
