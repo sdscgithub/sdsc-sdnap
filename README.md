@@ -3,22 +3,22 @@
 ## Status
 * Extracted holonet.sdsc.edu content and sites with docker containers and persistent volumes
 * Checked relevant files into git@gitlab.sdsc.edu:aha/holonet.git
-* in branch v0.2 created mw-deploy.yaml which includes:
+* in branch v0.2 created sdnap-deploy.yaml which includes:
     + replication deploy
     + services
-    + persistent volumes (nfs) - nfs server (caas.sdsc.edu)
-    + pv claim
+#    + persistent volumes (nfs) - nfs server (caas.sdsc.edu)
+#    + pv claim
 
 
 ## TODO
 * Create mysql service in k8s
-* Complete CI/CD pipeline with shared runner
 * Get Mediawiki to work in deployment (sqlite backend)
 * Port config parameters for apache, php, mysql
 * Port Sevices website (mysql backend)
 
 
 ## DONE
+* Complete CI/CD pipeline with shared runner
 * Create CI/CD pipeline for auto build of php images
 * Create Dockerfile and docker-compose
 * Start with building exact version of php/apache docker images 
