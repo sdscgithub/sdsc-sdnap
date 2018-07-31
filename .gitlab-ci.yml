@@ -40,7 +40,7 @@ deploy cluster:
       - kubectl version
       - kubectl cluster-info
       - kubectl get node
-      - kubectl -n jx delete deploy/sdnap
+      - kubectl delete deploy/sdnap
 #     - kubectl apply -f ./manifests/hostpath-pv.yaml --record
 #     - kubectl apply -f ./manifests/hostpath-pvc.yaml --record
         #- kubectl apply -f ./manifests/mw-deploy.yaml --record
