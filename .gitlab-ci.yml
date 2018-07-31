@@ -34,7 +34,7 @@ deploy cluster:
       - docker:dind
     script:
       - ls -al
-      - ./manifests/configmap-create.sh
+#      - ./manifests/configmap-create.sh
       - docker info
       - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
       - kubectl version
