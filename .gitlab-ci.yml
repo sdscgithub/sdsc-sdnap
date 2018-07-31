@@ -5,10 +5,7 @@ before_script:
   - uname -a
   - whoami
   - ls -al
-  - cd manifests
-  - ls -al
   - ./configmap-create.sh
-  - cd ../
 
     #  - GITLAB_TOKEN="vYSe8_Dkyf2sQNFDnG8M"
     #  - GITLAB_USERNAME="gitlab-ci-token"
