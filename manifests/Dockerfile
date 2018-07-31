@@ -2,7 +2,7 @@ FROM gitlab.sdsc.edu:4567/aha/ubuntu1204-apache-php53:latest
 MAINTAINER Anthony Ha <aha@sdsc.edu>
 
 # Insert new site content
-COPY ./site/www/ /var/www/
+COPY ../site/www/ /var/www/
 
 
 # Set users/owners
@@ -16,4 +16,3 @@ CMD ["mkdir", "-p", "/etc/pki/tls/private"]
 # Set ports to be visible for container
 EXPOSE 80 443
 CMD ["/usr/local/bin/run"]
-
