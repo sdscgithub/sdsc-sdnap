@@ -34,12 +34,13 @@ deploy cluster:
       - docker:dind
     script:
       - ls -al
-#      - ./manifests/configmap-create.sh
+      - ./manifests/configmap-create.sh
       - docker info
       - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
       - kubectl version
       - kubectl cluster-info
       - kubectl get node
+      - kubectl -n jx delete deploy/sdnap
 #     - kubectl apply -f ./manifests/hostpath-pv.yaml --record
 #     - kubectl apply -f ./manifests/hostpath-pvc.yaml --record
         #- kubectl apply -f ./manifests/mw-deploy.yaml --record
