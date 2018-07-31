@@ -4,7 +4,8 @@ before_script:
   - pwd
   - uname -a
   - whoami
-  - ./manifests/configmap-create.sh
+  - ls -al
+  - manifests/configmap-create.sh
 
     #  - GITLAB_TOKEN="vYSe8_Dkyf2sQNFDnG8M"
     #  - GITLAB_USERNAME="gitlab-ci-token"
