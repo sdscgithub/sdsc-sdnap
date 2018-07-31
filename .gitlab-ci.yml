@@ -39,8 +39,8 @@ deploy cluster:
       - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
       - kubectl version
       - kubectl cluster-info
-      - kubectl get node
-      - kubectl delete deploy/sdnap
+      - kubectl -n jx get node
+      - kubectl -n jx delete deployment sdnap
 #     - kubectl apply -f ./manifests/hostpath-pv.yaml --record
 #     - kubectl apply -f ./manifests/hostpath-pvc.yaml --record
         #- kubectl apply -f ./manifests/mw-deploy.yaml --record
