@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-cat-pod
+spec:
+  containers:
+    - name: test-container
+      image: k8s.gcr.io/busybox
+      command: [ "/bin/sh","-c","cat /etc/apache2/sites-enable/sdnap.conf" ]
+      volumeMounts:
+      - name: config-volume
+        mountPath: /etc/apache2/sites-enable/sdnap.conf"
+        subpath: "sdnap.conf"
+  volumes:
+    - name: config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: apache2-config
+  restartPolicy: Never

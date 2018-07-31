@@ -1,0 +1,18 @@
+.canClick{
+  cursor: pointer;
+}
+
+.isDropzone{
+  cursor: cell;
+}
+
+.dz-upload {
+  display: block;
+  background-color: #428bca;
+  height: 10px;
+  width: 0%;
+}
+
+.dz-preview{
+  display: hidden;
+}

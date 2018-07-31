@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "sdnap.fullname" . }}
+  labels:
+    app: {{ template "sdnap.name" . }}
+    chart: {{ template "sdnap.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "sdnap.name" . }}
+    release: {{ .Release.Name }}

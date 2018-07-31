@@ -1,0 +1,69 @@
+  Notes
+
+How to upload files to Holonet:
+
+1. Open Cyberduck
+2. Click open connection in the upper left corner of the screen
+3. Change FTP to SFTP in the dropdown menu in the top middle of the screen
+4. Enter "holonet.sdsc.edu" for the server
+5. Enter username and password (i.e tbpetersen)
+6. Enter username and password if prompted again
+7. Once connected, navigate to the root directory "/".
+8. Open the "var" directory
+9. Open the "www" directory
+10. Find the directory that you are trying to edit (i.e "Services")
+    * Try the directory that starts with a capital letter if two exist
+11. Replace files as needed
+
+---------- SQL ----------
+db: sdnapdb
+
+mysql -u tpetersen -p
+use sdnapdb
+
+---------- Notes ----------
+edit ticket to be rebilled
+copy ticket in this project
+set ticket to open
+edit description (add "Rebill Month" where month is the month of the original bill)
+add "rebill month to internal notes"
+set close date to next billing cycle (end of the month)
+tell Ryan to close the ticket
+
+--close master --
+edit ticket
+set close date to date specified or current date
+save ticket
+reopen ticket
+set status to closed
+add email about closure from customer to email section
+write the close date in the internal notes
+
+---------- Services Stuff ----------
+
+Standard VM:
+  1 virtual cpu
+  2 GB RAM
+  100 GB storage
+  Description Info: SDSC provide OS maintenance (patching, 8x5 monitoring, emergency response within reasonable timeframe) at no extra cost if reference OS is used
+  * Don't use high security VM
+
+Standard Project Storage:
+  Description Info: Project Storage is purchased in 1 TB increments. Customer may contact SDSC to change     storage allocation size at any time, but customer will be   billed for largest allocation size in any given month
+
+
+
+
+
+---------- Master Ticket Guide ----------
+https://intranet.sdsc.edu/ITI/MVP/ClientServices/Create%20a%20Master%20Ticket.aspx
+
+---------- Spreadsheet Link ----------
+https://intranet.sdsc.edu/ITI/itservices/_layouts/xlviewer.aspx?id=/ITI/itservices/Shared%20Documents/SSPS/Project%20Storage/ProjectStorageServers.xlsx&Source=https%3A%2F%2Fintranet%2Esdsc%2Eedu%2FITI%2Fitservices%2FShared%2520Documents%2FForms%2Fdefault%2Easpx%3FRootFolder%3D%252fITI%252fitservices%252fShared%2520Documents%252fSSPS%252fProject%2520Storage%26FolderCTID%3D0x0120009A97B55FFE6A5448ABF44EB18D7901D4&DefaultItemOpen=1
+
+---------- Refunding ----------
+ The best way to verify that refunds process is to look at the tickets and check their "refund status" field. ideally the statuses will be "refunded."
+
+---------- Support Ticket Billing -----------
+To verify that a support ticket bills, you can look in the support project and verify that the "billing status" field is "billed"
+for the support ticket in question
