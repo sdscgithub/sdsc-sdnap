@@ -1,12 +1,19 @@
-#FROM php:5.5-apache
-FROM gitlab.sdsc.edu:4567/j2dangelo/php_version_5.3:holonet
+FROM gitlab.sdsc.edu:4567/aha/ubuntu1204-apache-php53:latest
+MAINTAINER Anthony Ha <aha@sdsc.edu>
 
-# Container listens to this TCP port
+# Insert new site content
+COPY ./site/www/ /var/www/
+
+
+# Set users/owners
+# RUN useradd www-data
+RUN chown -R www-data:www-data /var/www
+
+# Make dirs for apache config files
+CMD ["mkdir", "-p", "/etc/pki/tls/certs"]
+CMD ["mkdir", "-p", "/etc/pki/tls/private"]
+
+# Set ports to be visible for container
 EXPOSE 80 443
+CMD ["/usr/local/bin/run"]
 
-# copy custom files to container
-# ADD sites/etc/php.ini /etc/php5/cli
-
-
-# install needed stuff
-#RUN apt-get update -qq && apt-get install -y sqlite
