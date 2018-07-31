@@ -37,10 +37,10 @@ spec:
                 subPath: "httpd.conf"
               - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_cert.crt"
                 name: cert-volume
-                subPath: "httpd.conf"
+                subPath: "maersk_sdsc_edu_cert.crt"
               - mountPath: "/etc/pki/tls/private/maersk.key"
                 name: key-volume
-                subPath: "httpd.conf"
+                subPath: "maersk.key"
               - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_interm.crt"
                 name: interm-volume
                 subPath: "maersk_sdsc_edu_interm.crt"
