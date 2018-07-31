@@ -35,6 +35,15 @@ spec:
               - mountPath: "/etc/apache2/sites-enabled/httpd.conf"
                 name: apache2-config-volume
                 subPath: "httpd.conf"
+              - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_cert.crt"
+                name: cert-volume
+                subPath: "httpd.conf"
+              - mountPath: "/etc/pki/tls/private/maersk.key"
+                name: key-volume
+                subPath: "httpd.conf"
+              - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_interm.crt"
+                name: interm-volume
+                subPath: "maersk_sdsc_edu_interm.crt"
 #              - mountPath: "/etc/php5/cli/php.ini"
 #                name: php-config-volume 
 #                subPath: "php.ini"
@@ -84,5 +93,15 @@ spec:
             - name: php-config-volume
               configMap:
                 name: php-config  # generated from configmap.yaml
+            - name: cert-volume
+              configMap:
+                name: cert  # generated from configmap.yaml
+            - name: key-volume
+              configMap:
+                name: key  # generated from configmap.yaml
+            - name: interm-volume
+              configMap:
+                name: interm  # generated from configmap.yaml
+                
 
 ---

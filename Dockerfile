@@ -4,6 +4,7 @@ MAINTAINER Anthony Ha <aha@sdsc.edu>
 # Insert new site content
 COPY sites/www/ /var/www/
 
+
 # Set users/owners
 # RUN useradd www-data
 RUN chown -R www-data:www-data /var/www
