@@ -6,11 +6,11 @@ spec:
   containers:
     - name: test-container
       image: k8s.gcr.io/busybox
-      command: [ "/bin/sh","-c","cat /etc/apache2/sites-enable/sdnap.conf" ]
+      command: [ "/bin/sh","-c","cat /etc/apache2/sites-enable/httpd.conf" ]
       volumeMounts:
       - name: config-volume
-        mountPath: /etc/apache2/sites-enable/sdnap.conf"
-        subPath: "sdnap.conf"
+        mountPath: /etc/apache2/sites-enable/httpd.conf"
+        subPath: "httpd.conf"
   volumes:
     - name: config-volume
       configMap:

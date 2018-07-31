@@ -6,7 +6,7 @@ metadata:
   name: apache2-config
   namespace: jx
 data:
-  apache2-config.file: "./site/etc/httpd/conf/httpd.conf"
+  apache2-config.file: "../site/etc/httpd/conf/httpd.conf"
 ---
 ---
 apiVersion: v1
@@ -16,5 +16,5 @@ metadata:
   name: php-config
   namespace: jx
 data:
-  php-config.file: "./site/etc/php.ini"
+  php-config.file: "../site/etc/php.ini"
 ---
