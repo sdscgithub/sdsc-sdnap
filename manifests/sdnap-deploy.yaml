@@ -22,7 +22,7 @@ spec:
         metadata:
             labels:
                 app: sdnap
-                version: v0.1
+                version: v0.2
         spec:
             containers:
             - name: sdnap
