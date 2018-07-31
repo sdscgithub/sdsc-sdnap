@@ -31,13 +31,13 @@ spec:
               imagePullPolicy: Always
               ports: 
               - containerPort: 80
-#             volumeMounts:
-#             - mountPath: "/var/www"
-#               name: holonetcontent 
-#               subPath: "www/sdnap"
-#             - mountPath: "/var/lib/sdnap"
-#               name: holonetcontent 
-#               subPath: "var/lib/sdnap"
+              volumeMounts:
+              - mountPath: "/etc/apache2/sites-enabled/httpd.conf"
+                name: apache2-config-volume
+                subPath: "httpd.conf"
+#              - mountPath: "/etc/php5/cli/php.ini"
+#                name: php-config-volume 
+#                subPath: "php.ini"
 #             - mountPath: "/var/lib/mysql"
 #               name: holonetcontent 
 #               subPath: "var/lib/mysql"
@@ -72,14 +72,17 @@ spec:
 #                - "-R root:root"
 #                - /work-dir/sdnap
 
-#           volumes:
+            volumes:
 #           - name: workdir
 #             emptyDir: {}
 #           - name: holonetcontent
 #             persistentVolumeClaim:
 #               claimName: holonet-pvc
-#           - name: phpconf
-#             configMap:
-#               name: phpconfig  # generated from configmap-create.sh 
+            - name: apache2-config-volume
+              configMap:
+                name: apache2-config  # generated from configmap.yaml
+            - name: php-config-volume
+              configMap:
+                name: php-config  # generated from configmap.yaml
 
 ---

@@ -11,6 +11,6 @@ services:
         ports:
         - "80:80"
 
-        command: ["apache2","-D","FOREGROUND"]
+#        command: ["apache2","-D","FOREGROUND"]
 
 

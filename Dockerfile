@@ -11,4 +11,4 @@ RUN chown -R www-data:www-data /var/www
 
 # Set ports to be visible for container
 # EXPOSE 80 443
-CMD ["/usr/local/bin/run"]
+#CMD ["/usr/local/bin/run"]

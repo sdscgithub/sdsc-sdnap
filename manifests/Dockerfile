@@ -5,7 +5,8 @@ FROM gitlab.sdsc.edu:4567/j2dangelo/php_version_5.3:holonet
 EXPOSE 80 443
 
 # copy custom files to container
-ADD site/etc/php.ini /usr/local/lib
+# ADD sites/etc/php.ini /etc/php5/cli
+
 
 # install needed stuff
 #RUN apt-get update -qq && apt-get install -y sqlite
