@@ -65,6 +65,7 @@ spec:
               args:
                 - echo starting;
                   ls /etc/apache2/sites-enabled;
+                  ls /var/www;
                   cat /etc/apache2/sites-enabled/httpd.conf;
                   cat /usr/local/bin/run;
                   echo "apache status";
