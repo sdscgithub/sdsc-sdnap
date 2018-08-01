@@ -15,5 +15,5 @@ CMD ["mkdir", "-p", "/etc/pki/tls/private"]
 CMD ["mkdir", "-p", "/var/run/apache2"]
 
 # Set ports to be visible for container
-#EXPOSE 80 443
+EXPOSE 80 443
 CMD ["/usr/local/bin/run"]

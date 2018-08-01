@@ -60,14 +60,21 @@ spec:
 #  emptydir for sharing data between pods
 #              - mountPath: "/var/lib"
 #                name: workdir
-
+              # Run some command in the containers
+              command: ["/bin/sh","-c"]
+              args:
+                - echo starting;
+                  ls /etc/apache2/sites-enabled;
+                  cat /etc/apache2/sites-enabled/httpd.conf;
+                  cat /usr/local/bin/run;
+                  echo "apache status";
+                  apachectl status;
+                
 
 #            initContainers:
 #              - name: chowns
 #                image: busybox
-              # Run some command in the containers
-              command: ["/bin/sh","-c"]
-              args: ["ls /etc/apache2/sites-enabled; cat /etc/apache2/sites-enabled/httpd.conf"]
+
 #                command:
 #                - chown
 #                - "-R root:root"
