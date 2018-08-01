@@ -1,0 +1,12 @@
+kind:               PersistentVolumeClaim
+apiVersion:         v1
+metadata:
+  name:             confd-pvc
+  namespace:        jx
+spec:
+  storageClassName: conf.d
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage:      200Mi
