@@ -1,0 +1,15 @@
+kind:               PersistentVolume
+apiVersion:         v1
+metadata:
+  name:             confd-pv
+  namespace:        jx
+  labels:
+    type:           local
+spec:
+  storageClassName: config.d
+  capacity:
+    storage:        1Gi
+  accessModes:
+  - ReadWriteOnce
+  hostPath:
+    path:           "/nfs/home/shared/ath038/sdnap/site/etc/httpd/conf.d/"
