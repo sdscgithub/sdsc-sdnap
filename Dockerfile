@@ -12,6 +12,7 @@ RUN chown -R www-data:www-data /var/www
 # Make dirs for apache config files
 CMD ["mkdir", "-p", "/etc/pki/tls/certs"]
 CMD ["mkdir", "-p", "/etc/pki/tls/private"]
+CMD ["mkdir", "-p", "/var/run/apache2"]
 
 # Set ports to be visible for container
 #EXPOSE 80 443
