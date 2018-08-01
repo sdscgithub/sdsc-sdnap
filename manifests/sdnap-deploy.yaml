@@ -80,9 +80,9 @@ spec:
             volumes:
 #           - name: workdir
 #             emptyDir: {}
-            - name: confd-hostpath
-              persistentVolumeClaim:
-                claimName: confd-pvc
+#            - name: confd-hostpath
+#              persistentVolumeClaim:
+#                claimName: confd-pvc
             - name: etc-hostpath
               persistentVolumeClaim:
                 claimName: etc-pvc
