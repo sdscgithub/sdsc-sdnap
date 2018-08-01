@@ -14,5 +14,5 @@ CMD ["mkdir", "-p", "/etc/pki/tls/certs"]
 CMD ["mkdir", "-p", "/etc/pki/tls/private"]
 
 # Set ports to be visible for container
-EXPOSE 80 443
-CMD ["/usr/local/bin/run"]
+#EXPOSE 80 443
+#CMD ["/usr/local/bin/run"]
