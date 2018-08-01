@@ -33,10 +33,10 @@ spec:
               - containerPort: 80
               volumeMounts:
               - mountPath: "/etc/apache2/sites-enabled/httpd.conf"
-                name: etc-hostpath 
-                subPath: "httpd.conf"
-#                name: apache2-config-volume
+#                name: etc-hostpath 
 #                subPath: "httpd.conf"
+                name: apache2-config-volume
+                subPath: "httpd.conf"
 #              - mountPath: "/etc/apache2/conf.d"
 #                name: confd-volume
               - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_cert.crt"
