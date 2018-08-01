@@ -1,15 +1,15 @@
 kind:               PersistentVolume
 apiVersion:         v1
 metadata:
-  name:             hostpathpv
+  name:             etc-pv
   namespace:        jx
   labels:
     type:           local
 spec:
-  storageClassName: manual
+  storageClassName: etc
   capacity:
     storage:        1Gi
   accessModes:
   - ReadWriteOnce
   hostPath:
-    path:           "/nfs/home/shared/holonet"
+    path:           "/nfs/home/shared/ath038/sdnap/site/etc/httpd/conf/"

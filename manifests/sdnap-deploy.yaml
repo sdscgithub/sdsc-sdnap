@@ -33,8 +33,10 @@ spec:
               - containerPort: 80
               volumeMounts:
               - mountPath: "/etc/apache2/sites-enabled/httpd.conf"
-                name: apache2-config-volume
+                name: etc-hostpath 
                 subPath: "httpd.conf"
+#                name: apache2-config-volume
+#                subPath: "httpd.conf"
               - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_cert.crt"
                 name: cert-volume
                 subPath: "maersk_sdsc_edu_cert.crt"
@@ -76,9 +78,9 @@ spec:
             volumes:
 #           - name: workdir
 #             emptyDir: {}
-#           - name: holonetcontent
-#             persistentVolumeClaim:
-#               claimName: holonet-pvc
+            - name: etc-hostpath
+              persistentVolumeClaim:
+                claimName: etc-pvc
             - name: apache2-config-volume
               configMap:
                 name: apache2-config  # generated from configmap.yaml

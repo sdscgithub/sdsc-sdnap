@@ -1,10 +1,10 @@
 kind:               PersistentVolumeClaim
 apiVersion:         v1
 metadata:
-  name:             holonet-pvc
+  name:             etc-pvc
   namespace:        jx
 spec:
-  storageClassName: manual
+  storageClassName: etc
   accessModes:
   - ReadWriteOnce
   resources:
