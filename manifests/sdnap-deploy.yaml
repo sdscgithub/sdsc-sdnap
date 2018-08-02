@@ -61,15 +61,23 @@ spec:
 #              - mountPath: "/var/lib"
 #                name: workdir
               # Run some command in the containers
-              command: ["/bin/sh","-c"]
+              command: ["/bin/bash","-c"]
               args:
                 - echo starting;
                   ls /etc/apache2/sites-enabled;
                   ls /var/www;
+                  echo "** cat /etc/apache2/apache2.conf **";
+                  cat /etc/apache2/apache2.conf;
+                  echo "** cat envvars **";
+                  cat /etc/apache2/envvars;
+                  echo "** cat httpd.conf **";
                   cat /etc/apache2/sites-enabled/httpd.conf;
                   cat /usr/local/bin/run;
-                  echo "apache status";
-                  apachectl status;
+                  echo "** source apache envvars **";
+                  source /etc/apache2/envvars;
+                  echo "** start apache2 **";
+                  exec /usr/sbin/apache2 -DFOREGROUND;
+                  #apachectl status;
                 
 
 #            initContainers:
