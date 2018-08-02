@@ -33,7 +33,7 @@ spec:
         spec:
             containers:
             - name: sdnap
-              image: gitlab.sdsc.edu:4567/aha/holonet-sdnap:latest
+              image: gitlab.sdsc.edu:4567/aha/holonet-sdnap:v0.2
               #image: bylexus/apache-php53
               imagePullPolicy: Always
 

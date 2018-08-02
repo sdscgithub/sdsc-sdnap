@@ -48,6 +48,7 @@ deploy cluster:
       - kubectl apply -f ./manifests/confd-pvc.yaml --record
         #- kubectl apply -f ./manifests/mw-deploy.yaml --record
         #- kubectl apply -f ./manifests/mw-svc.yaml --record
-      - kubectl apply -f ./manifests/sdnap-deploy.yaml --record
+      #- kubectl apply -f ./manifests/sdnap-deploy.yaml --record
+      - kubectl replace -f ./manifests/sdnap-deploy.yaml --record
       - kubectl apply -f ./manifests/sdnap-svc.yaml --record
       - kubectl apply -f ./manifests/ingresses.yaml --record
