@@ -4,13 +4,14 @@ services:
     sdnap:
         container_name: sdsc-sdnap
         build:
-            context: .
+            context: ..
             dockerfile: ./Dockerfile
         image: gitlab.sdsc.edu:4567/aha/holonet-sdnap:latest
         restart: always
         ports:
-        - "80:80"
+          - "80:80"
+          - "443:443"
 
-#        command: ["apache2","-D","FOREGROUND"]
-
+        #command: ["apache2","-D","FOREGROUND"]
+        command["/usr/local/bin/run"]
 
