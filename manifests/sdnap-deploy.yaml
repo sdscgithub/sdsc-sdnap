@@ -71,10 +71,10 @@ spec:
               command: ["/bin/bash","-c"]
               args:
                 - echo starting;
-                  echo "198.202.90.177  sdnap.sdsc.edu" >> /etc/hosts;
-                  echo "198.202.90.177  services-sdsc.sdsc.edu" >> /etc/hosts;
-                  echo "198.202.90.177  tasktracker.sdsc.edu" >> /etc/hosts;
-                  echo "198.202.90.177  services-itss.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.156  sdnap.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.156 services-sdsc.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.156  tasktracker.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.156  services-itss.sdsc.edu" >> /etc/hosts;
                   ls /etc/apache2/sites-enabled;
                   ls /var/www;
                   echo "** cat /etc/apache2/apache2.conf **";
