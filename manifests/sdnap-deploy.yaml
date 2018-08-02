@@ -64,7 +64,6 @@ spec:
               command: ["/bin/bash","-c"]
               args:
                 - echo starting;
-                  # Note these entries are for testing only - once dns is config'ed - take out
                   echo "198.202.90.177  sdnap.sdsc.edu" >> /etc/hosts;
                   echo "198.202.90.177  services-sdsc.sdsc.edu" >> /etc/hosts;
                   echo "198.202.90.177  tasktracker.sdsc.edu" >> /etc/hosts;
