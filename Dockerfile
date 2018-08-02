@@ -12,10 +12,13 @@ RUN mkdir -p /etc/pki/tls/certs
 RUN mkdir -p /etc/pki/tls/private
 RUN mkdir -p /var/run/apache2
 
-# Make dirs for apache config files
-#CMD ["mkdir", "-p", "/etc/pki/tls/certs"]
-#CMD ["mkdir", "-p", "/etc/pki/tls/private"]
-#CMD ["mkdir", "-p", "/var/run/apache2"]
+# create entry in /etc/hosts for testing only
+# this entry should be a dns record in production
+CMD ["echo ", "198.202.90.177 sdnap.sdsc.edu ", ">>" , "/etc/hosts"]
+CMD ["echo ", "198.202.90.177 services.sdsc.edu ", ">>" , "/etc/hosts"]
+CMD ["echo ", "198.202.90.177 tasktracker.sdsc.edu ", ">>" , "/etc/hosts"]
+CMD ["echo ", "198.202.90.177 itss.sdsc.edu ", ">>" , "/etc/hosts"]
+
 
 # Set ports to be visible for container
 EXPOSE 80 443
