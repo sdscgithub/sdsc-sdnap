@@ -23,8 +23,8 @@ build site:
     script:
       - docker info
       - docker login -u ${GITLAB_USERNAME} -p ${GITLAB_TOKEN} gitlab.sdsc.edu:4567
-      - docker build -t gitlab.sdsc.edu:4567/aha/holonet-sdnap:v0.3 .
-      - docker push gitlab.sdsc.edu:4567/aha/holonet-sdnap:v0.3
+      - docker build -t gitlab.sdsc.edu:4567/aha/holonet-sdnap:v0.4 .
+      - docker push gitlab.sdsc.edu:4567/aha/holonet-sdnap:v0.4
       
 deploy cluster:
     stage: deploy
