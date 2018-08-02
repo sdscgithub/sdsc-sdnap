@@ -60,11 +60,15 @@ spec:
 #  emptydir for sharing data between pods
 #              - mountPath: "/var/lib"
 #                name: workdir
-              # Run some command in the containers
+              # Run commands in the containers
               command: ["/bin/bash","-c"]
               args:
                 - echo starting;
-                  echo "198.202.90.177 sdnap.sdsc.edu " >> /etc/hosts;
+                  # Note these entries are for testing only - once dns is config'ed - take out
+                  echo "198.202.90.177  sdnap.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.177  services-sdsc.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.177  tasktracker.sdsc.edu" >> /etc/hosts;
+                  echo "198.202.90.177  services-itss.sdsc.edu" >> /etc/hosts;
                   ls /etc/apache2/sites-enabled;
                   ls /var/www;
                   echo "** cat /etc/apache2/apache2.conf **";
