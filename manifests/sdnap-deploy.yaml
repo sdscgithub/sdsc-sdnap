@@ -71,7 +71,7 @@ spec:
               command: ["/bin/bash","-c"]
               args:
                 - echo starting;
-                  echo "198.202.90.189  sdnap.sdsc.edu" >> /etc/hosts;
+                  echo "127.0.0.1  sdnap.sdsc.edu" >> /etc/hosts;
                   echo "198.202.90.198   services-sdsc.sdsc.edu" >> /etc/hosts;
                   echo "198.202.90.56  tasktracker.sdsc.edu" >> /etc/hosts;
                   echo "198.202.90.156  traefik.sdsc.edu" >> /etc/hosts;

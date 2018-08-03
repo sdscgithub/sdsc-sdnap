@@ -15,5 +15,6 @@ spec:
       - path: /
         backend:
           serviceName: sdnap
-          servicePort: http
+          servicePort: https
+#          servicePort: http
 
