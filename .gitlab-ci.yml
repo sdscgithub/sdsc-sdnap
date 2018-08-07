@@ -31,6 +31,7 @@ deploy cluster:
     image: gitlab.sdsc.edu:4567/j2dangelo/docker-devops:latest
     variables:
       DOCKER_HOST: tcp://localhost:2375
+      KUBERNETES_SERVICE_ACCOUNT_OVERWRITE: admin-user
     services:
       - docker:dind
     script:
