@@ -115,9 +115,9 @@ spec:
 #            - name: confd-hostpath
 #              persistentVolumeClaim:
 #                claimName: confd-pvc
-            - name: etc-hostpath
-              persistentVolumeClaim:
-                claimName: etc-pvc
+#            - name: etc-hostpath
+#             persistentVolumeClaim:
+#                claimName: etc-pvc
             - name: apache2-config-volume
               configMap:
                 name: apache2-config  # generated from configmap.yaml
