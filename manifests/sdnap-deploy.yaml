@@ -89,8 +89,7 @@ spec:
                   source /etc/apache2/envvars;
                   echo "** start apache2 **";
                   exec /usr/sbin/apache2 -DFOREGROUND;
-                  #apachectl status;
-                
+                  #apachectl status;               
 
 #            initContainers:
 #              - name: chowns
