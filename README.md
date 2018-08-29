@@ -9,13 +9,11 @@
 #    + persistent volumes (nfs) - nfs server (caas.sdsc.edu)
 #    + pv claim
 
-
 ## TODO
 * Create mysql service in k8s
 * Get Mediawiki to work in deployment (sqlite backend)
 * Port config parameters for apache, php, mysql
 * Port Sevices website (mysql backend)
-
 
 ## DONE
 * Complete CI/CD pipeline with shared runner
