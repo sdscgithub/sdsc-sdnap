@@ -8,7 +8,7 @@ Description: connect to the sql server
   /* The page that the user will be directed to after adding,
   editing or deleting */
   //$redirectPage = "Location: https://holonet.sdsc.edu/sdnap/";
-  $redirectPage = "Location: https://caas.sdsc.edu:32080/sdnap/";
+  $redirectPage = "Location: https://maersk.sdsc.edu/sdnap/";
   /* Holds information on data in the rows */
   $primaryTable = "user_data";
   /* Holds informatin for dropdown menus */
