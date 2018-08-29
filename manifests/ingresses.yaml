@@ -1,25 +1,15 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: holonet
+  name: sdnap-ingress
   annotations:
-    ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: traefik
 spec:
   rules:
-  - host: maersk.sdsc.edu
+  - host: sdnap.sdsc.edu
     http:
       paths:
-      - path: /sdnap
+      - path: 
         backend:
           serviceName: sdnap
           servicePort: http
-      - path: /tasktracker
-        backend:
-          serviceName: tasktracker
-          servicePort: http
-      - path: /services
-        backend:
-          serviceName: services
-          servicePort: http
-
-
