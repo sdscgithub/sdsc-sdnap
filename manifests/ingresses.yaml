@@ -4,6 +4,7 @@ metadata:
   name: sdnap-ingress
   annotations:
     kubernetes.io/ingress.class: traefik
+  namespace: jx
 spec:
   rules:
   - host: sdnap.sdsc.edu
