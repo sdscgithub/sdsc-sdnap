@@ -4,7 +4,7 @@ apiVersion: v1
 kind: ConfigMap
 apiVersion: v1
 metadata:
-  name: apache2-config
+  name: apache2-config-sdnap
   namespace: jx
 dataFromFile: "../site/etc/httpd/conf/httpd.conf"
 ---

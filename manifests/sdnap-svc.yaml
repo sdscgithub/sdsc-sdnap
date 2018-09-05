@@ -5,12 +5,12 @@ metadata:
     name: sdnap
     namespace: jx
 spec:
-  type: NodePort
+  #type: NodePort
   ports:
   - name: http
     targetPort: 80
     port: 80
-    nodePort: 30041
+    #nodePort: 30041
   - name: https
     targetPort: 443
     port: 443

@@ -29,7 +29,7 @@ spec:
         metadata:
             labels:
                 app: sdnap
-                version: v0.2
+                version: v0.3
         spec:
             containers:
             - name: sdnap
@@ -119,19 +119,19 @@ spec:
 #                claimName: etc-pvc
             - name: apache2-config-volume
               configMap:
-                name: apache2-config  # generated from configmap.yaml
+                name: apache2-config-sdnap  # generated from configmap-build.sh 
             - name: php-config-volume
               configMap:
-                name: php-config  # generated from configmap.yaml
+                name: php-config-sdnap  # generated from  configmap-build.s
             - name: cert-volume
               configMap:
-                name: cert  # generated from configmap.yaml
+                name: cert-sdnap  
             - name: key-volume
               configMap:
-                name: key  # generated from configmap.yaml
+                name: key-sdnap  
             - name: interm-volume
               configMap:
-                name: interm  # generated from configmap.yaml
+                name: interm-sdnap  # generated from configmap.yaml
                 
 
 ---
