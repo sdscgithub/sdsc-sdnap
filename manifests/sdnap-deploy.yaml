@@ -36,7 +36,35 @@ spec:
               image: gitlab.sdsc.edu:4567/aha/holonet-sdnap
               #image: bylexus/apache-php53
               imagePullPolicy: Always
-
+---
+              env:
+                # The MySQL image will configure a root password with the value of MYSQL_ROOT_PASSWORD...
+                - name: MYSQL_ROOT_PASSWORD
+                  valueFrom:
+                    # rather than embed sensitive details in this config
+                    # we reference another Kubernetes object
+                    # in this case, the Secret with the name: mysql-credentials
+                    secretKeyRef:
+                      name: holonet-credentials
+                      # references the rootpw key-value pair from the mysql-credentials Secret
+                      key: rootpw
+                # ... an initial non-root user with a username of the value of MYSQL_USER ...
+                - name: MYSQL_USER
+                  valueFrom:
+                    secretKeyRef:
+                      name: holonet-credentials
+                      key: user
+                # ... and a password of the value of MYSQL_PASSWORD ...
+                - name: MYSQL_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: holonet-credentials
+                      key: password
+                # ... and an initial database named sdnapdb
+                # with the value of MYSQL_DATABASE (while granting MYSQL_USER superuser access.)
+                - name: MYSQL_DATABASE
+                  value: sdnapdb
+---
               ports: 
               - containerPort: 80
               volumeMounts:
