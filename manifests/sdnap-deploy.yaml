@@ -36,7 +36,6 @@ spec:
               image: gitlab.sdsc.edu:4567/aha/holonet-sdnap
               #image: bylexus/apache-php53
               imagePullPolicy: Always
----
               env:
                 # The MySQL image will configure a root password with the value of MYSQL_ROOT_PASSWORD...
                 - name: MYSQL_ROOT_PASSWORD
@@ -64,7 +63,6 @@ spec:
                 # with the value of MYSQL_DATABASE (while granting MYSQL_USER superuser access.)
                 - name: MYSQL_DATABASE
                   value: sdnapdb
----
               ports: 
               - containerPort: 80
               volumeMounts:
