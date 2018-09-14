@@ -2,7 +2,7 @@ FROM gitlab.sdsc.edu:4567/aha/ubuntu1204-apache-php53:latest
 MAINTAINER Anthony Ha <aha@sdsc.edu>
 
 # Insert new site content
-COPY ../site/www/sdnap /var/www/
+COPY ./site/www/sdnap /var/www/
 
 
 # Set users/owners
