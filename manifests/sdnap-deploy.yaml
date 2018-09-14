@@ -63,9 +63,9 @@ spec:
                 # with the value of MYSQL_DATABASE (while granting MYSQL_USER superuser access.)
                 - name: MYSQL_DATABASE
                   value: sdnapdb
-								# use service name as host
-          			- name: MYSQL_HOST
-            			value: sdnapdb.jx.svc.cluster.local
+                # use service name as host
+                - name: MYSQL_HOST
+                  value: sdnapdb.jx.svc.cluster.local
 
               ports: 
               - containerPort: 80
