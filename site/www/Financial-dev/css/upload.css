@@ -1,7 +1,0 @@
-#loadingMessage1, #loadingMessage2, #doneMessage1, #doneMessage2 {
-	display: none;
-}
-
-input[type=file] {
-	display: inline-block;
-}
