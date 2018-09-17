@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>SRF PROJECT</title>
+			<style>
+				td.data{
+					border-right:solid black 1px; 
+					border-bottom:solid black 1px; 
+					padding:5px					
+				}
+				td.dataRightSide{
+					border-bottom:solid black 1px;
+					padding:5px;
+				}
+			</style>
+			<script>
+				function showTable(x)
+				{
+					var y = document.getElementById(x).style.display;
+					if(y == 'inline-table')
+					{
+						document.getElementById(x).style.display='none';
+					}
+					else
+					{
+						document.getElementById(x).style.display='inline-table';
+					}
+				}
+				function highlightSelection(tableRow, checkBox, color)
+				{
+					if(checkBox.checked)
+					{
+						document.getElementById(tableRow).style.backgroundColor='#3399FF';
+					}
+					else
+					{
+						document.getElementById(tableRow).style.backgroundColor=color;
+					}
+				}
+				function uncheckAllBoxes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					for(var i=0; i < inputs.length; i++)
+					{
+						if (inputs[i].type == 'checkbox')
+						{			
+							if(inputs[i].checked)
+							{
+								inputs[i].checked = false;	
+								inputs[i].onchange();
+							}
+						}
+					}
+				}
+				function changeIndexes()
+				{
+					var inputs = document.getElementsByTagName('input');
+					var checked = [];
+					for(var i=0; i < inputs.length; i++)
+					{
+						if(inputs[i].type=='checkbox')
+						{
+							if(inputs[i].checked)
+							{
+								checked.push(inputs[i]);
+							}
+						}
+					}
+					
+					for(var i=0; i < checked.length; i++)
+					{
+						// Do whatever to change indexes
+					}					
+				}
+				function rowClicked(x)
+				{
+					var checkbox = document.getElementById(x);
+					if(checkbox.checked)
+					{
+						checkbox.checked = false;
+					}
+					else
+					{
+						checkbox.checked = true;
+					}
+					document.getElementById(x).onchange();
+				}
+			</script>
+		</head>
+		<body>
+		<p><a href="https://holonet.sdsc.edu/Bounces"><-- Back</a><br><br>
+		<u>Seller</u>: <b>SRF PROJECT</b><br>
+		Changes occuring between 8/31/2015 and 9/30/2015</p>
+		<input type='submit' value='Clear All' onclick='uncheckAllBoxes()'>
+		<input type='submit' value='Change Indexes' onclick='changeIndexes()'>
+			<h2 align='center' style='cursor:pointer' onclick="showTable('added')"><img src='../../images/PlusButton.png' height='20px' width='auto' onmouseover="this.src='../../images/PlusButton_Selected.png'" onmouseout="this.src='../../images/PlusButton.png'">   <u>The following bounced tickets have been added this month</u>:</h2>
+			<p><u>Number of new tickets</u>: 1</p>
+			<table width='100%' style='border-collapse:collapse; display:inline-table;' id='added'>
+				<tr>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Close Date</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Buyer</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Ticket #</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Reason</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Index</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Index %</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Product Code</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Raw Quantity</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Quantity</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Rate</b></td>
+					<td align='center' style='border-bottom:solid black 1px; padding:5px;'><b>Cost</b></td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='added0'>
+					<td style='border-bottom:solid black 1px;'><input type='checkbox' id='added0cb' onchange="highlightSelection('added0', this, '#FFFFFF')"></td>
+					<td class='data' onclick="rowClicked('added0cb')">9/30/2015</td>
+					<td class='data' onclick="rowClicked('added0cb')">ANNESE, JACOPO</td>
+					<td class='data' align='center' onclick="rowClicked('added0cb')">60821</td>
+					<td class='data' onclick="rowClicked('added0cb')">Invalid index</td>
+					<td class='data' onclick="rowClicked('added0cb')"><input type='text' value='RAD8671' align='center'></td>
+					<td class='data' align='center' onclick="rowClicked('added0cb')">1</td>
+					<td class='data' onclick="rowClicked('added0cb')">ON DEMAND DUAL COPY</td>
+					<td class='data' align='center' onclick="rowClicked('added0cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('added0cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('added0cb')">$45.75</td>
+					<td class='dataRightSide' align='center' onclick="rowClicked('added0cb')">$183.00</td>
+				</tr>
+		</table>			
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('stillPresent')"><img src='../../images/PlusButton.png' height='20px' width='auto' onmouseover="this.src='../../images/PlusButton_Selected.png'" onmouseout="this.src='../../images/PlusButton.png'">   <u>The following bounced tickets are still present this month</u>:</h2>
+			<p><u>Number of bounced tickets</u>: 4</p>
+			<table width='100%' style='border-collapse:collapse; display:inline-table;' id='stillPresent'>
+				<tr>
+					<td style='border-bottom:solid black 1px;'></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Close Date</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Buyer</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Ticket #</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Reason</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Index</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Index %</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Product Code</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Raw Quantity</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Quantity</b></td>
+					<td align='center' style='border-right:solid black 1px; border-bottom:solid black 1px; padding:5px;'><b>Rate</b></td>
+					<td align='center' style='border-bottom:solid black 1px; padding:5px;'><b>Cost</b></td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='modified0'>
+					<td style='border-bottom:solid black 1px;'><input type='checkbox' id='modified0cb' onchange="highlightSelection('modified0', this, '#FFFFFF')"></td>
+					<td class='data' onclick="rowClicked('modified0cb')">5/31/2015</td>
+					<td class='data' onclick="rowClicked('modified0cb')">ANNESE, JACOPO</td>
+					<td class='data' align='center' onclick="rowClicked('modified0cb')">56420</td>
+					<td class='data' onclick="rowClicked('modified0cb')">Invalid index</td>
+					<td class='data' onclick="rowClicked('modified0cb')"><input type='text' value='RAD8671' align='center'></td>
+					<td class='data' align='center' onclick="rowClicked('modified0cb')">1</td>
+					<td class='data' onclick="rowClicked('modified0cb')">ON DEMAND DUAL COPY</td>
+					<td class='data' align='center' onclick="rowClicked('modified0cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified0cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified0cb')">$45.75</td>
+					<td class='dataRightSide' align='center' onclick="rowClicked('modified0cb')">$183.00</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='modified1'>
+					<td style='border-bottom:solid black 1px;'><input type='checkbox' id='modified1cb' onchange="highlightSelection('modified1', this, '#D3D3D3')"></td>
+					<td class='data' onclick="rowClicked('modified1cb')">6/30/2015</td>
+					<td class='data' onclick="rowClicked('modified1cb')">ANNESE, JACOPO</td>
+					<td class='data' align='center' onclick="rowClicked('modified1cb')">57621</td>
+					<td class='data' onclick="rowClicked('modified1cb')">Invalid index</td>
+					<td class='data' onclick="rowClicked('modified1cb')"><input type='text' value='RAD8671' align='center'></td>
+					<td class='data' align='center' onclick="rowClicked('modified1cb')">1</td>
+					<td class='data' onclick="rowClicked('modified1cb')">ON DEMAND DUAL COPY</td>
+					<td class='data' align='center' onclick="rowClicked('modified1cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified1cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified1cb')">$45.75</td>
+					<td class='dataRightSide' align='center' onclick="rowClicked('modified1cb')">$183.00</td>
+				</tr>
+				<tr style='background-color:#FFFFFF' id='modified2'>
+					<td style='border-bottom:solid black 1px;'><input type='checkbox' id='modified2cb' onchange="highlightSelection('modified2', this, '#FFFFFF')"></td>
+					<td class='data' onclick="rowClicked('modified2cb')">7/31/2015</td>
+					<td class='data' onclick="rowClicked('modified2cb')">ANNESE, JACOPO</td>
+					<td class='data' align='center' onclick="rowClicked('modified2cb')">58678</td>
+					<td class='data' onclick="rowClicked('modified2cb')">Invalid index</td>
+					<td class='data' onclick="rowClicked('modified2cb')"><input type='text' value='RAD8671' align='center'></td>
+					<td class='data' align='center' onclick="rowClicked('modified2cb')">1</td>
+					<td class='data' onclick="rowClicked('modified2cb')">ON DEMAND DUAL COPY</td>
+					<td class='data' align='center' onclick="rowClicked('modified2cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified2cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified2cb')">$45.75</td>
+					<td class='dataRightSide' align='center' onclick="rowClicked('modified2cb')">$183.00</td>
+				</tr>
+				<tr style='background-color:#D3D3D3' id='modified3'>
+					<td style='border-bottom:solid black 1px;'><input type='checkbox' id='modified3cb' onchange="highlightSelection('modified3', this, '#D3D3D3')"></td>
+					<td class='data' onclick="rowClicked('modified3cb')">8/31/2015</td>
+					<td class='data' onclick="rowClicked('modified3cb')">ANNESE, JACOPO</td>
+					<td class='data' align='center' onclick="rowClicked('modified3cb')">59756</td>
+					<td class='data' onclick="rowClicked('modified3cb')">Invalid index</td>
+					<td class='data' onclick="rowClicked('modified3cb')"><input type='text' value='RAD8671' align='center'></td>
+					<td class='data' align='center' onclick="rowClicked('modified3cb')">1</td>
+					<td class='data' onclick="rowClicked('modified3cb')">ON DEMAND DUAL COPY</td>
+					<td class='data' align='center' onclick="rowClicked('modified3cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified3cb')">4</td>
+					<td class='data' align='center' onclick="rowClicked('modified3cb')">$45.75</td>
+					<td class='dataRightSide' align='center' onclick="rowClicked('modified3cb')">$183.00</td>
+				</tr>
+		</table>
+		</body>
+	</html>

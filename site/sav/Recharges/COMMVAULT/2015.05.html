@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SDSC COMMVAULT</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'none')
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+				else
+				{
+					document.getElementById(x).style.display='none';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SDSC COMMVAULT<br><br>	
+		<u>5/19/2015 revenue</u> = $5,488.03<br>
+		<u>4/19/2015 revenue</u> = $5,248.74<br><h2 align='center' style='cursor:pointer' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u align='center'>Number of added charges</u>: 3<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">5/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">NANDIGAM, VISWANATH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$3.67</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">Commvault Invoice - opentopo</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">CACTOPO</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">.04</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$91.67</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">COMMVAULT ON-DISK TB</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">5/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">ONG, SHYUE-PING</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$171.42</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">Commvault Invoice - ong-lab</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">NANSOS4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">1.87</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$91.67</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added1')">COMMVAULT ON-DISK TB</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">5/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">WANETICK, JERRY</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$118.25</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">Commvault Invoice - cis-conners</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">IOD13KB</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">1.29</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$91.67</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added2')">COMMVAULT ON-DISK TB</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u align='center'>Number of modified charges</u>: 8<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">HUSSAIN, SAFA<br>HUSSAIN, SAFA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>$44.00<br>$42.17</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">Commvault Invoice - UCD-ITS-UCOP<br>Commvault Invoice - UCD-ITS-UCOP</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">CACVERM<br>CACVERM</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>.48<br>.46</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">INAL, TUGAY<br>INAL, TUGAY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>$535.35<br>$529.85</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">Commvault Invoice - Rady-Storage-Policy<br>Commvault Invoice - Rady-Storage-Policy</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">MGTFNIT<br>MGTFNIT</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>5.84<br>5.78</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">KIEU, MARC<br>KIEU, MARC</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>$467.52<br>$455.60</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">Commvault Invoice - ESPP<br>Commvault Invoice - ESPP</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">EXISCSG<br>EXISCSG</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>5.1<br>4.97</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified2')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">LEE, CYNTHIA<br>LEE, CYNTHIA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>$23.83<br>$22.92</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">Commvault Invoice - ethority<br>Commvault Invoice - ethority</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">CACHECB<br>CACHECB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>.26<br>.25</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified3')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">LOPES, ALANN<br>LOPES, ALANN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>$126.50<br>$115.50</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">Commvault Invoice - chembio-dedupe<br>Commvault Invoice - chembio-dedupe</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">CHECOMP<br>CHECOMP</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>1.38<br>1.26</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified4')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified5'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified5')">WANETICK, JERRY<br>WANETICK, JERRY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')"><span style='background-color:yellow'>$167.76<br>$160.42</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified5')">Commvault Invoice - cis-neoco<br>Commvault Invoice - cis-neoco</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">MPLETND<br>MPLETND</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')"><span style='background-color:yellow'>1.83<br>1.75</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified5')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified6'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified6')">WANETICK, JERRY<br>WANETICK, JERRY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')"><span style='background-color:yellow'>$225.51<br>$223.67</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified6')">Commvault Invoice - SIODO-Mac<br>Commvault Invoice - SIODO-Mac</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">DIRSYS4<br>DIRSYS4</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')"><span style='background-color:yellow'>2.46<br>2.44</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified6')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified7'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">5/19/2015<br>4/19/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified7')">ZASLAVSKY, ILYA<br>ZASLAVSKY, ILYA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')"><span style='background-color:yellow'>$33.92<br>$42.17</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified7')">Commvault Invoice - River<br>Commvault Invoice - River</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">CACSCZO<br>CACSCZO</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')"><span style='background-color:yellow'>.37<br>.46</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">$91.67<br>$91.67</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified7')">COMMVAULT ON-DISK TB<br>COMMVAULT ON-DISK TB</td>
+			</tr>	
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u align='center'>Number of removed recharges</u>: 14<br><br>
+	<table width='100%' style='border-collapse:collapse;' id='removed'>
+		<tr>
+			<td class='data' align='center'><b>Date</b></td>
+			<td class='data' align='center'><b>Buyer</b></td>
+			<td class='data' align='center'><b>Total Cost</b></td>
+			<td class='data' align='center'><b>Description</b></td>
+			<td class='data' align='center'><b>Index</b></td>
+			<td class='data' align='center'><b>Quantity</b></td>
+			<td class='data' align='center'><b>Unit Cost</b></td>
+			<td class='dataRightSide' align='center'><b>Product Number</b></td>
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed0'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">FERBERT, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$3.67</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">Commvault Invoice - opentopo</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">CACTOPO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">.04</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed1'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">FERBERT, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$4.58</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">Commvault Invoice - wcga</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">CAC3344</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed2'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">FIGUEROA, JOSHUA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$118.25</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">Commvault Invoice - ucsd-figueroa</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">CHE5770</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">1.29</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed3'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">HELLY, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">-$4.58</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">Commvault Invoice - wcga</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">CAC1129</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">-.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed4'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">HELLY, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">-$4.58</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">Commvault Invoice - wcga</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">CAC1129</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">-.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed5'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">HELLY, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$4.58</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">Commvault Invoice - wcga - Feb 2015 Re</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">CAC3344</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed6'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">HELLY, JOHN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$4.58</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">Commvault Invoice - wcga - Mar 2015 Re</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">CAC3344</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">.05</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed7'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">4/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">ONG, SHYUE PING</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$167.76</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">Commvault Invoice - ong-lab</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">NANSOS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">1.83</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed8'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">-$34.34</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">MPLET21</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">-.37</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed9'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">-$34.34</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">MPLET44</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">-.37</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed10'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">-$34.34</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">MPLET44</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">-.37</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed11'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">-$35.38</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">MPLET60</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">-.39</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed12'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">-$35.38</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">MPLET60</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">-.39</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed13'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">1/19/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">OTERO, MARK</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">-$34.34</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">Commvault Invoice - mpl-sandbar</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">MPLET61</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">-.37</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">$91.67</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">COMMVAULT ON-DISK TB</td>			
+		</tr>
+			<tr height='50px'>
+			</tr>
+		</table>		
+	</body>
+	</html>

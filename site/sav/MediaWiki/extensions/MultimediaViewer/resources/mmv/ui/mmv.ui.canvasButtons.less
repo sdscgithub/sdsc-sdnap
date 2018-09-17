@@ -1,0 +1,120 @@
+@import "../mmv.globals";
+@import "../mmv.mixins";
+
+@navbutton-width: 18px;
+@buttons-offset: 5px;
+
+.mw-mmv-reuse-button,
+.mw-mmv-close,
+.mw-mmv-fullscreen,
+.mw-mmv-next-image,
+.mw-mmv-prev-image {
+	cursor: pointer;
+	position: fixed;
+	background-repeat: no-repeat;
+	.opacity(0.8);
+	border: none;
+	z-index: 1003;
+
+	&.mw-mmv-dialog-open,
+	&:hover {
+		.opacity(1);
+	}
+
+	.unselectable;
+}
+
+.mw-mmv-reuse-button.hidden,
+.mw-mmv-close.hidden,
+.mw-mmv-fullscreen.hidden,
+.mw-mmv-next-image.hidden,
+.mw-mmv-prev-image.hidden {
+	display: none;
+}
+
+.cursor-hidden {
+	.mw-mmv-reuse-button,
+	.mw-mmv-close,
+	.mw-mmv-fullscreen,
+	.mw-mmv-next-image,
+	.mw-mmv-prev-image {
+		cursor: none;
+	}
+}
+
+.mw-mmv-reuse-button,
+.mw-mmv-close,
+.mw-mmv-fullscreen {
+	right: @buttons-offset;
+	left: auto;
+	transition: opacity 0.25s;
+	background-position: center;
+	margin-top: 14px;
+	margin-right: 14px;
+}
+
+.mw-mmv-next-image,
+.mw-mmv-prev-image {
+	top: -999px;
+	width: 80px;
+	height: 120px;
+	transition: opacity 0.25s, margin 0.25s;
+
+	&.disabled {
+		display: none;
+		cursor: none;
+	}
+}
+
+.mw-mmv-close {
+	top: @buttons-offset;
+	/* @embed */
+	background-image: url(img/mw-close.svg);
+	height: 23px;
+	width: 23px;
+}
+
+.mw-mmv-fullscreen {
+	top: (@buttons-offset + 37px);
+	/* @embed */
+	background-image: url(img/mw-fullscreen-ltr.svg);
+	width: 21px;
+	height: 22px;
+}
+
+.jq-fullscreened {
+	.mw-mmv-fullscreen {
+		/* @embed */
+		background-image: url(img/mw-defullscreen-ltr.svg);
+	}
+}
+
+.mw-mmv-next-image {
+	/* @embed */
+	background-image: url(img/next-ltr.svg);
+	background-position: right;
+	right: @navbutton-width;
+
+	&:hover {
+		margin-right: -4px;
+	}
+}
+
+.mw-mmv-prev-image {
+	/* @embed */
+	background-image: url(img/prev-ltr.svg);
+	background-position: left;
+	left: @navbutton-width;
+
+	&:hover {
+		margin-left: -4px;
+	}
+}
+
+.mw-mmv-reuse-button {
+	bottom: @buttons-offset + @metadatabar-above-fold-height + @progress-bar-height;
+	/* @embed */
+	background-image: url(img/use-ltr.svg);
+	height: 24px;
+	width: 24px;
+}

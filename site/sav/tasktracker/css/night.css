@@ -1,0 +1,283 @@
+body {
+  background-color: #212121;
+  color: #BDBDBD;
+}
+
+.btn, button {
+  background-color: transparent;
+}
+
+.btn:hover, button:hover, li:hover {
+  color: #BDBDBD;
+  background-color: #212121;
+}
+
+thead {
+  color: #B93C3C;
+}
+
+#tableTitle:hover{
+  background-color: #BDBDBD;
+  color: #212121;
+}
+#wrapper_-2 div #tableTitle:hover{
+  background-color: transparent;
+  color: #BDBDBD;
+  cursor: auto;
+}
+
+td {
+  border-color: #BDBDBD;
+  /* vs #d3d3d3 */
+}
+
+.cancelButton {
+  background-color: #171717;
+}
+.cancelButton:hover{
+  background-color: #1a1a1a !important;
+}
+.cancelButton:active{
+}
+
+.ui-state-highlight {
+  background: #d3d3d3;
+}
+
+.notFirst:hover {
+  background-color: #B93C3C;
+  color: #FFF;
+}
+
+select#sortList {
+  color: black;
+}
+
+#close-ticket-panel-button{
+  background-color: #B93C3C;
+  border: none;
+  border-right: 1px #222 solid;
+}
+
+#leftSidebar {
+  background-color: #212121;
+}
+
+.leftSidebarItem {
+  background-color: transparent;
+}
+
+.leftSidebarItem:hover {
+  background-color: #171717;
+}
+
+.filteredIn{
+  background-color: #171717;
+}
+
+h2#info-header {
+    color: #ddd;
+}
+
+h3#filters {
+    color: #ddd;
+}
+
+#leftSidebar h3 {
+  background-color: #B93C3C;
+}
+
+.info-panel {
+  background-color: #212121;
+}
+
+#info-header {
+  background-color: #B93C3C;
+}
+
+#clearBtn {
+  background-color: #B93C3C;
+  color: #ddd;
+  border: 2px solid grey;
+}
+
+#clearBtn:active {
+  background-color: #9e0707;
+}
+
+.panel-heading {
+  background-color: #171717 !important;
+}
+
+.panel-heading .glyphicon-remove-sign {
+  color: #BDBDBD;
+}
+
+.panel-body {
+  background-color: #212121;
+}
+
+.panel-body a {
+  color: #B93C3C;
+}
+.panel-heading a {
+  color: #B93C3C;
+}
+.panel-heading a:hover {
+  color: #BDBDBD;
+}
+
+.navbar {
+  background-color: #171717;
+  border-color: transparent;
+  /*border-bottom: 1px solid darkgrey; Looks weird on firefox, feel free to try to fix it*/
+}
+
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:active {
+    background: #171717 !important;
+    color: #BDBDBD !important;
+}
+
+.navbar-collapse {
+  background-color: #171717;
+}
+
+#navbar-links li:not(#searchBar):hover {
+  background-color: #212121;
+  color: #FFF;
+}
+
+#navbar-links .dropdown-menu, #navbar-links .dropdown-menu > li > a
+{
+  background-color: #171717;
+  color: #BDBDBD;
+}
+
+#navbar-links .dropdown-menu li > a:hover {
+  background-color: #212121;
+}
+
+#app-title a, a:hover {
+  color: #B93C3C;
+}
+
+.form-control:focus {
+  border-color: #B93C3C;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.form-group input{
+  background-color: #212121;
+  color: #BDBDBD;
+}
+
+.hamburger {
+  background: transparent;
+}
+
+.hamburger.is-closed:before {
+  color: #BDBDBD;
+}
+
+.hamburger.is-closed .hamb-top {
+  background-color: rgba(224, 224, 224, 0.7);
+}
+
+.hamburger.is-closed .hamb-middle {
+  background-color: rgba(224, 224, 224, 0.7);
+}
+
+.hamburger.is-closed .hamb-bottom {
+  background-color: rgba(224, 224, 224, 0.7);
+}
+
+.hamburger.is-open .hamb-top {
+  background-color: #BDBDBD;
+}
+
+.hamburger.is-open .hamb-middle {
+  background-color: #BDBDBD;
+}
+
+.hamburger.is-open .hamb-bottom {
+  background-color: #BDBDBD;
+}
+
+.hamburger.is-open:before {
+  color: #BDBDBD;
+}
+
+.sortButton {
+  background-color: transparent;
+}
+
+.deleteBtn {
+  background-color: #B93C3C;
+}
+
+#deleteTableBtn {
+  background-color: #B93C3C;
+  color: #FFF;
+}
+
+#openPanelArrow {
+  background-color: #171717;
+  color: #A2270C;
+  border-color: darkgrey;
+}
+#openPanelArrow:hover{
+  background-color: dimgrey;
+}
+#openPanelArrow:active{
+  background-color: grey;
+}
+
+.scrollTop {
+  background-color: transparent;
+  color: #BDBDBD;
+}
+
+.modal-header {
+  color: #B93C3C;
+  background-color: #171717;
+}
+
+.modal-header #closeModal {
+  color: #BDBDBD;
+}
+
+.modal-body {
+  background-color: #212121;
+}
+
+.modal-footer {
+  background-color: #212121;
+}
+
+.tingle-modal-box {
+  background-color: #212121 !important;
+}
+
+.tingle-btn--primary {
+  background-color: #171717 !important;
+}
+
+.tingle-btn--danger {
+  background-color: #B93C3C !important;
+}
+
+.tingle-modal-box h3 {
+  color: #B93C3C;
+}
+
+.btn-primary {
+  background-color: #B93C3C;
+}
+
+.btn-primary:hover, .btn-primary.active, .btm-primary:active, .btn-primary:focus {
+  background-color: #c6595c !important;
+}
+
+.table-wrapper {
+  background-color: #1D1D1D;
+}

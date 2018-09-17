@@ -1,0 +1,55 @@
+@import "../mmv.mixins";
+
+.mw-mmv-image {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	.unselectable;
+
+	&.empty {
+		display: none;
+	}
+	&.error {
+		/* @embed */
+		background-image: url(img/error.svg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	.mw-mmv-error-text {
+		position: absolute;
+		left: 10%;
+		right: 10%;
+		top: 20%;
+
+		padding: 6px 20px;
+		.box-round(15px);
+		background-color: #ff4f4d;
+		text-align: center;
+		font-size: normal;
+		color: #000;
+	}
+}
+
+.mw-mmv-image.empty img {
+	display: none;
+}
+
+.mw-mmv-image img.blurred {
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+	.opacity(0.8);
+}
+
+.mw-mmv-image img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	background: url('//upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png') repeat;
+	cursor: pointer;
+	cursor: zoom-in;
+
+	&.mw-mmv-dialog-is-open {
+		cursor: default;
+	}
+}

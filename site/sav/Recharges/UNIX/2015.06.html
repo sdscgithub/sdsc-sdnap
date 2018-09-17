@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SDSC UNIX PLATFORM</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'none')
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+				else
+				{
+					document.getElementById(x).style.display='none';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SDSC UNIX PLATFORM<br><br>	
+		<u>6/30/2015 revenue</u> = $8,650.59<br>
+		<u>5/31/2015 revenue</u> = $13,689.13<br><h2 align='center' style='cursor:pointer' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u align='center'>Number of added charges</u>: 33<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">service - bread.sdsc.edu - system administration - SDSC BO</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">CAC250T</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">service - bubbles.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added1')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">service - codd.sdsc.edu - system admin - SDSC Oracle</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">CACHECO</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added2')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">service - dough.sdsc.edu - system administration - SDSC BO</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">CAC250T</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added3')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">service - ham.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added4')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added5'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">service - inmon.sdsc.edu - system admin - SDSC Oracle</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">CACHECO</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added5')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added6'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">service - matilda.sdsc.edu - system admin - SDSC Oracle</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">CACHECO</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added6')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added7'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">service - web3.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added7')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added8'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">service - web5.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added8')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added9'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">service - xigua.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added9')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added10'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">service - yolk.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added10')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added11'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">LEE, CYNTHIA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$124.99</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">service - zucchini.sdsc.edu - system admin - SDSC Webfarm</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">1.3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added11')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added12'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">TATINENI, MAHIDHAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$1.53</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">NFS - /projects/us 30GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added12')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added13'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">WAGNER, RICK</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$101.76</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">chester.sdsc.edu GX-MAP machine</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">CACCOM1</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">1.06</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added13')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added14'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">6/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">YOUNG, WILLIAM</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$0.77</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">NFS - /projects/tg-data 10GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added14')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added15'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">CARSON, LEONARD K</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$101.76</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">chester.sdsc.edu GX-MAP machine</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">CACCOM1</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">1.06</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added15')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added16'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">TATINENI, MAHIDHAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$1.53</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">NFS - /projects/us 30GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added16')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added17'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">YOUNG, WILLIAM</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$0.77</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">NFS - /projects/tg-data 10GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added17')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added18'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">CARSON, LEONARD K</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$101.76</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">chester.sdsc.edu GX-MAP machine</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">CACCOM1</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">1.06</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added18')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added19'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">-$194.15</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">-5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added19')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added20'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">-$194.15</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">-5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added20')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added21'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">-$194.15</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">-5</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added21')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added22'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">-$194.15</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">-5</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added22')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added23'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">-$488.25</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">-7</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added23')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added24'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">-$488.25</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">-7</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added24')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added25'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">-$488.25</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">-7</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added25')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added26'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">-$488.25</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">-7</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added26')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added27'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">-$263.04</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">-2.74</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added27')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added28'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">-$263.04</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">-2.74</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added28')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added29'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">-$263.04</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">-2.74</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added29')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added30'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">HELLY, JOHN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">-$263.04</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">Service - VM and Server Maintenance - Helly - WCGA - 2014-20</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">CAC3344</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">-2.74</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added30')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added31'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">TATINENI, MAHIDHAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">$1.53</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">NFS - /projects/us 30GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added31')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added32'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">4/30/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">YOUNG, WILLIAM</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">$0.77</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">NFS - /projects/tg-data 10GB ZFS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">CACTRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">0</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added32')">FILE SYS MGMT</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u align='center'>Number of modified charges</u>: 3<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">6/30/2015<br>5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">CARSON, LEONARD<br>CARSON, LEONARD</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>$69.75<br>$34.88</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">service - teragrid - scruple.sdsc.edu (VM)<br>service - teragrid - scruple.sdsc.edu (VM)</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>CACTRE2<br>CAC103G</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>1<br>.5</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$69.75<br>$69.75</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">VM - FIRST MACH<br>VM - FIRST MACH</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">6/30/2015<br>5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">LEE, CYNTHIA<br>LEE, CYNTHIA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>$41.16<br>$43.65</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">NFS - /misc/www 900GB ZFS<br>NFS - /misc/www 900GB ZFS</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">CACHEC4<br>CACHEC4</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">.11<br>.11</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$382.92<br>$382.92</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">FILE SYS MGMT<br>FILE SYS MGMT</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">6/30/2015<br>5/31/2015</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">NIJS, VINCENT<br>NIJS, VINCENT</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>$85.39<br>$287.26</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">Service - VM - rsm-bizanalytics - Vincent Nijs and Dean Olse<br>Service - VM - rsm-bizanalytics - Vincent Nijs and Dean Olse</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">MGTFCBA<br>MGTFCBA</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>2.2<br>7.4</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified2')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>	
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u align='center'>Number of removed recharges</u>: 12<br><br>
+	<table width='100%' style='border-collapse:collapse;' id='removed'>
+		<tr>
+			<td class='data' align='center'><b>Date</b></td>
+			<td class='data' align='center'><b>Buyer</b></td>
+			<td class='data' align='center'><b>Total Cost</b></td>
+			<td class='data' align='center'><b>Description</b></td>
+			<td class='data' align='center'><b>Index</b></td>
+			<td class='data' align='center'><b>Quantity</b></td>
+			<td class='data' align='center'><b>Unit Cost</b></td>
+			<td class='dataRightSide' align='center'><b>Product Number</b></td>
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed0'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">5/31/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$34.88</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">service - teragrid - scruple.sdsc.edu (VM)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">CACCOM1</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed1'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">5/31/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">LEE, CYNTHIA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$249.98</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">SDSC Oracle - zachman.sdsc.edu, inmon.sdsc.edu system admin</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">CACHECO</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">2.6</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed2'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">5/31/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">LEE, CYNTHIA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$100.03</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">service - bread.sdsc.edu - system administration</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">CAC250T</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">1.04</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed3'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">5/31/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">LEE, CYNTHIA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$2,185.92</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">web[0-9].sdsc.edu</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">CACHEC4</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">22.77</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed4'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">5/6/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">CHOURASIA, AMIT</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$38.40</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">PC - Unix: Install OAUTH PECL on seedblade 1 and 2</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">CACAC31</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">.4</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">FFS</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed5'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">5/6/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">NADEAU, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$43.20</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">PC - Unix: Seedblade2 actions needed</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">CACAC31</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">.45</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">FFS</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed6'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">4/30/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$34.88</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">service - teragrid - buchhalter.sdsc.edu (VM)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">CAC103G</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed7'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">4/30/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$34.88</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">service - teragrid - buchhalter.sdsc.edu (VM)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">CACCOM1</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed8'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">4/30/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$34.88</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">service - teragrid - scruple.sdsc.edu (VM)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">CAC103G</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed9'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">4/30/2015</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$34.88</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">service - teragrid - scruple.sdsc.edu (VM)</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">CACCOM1</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">.5</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed10'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">4/30/2015</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">CARSON, LEONARD</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$69.02</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">U55 / Teragrid-XEDE / balthazar.sdsc.edu</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">CACXDSO</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">.72</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">SERVER MAINT</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed11'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">10/4/2012</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">CHOURASIA, AMIT</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$38.40</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">Accounts / Passwords: need unix group for seedme.org</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">CACAC31</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">.4</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">FFS</td>			
+		</tr>
+			<tr height='50px'>
+			</tr>
+		</table>		
+	</body>
+	</html>

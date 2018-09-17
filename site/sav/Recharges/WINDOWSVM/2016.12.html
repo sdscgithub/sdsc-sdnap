@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>SDSC WINDOWS/VM</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'none')
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+				else
+				{
+					document.getElementById(x).style.display='none';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: SDSC WINDOWS/VM<br><br>	
+		<u>12/31/2016 revenue</u> = $39,383.49<br>
+		<u>11/30/2016 revenue</u> = $22,241.25<br><h2 align='center' style='cursor:pointer' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u align='center'>Number of added charges</u>: 26<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">ABEYTA, ED</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$1,362.75</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">service - VM and Consulting - SRS@UCSD</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">EXSROPS</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$1,362.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">PASS THRU</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$414.20</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">Service - VMware - Lipid Maps</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">10.67</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added1')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$31.78</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">Service - VMware - Lipid Maps</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">0.08</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added2')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$418.50</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">Service - VMware - Lipid Maps</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">6.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added3')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$768.00</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">Service - VMware - Lipid Maps</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">8.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added4')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added5'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">POLICHAR, VALERIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$181.14</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">ITSFISP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">4.67</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added5')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added6'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">POLICHAR, VALERIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$139.50</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">ITSFISP</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">2.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added6')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added7'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">POLICHAR, VALERIE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$48.00</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">ITSFISP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">0.50</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added7')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added8'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$1,087.24</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">Service - VMware - Metabolomics</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">28.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added8')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added9'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$1,373.92</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">Service - VMware - Metabolomics</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">3.59</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added9')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added10'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$697.50</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">Service - VMware - Metabolomics</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">10.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added10')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added11'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">ABEYTA, ED</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$1,362.75</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">service - VM and Consulting - SRS@UCSD</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">EXSROPS</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$1,362.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added11')">PASS THRU</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added12'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$414.20</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">Service - VMware - Lipid Maps - Nov 201</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">10.67</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added12')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added13'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$31.78</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">Service - VMware - Lipid Maps - Nov 201</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">0.08</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added13')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added14'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$418.50</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">Service - VMware - Lipid Maps - Nov 201</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">6.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added14')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added15'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$768.00</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">Service - VMware - Lipid Maps - Nov 201</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">8.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added15')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added16'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$1,087.24</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">Service - VMware - Metabolomics - Nov 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">28.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added16')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added17'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$1,373.92</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">Service - VMware - Metabolomics - Nov 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">3.59</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added17')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added18'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">11/29/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$697.50</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">Service - VMware - Metabolomics - Nov 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">10.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added18')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added19'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$414.20</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">Service - VMware - Lipid Maps - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">10.67</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added19')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added20'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$31.78</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">Service - VMware - Lipid Maps - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">0.08</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added20')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added21'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$418.50</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">Service - VMware - Lipid Maps - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">6.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added21')">VM - FIRST MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added22'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">FAHY, EOIN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$768.00</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">Service - VMware - Lipid Maps - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">CAC3435</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">8.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$96.00</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added22')">SERVER MAINT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added23'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$1,087.24</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">Service - VMware - Metabolomics - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">28.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$38.83</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added23')">VM - ADDL MACH</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added24'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$1,373.92</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">Service - VMware - Metabolomics - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">3.59</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$382.92</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added24')">FILE SYS MGMT</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added25'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">10/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">SUBRAMANIAM, SHANKAR</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$697.50</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">Service - VMware - Metabolomics - Oct 2016</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">BNG7962</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">10.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$69.75</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added25')">VM - FIRST MACH</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u align='center'>Number of modified charges</u>: 5<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">12/31/2016<br>11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">COOPER, TREVOR<br>COOPER, TREVOR</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>$63.93<br>$12.81</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">Service - VMware - Trevor Cooper - forge<br>Service - VMware - Trevor Cooper - forge</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">CAC103G<br>CAC103G</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>1.65<br>0.33</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">12/31/2016<br>11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">COOPER, TREVOR<br>COOPER, TREVOR</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>$65.86<br>$13.20</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">Service - VMware - Trevor Cooper - forge<br>Service - VMware - Trevor Cooper - forge</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">CACCOM1<br>CACCOM1</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>1.70<br>0.34</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">12/31/2016<br>11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">COOPER, TREVOR<br>COOPER, TREVOR</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>$63.93<br>$12.81</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">Service - VMware - Trevor Cooper - forge<br>Service - VMware - Trevor Cooper - forge</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">RCITSCC<br>RCITSCC</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>1.65<br>0.33</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified2')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">12/31/2016<br>11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">GUPTA, AMARNATH<br>GUPTA, AMARNATH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>$219.99<br>$310.64</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">Service - VMware - Amarnath Gupta - bigonc<br>Service - VMware - Amarnath Gupta - bigonc</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">CAC1867<br>CAC1867</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>5.67<br>8.00</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">$38.83<br>$38.83</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified3')">VM - ADDL MACH<br>VM - ADDL MACH</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">12/31/2016<br>11/30/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">GUPTA, AMARNATH<br>GUPTA, AMARNATH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>$69.75<br>$90.68</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">Service - VMware - Amarnath Gupta - bigonc<br>Service - VMware - Amarnath Gupta - bigonc</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">CAC1867<br>CAC1867</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>1.00<br>1.30</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">$69.75<br>$69.75</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified4')">VM - FIRST MACH<br>VM - FIRST MACH</td>
+			</tr>	
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u align='center'>Number of removed recharges</u>: 3<br><br>
+	<table width='100%' style='border-collapse:collapse;' id='removed'>
+		<tr>
+			<td class='data' align='center'><b>Date</b></td>
+			<td class='data' align='center'><b>Buyer</b></td>
+			<td class='data' align='center'><b>Total Cost</b></td>
+			<td class='data' align='center'><b>Description</b></td>
+			<td class='data' align='center'><b>Index</b></td>
+			<td class='data' align='center'><b>Quantity</b></td>
+			<td class='data' align='center'><b>Unit Cost</b></td>
+			<td class='dataRightSide' align='center'><b>Product Number</b></td>
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed0'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">11/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">JUROWSKI, SANDON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$181.14</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">ADC0092</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">4.67</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$38.83</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">VM - ADDL MACH</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed1'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">11/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">JUROWSKI, SANDON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$139.50</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">ADC0092</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">2.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$69.75</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">VM - FIRST MACH</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed2'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">11/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">JUROWSKI, SANDON</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$48.00</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">Service - VMware - Sandon Jurowski - ACTREAL</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">ADC0092</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">0.50</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$96.00</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">SERVER MAINT</td>			
+		</tr>
+			<tr height='50px'>
+			</tr>
+		</table>		
+	</body>
+	</html>

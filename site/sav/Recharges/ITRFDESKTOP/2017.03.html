@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>ITRF DESKTOP</title>
+		<link rel='icon' href='../../images/favicon.ico'>
+		<style>
+			td.data{
+				border-right:solid black 1px;
+				border-bottom:solid black 1px;
+				padding:5px
+			}
+			td.dataRightSide{			
+				border-bottom:solid black 1px;
+				padding:5px;
+			}
+		</style>
+		<script>
+			function showTable(x)
+			{
+				var y = document.getElementById(x).style.display;
+				if(y == 'none')
+				{
+					document.getElementById(x).style.display='inline-table';
+				}
+				else
+				{
+					document.getElementById(x).style.display='none';
+				}
+			}
+			function highlightSelection(color, objectID)
+			{
+				var x = document.getElementById(objectID);					
+				if(x.style.backgroundColor === 'rgb(255, 255, 255)' || x.style.backgroundColor === 'rgb(211, 211, 211)')
+				{
+					x.style.backgroundColor = '#3399FF';
+				}
+				else
+				{
+					x.style.backgroundColor = color;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<a href='https://holonet.sdsc.edu/Recharges/'><-- Back</a><br>
+		<u>Seller</u>: ITRF DESKTOP<br><br>	
+		<u>3/31/2017 revenue</u> = $20,361.25<br>
+		<u>2/28/2017 revenue</u> = $20,580.33<br><h2 align='center' style='cursor:pointer' onclick="showTable('added')"><u>The following charges have been <span style='color:green'>added</span> this month</u>:</h2>	
+		<u align='center'>Number of added charges</u>: 33<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='added'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">CARRINGTON, LAURA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$1.09</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added0')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">CACLCIN</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">0.07</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added0')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added0')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">CARRINGTON, LAURA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$0.47</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added1')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">0.03</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added1')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added1')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">CARRINGTON, LAURA CH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$8.74</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added2')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">CACLCIN</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">0.07</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added2')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added2')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">CARRINGTON, LAURA CH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$3.75</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added3')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">0.03</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added3')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added3')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">CUI, YIFENG</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$18.73</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added4')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">CACYCS2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added4')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added4')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added5'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">CUI, YIFENG</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$2.34</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added5')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">CACYCS2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added5')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added5')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added6'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">FOMENKOV, MARINA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$43.70</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added6')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">CACPRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">0.35</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added6')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added6')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added7'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">FOMENKOV, MARINA N</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$5.46</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added7')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">CACPRE2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">0.35</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added7')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added7')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added8'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">GOETZ, ANDREAS</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$3.12</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added8')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">CACPCY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">0.20</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added8')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added8')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added9'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">GOETZ, ANDREAS WALTE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$24.97</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added9')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">CACPCY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">0.20</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added9')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added9')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added10'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">GU, ZHIHUA</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$15.59</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added10')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">CACCODD</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added10')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added10')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added11'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">HOOVER, PAUL</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$3.12</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added11')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">0.20</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added11')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added11')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added12'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">HOOVER, PAUL T</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$24.97</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added12')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">0.20</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added12')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added12')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added13'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">LO, GRACE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$15.59</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added13')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">CACTADV</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added13')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added13')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added14'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">LUANGRAJ, VILAYPHONE</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$112.38</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added14')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">CACGC02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">0.90</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added14')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added14')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added15'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">MA, ALEX HIU-WAH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$6.24</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added15')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added15')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added15')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added16'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">MA, ALEX HIU-WAH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$0.78</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added16')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added16')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added16')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added17'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">MORAN LOSADA, PATRIC</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$15.59</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added17')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">PST2582</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added17')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added17')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added18'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">3/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">REDDY, SARAN</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$15.59</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added18')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">CACOPDM</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added18')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added18')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added19'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">-$2.60</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added19')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">CAC1CLD</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added19')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added19')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added20'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">-$91.06</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added20')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">CACGC02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">-0.73</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added20')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added20')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added21'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">-$2.60</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added21')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">CACITSP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added21')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added21')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added22'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">-$2.60</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added22')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">CACITSY</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added22')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added22')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added23'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">-$5.21</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added23')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">CACNAP1</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">-0.04</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added23')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added23')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added24'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">-$20.82</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added24')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">ITSBD00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">-0.17</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added24')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added24')">MSP</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added25'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">-$0.32</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added25')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">CAC1CLD</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added25')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added25')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added26'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">-$11.37</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added26')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">CACGC02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">-0.73</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added26')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added26')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added27'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">-$0.32</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added27')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">CACITSP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added27')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added27')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added28'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">-$0.32</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added28')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">CACITSY</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">-0.02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added28')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added28')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added29'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">-$0.65</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added29')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">CACNAP1</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">-0.04</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added29')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added29')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added30'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">BATTISTUZ, CHRISTOPH</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">-$2.60</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added30')">Monthly SDSC Account Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">ITSBD00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">-0.17</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added30')">$15.59</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added30')">ACCOUNT FEE</td>			
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='added31'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">1/31/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">MOK, KA PUI</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">-$124.87</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'added31')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">CACCNGS</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">-1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'added31')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'added31')">MSP</td>			
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='added32'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">12/31/2016</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">MOK, KA PUI</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">-$124.87</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'added32')">Monthly IT Desktop Support Fee</td>			
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">CACCNGS</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">-1.00</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'added32')">$124.87</td>			
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'added32')">MSP</td>			
+			</tr>
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer' onclick="showTable('modified')"><u>The following charges have been <span style='color:blue'>modified</span> this month</u>:</h2><u align='center'>Number of modified charges</u>: 88<br><br>
+		<table width='100%' style='border-collapse:collapse;' id='modified'>
+			<tr>
+				<td class='data' align='center'><b>Date</b></td>
+				<td class='data' align='center'><b>Buyer</b></td>
+				<td class='data' align='center'><b>Total Cost</b></td>
+				<td class='data' align='center'><b>Description</b></td>
+				<td class='data' align='center'><b>Index</b></td>
+				<td class='data' align='center'><b>Quantity</b></td>
+				<td class='data' align='center'><b>Unit Cost</b></td>
+				<td class='dataRightSide' align='center'><b>Product Number</b></td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified0'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">CARRINGTON, LAURA<br>CARRINGTON, LAURA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>$7.80<br>$14.71</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified0')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')"><span style='background-color:yellow'>0.50<br>0.94</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified0')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified0')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified1'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">CARRINGTON, LAURA<br>CARRINGTON, LAURA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>$6.24<br>$0.88</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified1')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>CACLCDS<br>CACPIS3</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')"><span style='background-color:yellow'>0.40<br>0.06</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified1')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified1')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified2'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">CARRINGTON, LAURA CH<br>CARRINGTON, LAURA CH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>$62.44<br>$117.80</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified2')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')"><span style='background-color:yellow'>0.50<br>0.94</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified2')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified2')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified3'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">CARRINGTON, LAURA CH<br>CARRINGTON, LAURA CH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>$49.95<br>$7.07</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified3')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>CACLCDS<br>CACPIS3</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')"><span style='background-color:yellow'>0.40<br>0.06</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified3')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified3')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified4'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">CICOTTI, PIETRO<br>CICOTTI, PIETRO</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>$12.49<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified4')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">CAC5307<br>CAC5307</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')"><span style='background-color:yellow'>0.10<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified4')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified4')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified5'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified5')">CICOTTI, PIETRO<br>CICOTTI, PIETRO</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')"><span style='background-color:yellow'>$14.98<br>$2.50</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified5')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')"><span style='background-color:yellow'>0.12<br>0.02</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified5')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified5')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified6'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified6')">CICOTTI, PIETRO<br>CICOTTI, PIETRO</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')"><span style='background-color:yellow'>$1.56<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified6')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">CAC5307<br>CAC5307</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')"><span style='background-color:yellow'>0.10<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified6')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified6')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified7'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified7')">CICOTTI, PIETRO<br>CICOTTI, PIETRO</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')"><span style='background-color:yellow'>$1.87<br>$0.31</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified7')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')"><span style='background-color:yellow'>0.12<br>0.02</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified7')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified7')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified8'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified8')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified8')">CLAFFY, KIMBERLY<br>CLAFFY, KIMBERLY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified8')"><span style='background-color:yellow'>$2.34<br>$1.09</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified8')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified8')">CAC0002<br>CAC0002</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified8')"><span style='background-color:yellow'>0.15<br>0.07</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified8')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified8')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified9'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified9')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified9')">CLAFFY, KIMBERLY<br>CLAFFY, KIMBERLY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified9')"><span style='background-color:yellow'>$2.65<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified9')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified9')">CACACRI<br>CACACRI</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified9')"><span style='background-color:yellow'>0.17<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified9')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified9')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified10'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified10')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified10')">CLAFFY, KIMBERLY<br>CLAFFY, KIMBERLY</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified10')"><span style='background-color:yellow'>$0.78<br>$1.56</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified10')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified10')">CACSIST<br>CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified10')"><span style='background-color:yellow'>0.05<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified10')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified10')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified11'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified11')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified11')">CLAFFY, KIMBERLY C<br>CLAFFY, KIMBERLY C</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified11')"><span style='background-color:yellow'>$18.73<br>$8.74</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified11')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified11')">CAC0002<br>CAC0002</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified11')"><span style='background-color:yellow'>0.15<br>0.07</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified11')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified11')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified12'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified12')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified12')">CLAFFY, KIMBERLY C<br>CLAFFY, KIMBERLY C</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified12')"><span style='background-color:yellow'>$21.23<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified12')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified12')">CACACRI<br>CACACRI</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified12')"><span style='background-color:yellow'>0.17<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified12')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified12')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified13'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified13')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified13')">CLAFFY, KIMBERLY C<br>CLAFFY, KIMBERLY C</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified13')"><span style='background-color:yellow'>$6.24<br>$12.49</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified13')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified13')">CACSIST<br>CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified13')"><span style='background-color:yellow'>0.05<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified13')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified13')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified14'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified14')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified14')">COAKLEY, KEVIN<br>COAKLEY, KEVIN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified14')"><span style='background-color:yellow'>$12.47<br>$16.55</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified14')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified14')">CAC1CLD<br>CAC1CLD</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified14')"><span style='background-color:yellow'>0.10<br>0.13</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified14')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified14')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified15'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified15')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified15')">COAKLEY, KEVIN<br>COAKLEY, KEVIN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified15')"><span style='background-color:yellow'>$22.80<br>$18.73</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified15')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified15')">ENGDSEP<br>ENGDSEP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified15')"><span style='background-color:yellow'>0.18<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified15')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified15')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified16'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified16')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified16')">COAKLEY, KEVIN<br>COAKLEY, KEVIN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified16')"><span style='background-color:yellow'>$1.56<br>$2.07</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified16')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified16')">CAC1CLD<br>CAC1CLD</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified16')"><span style='background-color:yellow'>0.10<br>0.13</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified16')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified16')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified17'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified17')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified17')">COAKLEY, KEVIN<br>COAKLEY, KEVIN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified17')"><span style='background-color:yellow'>$2.85<br>$2.34</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified17')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified17')">ENGDSEP<br>ENGDSEP</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified17')"><span style='background-color:yellow'>0.18<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified17')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified17')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified18'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified18')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified18')">CSORI, CSILLA<br>CSORI, CSILLA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified18')"><span style='background-color:yellow'>$12.94<br>$12.47</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified18')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified18')">CACGC02<br>CACGC02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified18')"><span style='background-color:yellow'>0.83<br>0.80</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified18')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified18')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified19'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified19')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified19')">CSORI, CSILLA<br>CSORI, CSILLA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified19')"><span style='background-color:yellow'>$2.65<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified19')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified19')">CACHECB<br>CACHECB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified19')"><span style='background-color:yellow'>0.17<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified19')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified19')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified20'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified20')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified20')">CSORI, CSILLA KATALI<br>CSORI, CSILLA KATALI</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified20')"><span style='background-color:yellow'>$103.64<br>$99.90</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified20')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified20')">CACGC02<br>CACGC02</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified20')"><span style='background-color:yellow'>0.83<br>0.80</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified20')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified20')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified21'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified21')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified21')">CSORI, CSILLA KATALI<br>CSORI, CSILLA KATALI</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified21')"><span style='background-color:yellow'>$21.23<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified21')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified21')">CACHECB<br>CACHECB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified21')"><span style='background-color:yellow'>0.17<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified21')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified21')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified22'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified22')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified22')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified22')"><span style='background-color:yellow'>$68.68<br>$70.08</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified22')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified22')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified22')"><span style='background-color:yellow'>0.55<br>0.56</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified22')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified22')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified23'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified23')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified23')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified23')"><span style='background-color:yellow'>$18.73<br>$19.12</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified23')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified23')">CAC9119<br>CAC9119</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified23')">0.15<br>0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified23')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified23')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified24'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified24')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified24')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified24')"><span style='background-color:yellow'>$3.75<br>$3.82</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified24')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified24')">CACPIS3<br>CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified24')">0.03<br>0.03</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified24')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified24')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified25'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified25')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified25')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified25')"><span style='background-color:yellow'>$6.24<br>$6.37</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified25')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified25')">CACYCBW<br>CACYCBW</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified25')">0.05<br>0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified25')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified25')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified26'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified26')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified26')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified26')"><span style='background-color:yellow'>$2.50<br>$6.37</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified26')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified26')"><span style='background-color:yellow'>CACYCIN<br>CACYCKF</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified26')"><span style='background-color:yellow'>0.02<br>0.05</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified26')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified26')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified27'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified27')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified27')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified27')"><span style='background-color:yellow'>$6.24<br>$19.12</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified27')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified27')"><span style='background-color:yellow'>CACYCKF<br>CACYCS2</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified27')"><span style='background-color:yellow'>0.05<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified27')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified27')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified28'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified28')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified28')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified28')"><span style='background-color:yellow'>$8.57<br>$8.75</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified28')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified28')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified28')"><span style='background-color:yellow'>0.55<br>0.56</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified28')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified28')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified29'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified29')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified29')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified29')"><span style='background-color:yellow'>$2.34<br>$2.39</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified29')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified29')">CAC9119<br>CAC9119</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified29')">0.15<br>0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified29')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified29')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified30'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified30')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified30')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified30')"><span style='background-color:yellow'>$0.47<br>$0.48</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified30')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified30')">CACPIS3<br>CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified30')">0.03<br>0.03</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified30')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified30')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified31'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified31')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified31')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified31')"><span style='background-color:yellow'>$0.78<br>$0.80</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified31')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified31')">CACYCBW<br>CACYCBW</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified31')">0.05<br>0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified31')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified31')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified32'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified32')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified32')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified32')"><span style='background-color:yellow'>$0.31<br>$0.80</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified32')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified32')"><span style='background-color:yellow'>CACYCIN<br>CACYCKF</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified32')"><span style='background-color:yellow'>0.02<br>0.05</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified32')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified32')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified33'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified33')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified33')">CUI, YIFENG<br>CUI, YIFENG</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified33')"><span style='background-color:yellow'>$0.78<br>$2.39</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified33')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified33')"><span style='background-color:yellow'>CACYCKF<br>CACYCS2</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified33')"><span style='background-color:yellow'>0.05<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified33')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified33')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified34'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified34')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified34')">ENG, DARREN L<br>ENG, DARREN L</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified34')">$31.22<br>$31.22</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified34')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified34')"><span style='background-color:yellow'>CAC9979<br>CACHPCD</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified34')">0.25<br>0.25</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified34')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified34')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified35'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified35')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified35')">FLAMMER, KAREN R.<br>FLAMMER, KAREN R.</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified35')"><span style='background-color:yellow'>$62.44<br>$31.22</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified35')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified35')">TLC1160<br>TLC1160</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified35')"><span style='background-color:yellow'>0.50<br>0.25</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified35')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified35')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified36'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified36')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified36')">FOMENKOV, MARINA<br>FOMENKOV, MARINA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified36')"><span style='background-color:yellow'>$18.73<br>$21.23</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified36')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified36')"><span style='background-color:yellow'>CAC0002<br>CACACRI</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified36')"><span style='background-color:yellow'>0.15<br>0.17</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified36')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified36')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified37'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified37')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified37')">FOMENKOV, MARINA<br>FOMENKOV, MARINA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified37')"><span style='background-color:yellow'>$14.98<br>$56.19</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified37')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified37')"><span style='background-color:yellow'>CACACRI<br>CACPRE2</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified37')"><span style='background-color:yellow'>0.12<br>0.45</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified37')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified37')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified38'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified38')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified38')">FOMENKOV, MARINA N<br>FOMENKOV, MARINA N</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified38')"><span style='background-color:yellow'>$2.34<br>$2.65</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified38')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified38')"><span style='background-color:yellow'>CAC0002<br>CACACRI</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified38')"><span style='background-color:yellow'>0.15<br>0.17</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified38')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified38')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified39'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified39')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified39')">FOMENKOV, MARINA N<br>FOMENKOV, MARINA N</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified39')"><span style='background-color:yellow'>$1.87<br>$7.02</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified39')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified39')"><span style='background-color:yellow'>CACACRI<br>CACPRE2</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified39')"><span style='background-color:yellow'>0.12<br>0.45</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified39')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified39')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified40'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified40')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified40')">GOETZ, ANDREAS<br>GOETZ, ANDREAS</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified40')"><span style='background-color:yellow'>$4.68<br>$7.80</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified40')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified40')">CACAGSR<br>CACAGSR</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified40')"><span style='background-color:yellow'>0.30<br>0.50</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified40')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified40')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified41'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified41')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified41')">GOETZ, ANDREAS WALTE<br>GOETZ, ANDREAS WALTE</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified41')"><span style='background-color:yellow'>$37.46<br>$62.44</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified41')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified41')">CACAGSR<br>CACAGSR</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified41')"><span style='background-color:yellow'>0.30<br>0.50</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified41')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified41')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified42'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified42')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified42')">GUJRAL, MADHUSUDAN<br>GUJRAL, MADHUSUDAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified42')"><span style='background-color:yellow'>$24.97<br>$62.44</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified42')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified42')">CAC9148<br>CAC9148</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified42')"><span style='background-color:yellow'>0.20<br>0.50</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified42')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified42')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified43'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified43')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified43')">GUJRAL, MADHUSUDAN<br>GUJRAL, MADHUSUDAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified43')"><span style='background-color:yellow'>$99.90<br>$31.22</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified43')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified43')">CACMMAB<br>CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified43')"><span style='background-color:yellow'>0.80<br>0.25</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified43')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified43')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified44'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified44')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified44')">HOOVER, PAUL<br>HOOVER, PAUL</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified44')"><span style='background-color:yellow'>$4.68<br>$5.85</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified44')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified44')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified44')"><span style='background-color:yellow'>0.30<br>0.38</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified44')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified44')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified45'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified45')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified45')">HOOVER, PAUL<br>HOOVER, PAUL</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified45')"><span style='background-color:yellow'>$7.80<br>$9.74</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified45')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified45')">CAC245X<br>CAC245X</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified45')"><span style='background-color:yellow'>0.50<br>0.63</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified45')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified45')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified46'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified46')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified46')">HOOVER, PAUL T<br>HOOVER, PAUL T</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified46')"><span style='background-color:yellow'>$37.46<br>$46.83</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified46')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified46')">CAC222X<br>CAC222X</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified46')"><span style='background-color:yellow'>0.30<br>0.38</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified46')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified46')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified47'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified47')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified47')">HOOVER, PAUL T<br>HOOVER, PAUL T</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified47')"><span style='background-color:yellow'>$62.44<br>$78.04</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified47')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified47')">CAC245X<br>CAC245X</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified47')"><span style='background-color:yellow'>0.50<br>0.63</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified47')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified47')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified48'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified48')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified48')">LUANGRAJ, VILAYPHONE<br>LUANGRAJ, VILAYPHONE</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified48')"><span style='background-color:yellow'>$12.49<br>$124.87</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified48')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified48')"><span style='background-color:yellow'>BIOAPPR<br>CACGC02</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified48')"><span style='background-color:yellow'>0.10<br>1.00</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified48')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified48')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified49'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified49')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified49')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified49')">$12.49<br>$12.49</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified49')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified49')"><span style='background-color:yellow'>CAC0002<br>CACCNGS</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified49')">0.10<br>0.10</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified49')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified49')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified50'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified50')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified50')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified50')"><span style='background-color:yellow'>$18.73<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified50')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified50')"><span style='background-color:yellow'>CACCNGS<br>CACFINP</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified50')"><span style='background-color:yellow'>0.15<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified50')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified50')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified51'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified51')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified51')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified51')">$12.49<br>$12.49</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified51')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified51')"><span style='background-color:yellow'>CACFINP<br>CACSIST</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified51')">0.10<br>0.10</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified51')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified51')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified52'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified52')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified52')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified52')">$1.56<br>$1.56</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified52')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified52')"><span style='background-color:yellow'>CAC0002<br>CACCNGS</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified52')">0.10<br>0.10</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified52')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified52')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified53'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified53')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified53')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified53')"><span style='background-color:yellow'>$2.34<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified53')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified53')"><span style='background-color:yellow'>CACCNGS<br>CACFINP</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified53')"><span style='background-color:yellow'>0.15<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified53')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified53')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified54'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified54')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified54')">MA, ALEX HIU-WAH<br>MA, ALEX HIU-WAH</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified54')">$1.56<br>$1.56</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified54')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified54')"><span style='background-color:yellow'>CACFINP<br>CACSIST</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified54')">0.10<br>0.10</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified54')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified54')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified55'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified55')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified55')">MAJUMDAR, AMITAVA<br>MAJUMDAR, AMITAVA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified55')"><span style='background-color:yellow'>$17.48<br>$14.98</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified55')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified55')">CACAMNG<br>CACAMNG</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified55')"><span style='background-color:yellow'>0.14<br>0.12</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified55')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified55')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified56'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified56')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified56')">MAJUMDAR, AMITAVA<br>MAJUMDAR, AMITAVA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified56')"><span style='background-color:yellow'>$22.48<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified56')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified56')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified56')"><span style='background-color:yellow'>0.18<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified56')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified56')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified57'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified57')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified57')">MAJUMDAR, AMITAVA<br>MAJUMDAR, AMITAVA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified57')"><span style='background-color:yellow'>$2.18<br>$1.87</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified57')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified57')">CACAMNG<br>CACAMNG</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified57')"><span style='background-color:yellow'>0.14<br>0.12</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified57')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified57')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified58'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified58')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified58')">MAJUMDAR, AMITAVA<br>MAJUMDAR, AMITAVA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified58')"><span style='background-color:yellow'>$2.81<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified58')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified58')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified58')"><span style='background-color:yellow'>0.18<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified58')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified58')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified59'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified59')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified59')">MILLER, MARK<br>MILLER, MARK</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified59')"><span style='background-color:yellow'>$14.67<br>$11.55</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified59')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified59')">CACMMAB<br>CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified59')"><span style='background-color:yellow'>0.94<br>0.74</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified59')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified59')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified60'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified60')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified60')">MILLER, MARK<br>MILLER, MARK</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified60')"><span style='background-color:yellow'>$0.46<br>$3.69</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified60')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified60')">CACMMSI<br>CACMMSI</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified60')"><span style='background-color:yellow'>0.03<br>0.24</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified60')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified60')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified61'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified61')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified61')">MILLER, MARK<br>MILLER, MARK</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified61')"><span style='background-color:yellow'>$0.46<br>$0.35</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified61')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified61')">CACPIS3<br>CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified61')"><span style='background-color:yellow'>0.03<br>0.02</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified61')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified61')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified62'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified62')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified62')">MILLER, MARK ALAN<br>MILLER, MARK ALAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified62')"><span style='background-color:yellow'>$23.50<br>$18.49</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified62')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified62')">CACMMAB<br>CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified62')"><span style='background-color:yellow'>0.19<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified62')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified62')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified63'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified63')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified63')">MILLER, MARK ALAN<br>MILLER, MARK ALAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified63')"><span style='background-color:yellow'>$0.74<br>$5.92</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified63')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified63')">CACMMSI<br>CACMMSI</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified63')"><span style='background-color:yellow'>0.01<br>0.05</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified63')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified63')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified64'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified64')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified64')">MILLER, MARK ALAN<br>MILLER, MARK ALAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified64')"><span style='background-color:yellow'>$0.74<br>$0.55</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified64')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified64')">CACPIS3<br>CACPIS3</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified64')"><span style='background-color:yellow'>0.01<br>0.00</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified64')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified64')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified65'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified65')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified65')">NADEAU, DAVID<br>NADEAU, DAVID</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified65')"><span style='background-color:yellow'>$15.12<br>$7.80</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified65')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified65')">CACDIBB<br>CACDIBB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified65')"><span style='background-color:yellow'>0.97<br>0.50</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified65')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified65')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified66'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified66')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified66')">NADEAU, DAVID R<br>NADEAU, DAVID R</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified66')"><span style='background-color:yellow'>$121.12<br>$62.44</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified66')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified66')">CACDIBB<br>CACDIBB</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified66')"><span style='background-color:yellow'>0.97<br>0.50</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified66')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified66')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified67'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified67')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified67')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified67')">$6.24<br>$6.24</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified67')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified67')"><span style='background-color:yellow'>CACFINP<br>CACSPFR</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified67')">0.05<br>0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified67')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified67')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified68'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified68')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified68')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified68')">$18.73<br>$18.73</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified68')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified68')"><span style='background-color:yellow'>CACGNDN<br>CAC0002</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified68')">0.15<br>0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified68')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified68')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified69'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified69')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified69')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified69')"><span style='background-color:yellow'>$18.73<br>$12.49</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified69')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified69')">CACKEFF<br>CACKEFF</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified69')"><span style='background-color:yellow'>0.15<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified69')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified69')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified70'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified70')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified70')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified70')"><span style='background-color:yellow'>$18.73<br>$12.49</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified70')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified70')">CACSIST<br>CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified70')"><span style='background-color:yellow'>0.15<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified70')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified70')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified71'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified71')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified71')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified71')">$0.78<br>$0.78</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified71')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified71')"><span style='background-color:yellow'>CACFINP<br>CACSPFR</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified71')">0.05<br>0.05</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified71')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified71')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified72'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified72')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified72')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified72')">$2.34<br>$2.34</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified72')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified72')"><span style='background-color:yellow'>CACGNDN<br>CAC0002</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified72')">0.15<br>0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified72')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified72')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified73'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified73')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified73')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified73')"><span style='background-color:yellow'>$2.34<br>$1.56</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified73')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified73')">CACKEFF<br>CACKEFF</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified73')"><span style='background-color:yellow'>0.15<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified73')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified73')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified74'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified74')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified74')">POLTEROCK, JOSHUA<br>POLTEROCK, JOSHUA</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified74')"><span style='background-color:yellow'>$2.34<br>$1.56</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified74')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified74')">CACSIST<br>CACSIST</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified74')"><span style='background-color:yellow'>0.15<br>0.10</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified74')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified74')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified75'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified75')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified75')">SCHWARTZ, TERRI<br>SCHWARTZ, TERRI</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified75')"><span style='background-color:yellow'>$124.87<br>$63.06</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified75')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified75')">CACMMAB<br>CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified75')"><span style='background-color:yellow'>1.00<br>0.51</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified75')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified75')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified76'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified76')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified76')">SCHWARTZ, TERRI<br>SCHWARTZ, TERRI</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified76')"><span style='background-color:yellow'>$15.59<br>$7.87</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified76')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified76')">CACMMAB<br>CACMMAB</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified76')"><span style='background-color:yellow'>1.00<br>0.51</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified76')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified76')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified77'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified77')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified77')">SHANTHARAM, MANU<br>SHANTHARAM, MANU</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified77')"><span style='background-color:yellow'>$43.70<br>$49.95</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified77')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified77')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified77')"><span style='background-color:yellow'>0.35<br>0.40</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified77')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified77')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified78'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified78')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified78')">SHANTHARAM, MANU<br>SHANTHARAM, MANU</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified78')"><span style='background-color:yellow'>$31.22<br>$24.97</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified78')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified78')"><span style='background-color:yellow'>CACLCDS<br>CACLCIN</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified78')"><span style='background-color:yellow'>0.25<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified78')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified78')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified79'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified79')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified79')">SHANTHARAM, MANU<br>SHANTHARAM, MANU</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified79')"><span style='background-color:yellow'>$5.46<br>$6.24</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified79')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified79')">CACAMY2<br>CACAMY2</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified79')"><span style='background-color:yellow'>0.35<br>0.40</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified79')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified79')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified80'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified80')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified80')">SHANTHARAM, MANU<br>SHANTHARAM, MANU</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified80')"><span style='background-color:yellow'>$3.90<br>$3.12</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified80')">Monthly SDSC Account Fee<br>Monthly SDSC Account Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified80')"><span style='background-color:yellow'>CACLCDS<br>CACLCIN</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified80')"><span style='background-color:yellow'>0.25<br>0.20</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified80')">$15.59<br>$15.59</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified80')">ACCOUNT FEE<br>ACCOUNT FEE</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified81'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified81')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified81')">VURAL, VOLKAN<br>VURAL, VOLKAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified81')"><span style='background-color:yellow'>$22.48<br>$28.10</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified81')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified81')">CACCOED<br>CACCOED</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified81')"><span style='background-color:yellow'>0.18<br>0.23</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified81')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified81')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified82'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified82')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified82')">VURAL, VOLKAN<br>VURAL, VOLKAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified82')"><span style='background-color:yellow'>$14.98<br>$18.73</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified82')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified82')">CACMTRO<br>CACMTRO</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified82')"><span style='background-color:yellow'>0.12<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified82')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified82')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified83'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified83')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified83')">VURAL, VOLKAN<br>VURAL, VOLKAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified83')"><span style='background-color:yellow'>$14.98<br>$18.73</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified83')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified83')">CACRTIA<br>CACRTIA</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified83')"><span style='background-color:yellow'>0.12<br>0.15</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified83')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified83')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified84'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified84')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified84')">VURAL, VOLKAN<br>VURAL, VOLKAN</td>		
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified84')"><span style='background-color:yellow'>$22.48<br>$9.37</span></td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified84')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified84')">CSE8462<br>CSE8462</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified84')"><span style='background-color:yellow'>0.18<br>0.08</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified84')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified84')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified85'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified85')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified85')">ZONCA, ANDREA<br>ZONCA, ANDREA</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified85')">$18.73<br>$18.73</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified85')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified85')"><span style='background-color:yellow'>CACCODE<br>CACHPCU</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified85')">0.15<br>0.15</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified85')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified85')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#FFFFFF;' id='modified86'>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified86')">3/31/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified86')">ZONCA, ANDREA<br>ZONCA, ANDREA</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified86')">$24.97<br>$24.97</td>
+				<td class='data' onclick="highlightSelection('#FFFFFF', 'modified86')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified86')"><span style='background-color:yellow'>CACCOIA<br>ACC8774</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified86')">0.20<br>0.20</td>
+				<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'modified86')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#FFFFFF', 'modified86')">MSP<br>MSP</td>
+			</tr>
+			<tr style='background-color:#D3D3D3;' id='modified87'>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified87')">2/28/2017<br>2/28/2017</td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified87')">MOK, KA PUI<br>MOK, KA PUI</td>		
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified87')"><span style='background-color:yellow'>-$124.87<br>$124.87</span></td>
+				<td class='data' onclick="highlightSelection('#D3D3D3', 'modified87')">Monthly IT Desktop Support Fee<br>Monthly IT Desktop Support Fee</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified87')">CACCNGS<br>CACCNGS</td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified87')"><span style='background-color:yellow'>-1.00<br>1.00</span></td>
+				<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'modified87')">$124.87<br>$124.87</td>							
+				<td class='dataRightSide' onclick="highlightSelection('#D3D3D3', 'modified87')">MSP<br>MSP</td>
+			</tr>	
+				<tr height='50px'>
+				</tr>
+			</table>	
+			<h2 align='center' style='cursor:pointer;' onclick="showTable('removed')"><u>The following charges have been <span style='color:red'>removed</span> this month</u>:</h2><u align='center'>Number of removed recharges</u>: 37<br><br>
+	<table width='100%' style='border-collapse:collapse;' id='removed'>
+		<tr>
+			<td class='data' align='center'><b>Date</b></td>
+			<td class='data' align='center'><b>Buyer</b></td>
+			<td class='data' align='center'><b>Total Cost</b></td>
+			<td class='data' align='center'><b>Description</b></td>
+			<td class='data' align='center'><b>Index</b></td>
+			<td class='data' align='center'><b>Quantity</b></td>
+			<td class='data' align='center'><b>Unit Cost</b></td>
+			<td class='dataRightSide' align='center'><b>Product Number</b></td>
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed0'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">BAGCHI, ADITYA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$124.87</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed0')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">CACAWSM</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed0')">MSP</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed1'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">FLAMMER, KAREN R.</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$31.22</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed1')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">CACCOED</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">0.25</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed1')">MSP</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed2'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">GUJRAL, MADHUSUDAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$31.22</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed2')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">CACCOM1</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">0.25</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed2')">MSP</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed3'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">NADEAU, DAVID</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$7.33</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed3')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">CAC8384</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">0.47</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed3')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed4'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">NADEAU, DAVID R</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$58.69</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed4')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">CAC8384</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">0.47</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed4')">MSP</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed5'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">NAZRUL, SYED</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed5')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">CAC103G</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed5')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed6'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">POLTEROCK, JOSHUA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$12.49</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed6')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">CACGNDN</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">0.10</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed6')">MSP</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed7'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">POLTEROCK, JOSHUA</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$1.56</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed7')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">CACGNDN</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">0.10</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed7')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed8'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">RYAN NEMIROFF, RYAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed8')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">CACE274</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed8')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed9'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">SCHWARTZ, TERRI</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$24.97</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed9')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">CAC225X</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">0.20</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed9')">MSP</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed10'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">SCHWARTZ, TERRI</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$36.84</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed10')">Monthly IT Desktop Support Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">CACMMSI</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">0.30</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">$124.87</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed10')">MSP</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed11'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">SCHWARTZ, TERRI</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$3.12</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed11')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">CAC225X</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">0.20</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed11')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed12'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">2/28/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">SCHWARTZ, TERRI</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">$4.60</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed12')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">CACMMSI</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">0.30</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed12')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed13'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">1/31/2017</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed13')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed13')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed14'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">1/31/2017</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed14')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed14')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed14')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed15'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">12/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed15')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed15')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed15')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed16'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">12/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed16')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed16')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed16')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed17'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">11/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed17')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed17')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed17')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed18'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">11/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed18')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed18')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed18')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed19'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">10/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed19')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed19')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed19')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed20'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">10/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed20')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed20')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed20')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed21'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">9/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed21')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed21')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed21')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed22'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">9/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed22')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed22')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed22')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed23'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">8/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed23')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed23')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed23')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed24'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">8/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed24')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed24')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed24')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed25'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">7/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed25')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed25')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed25')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed26'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">7/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed26')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed26')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed26')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed27'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">6/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed27')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed27')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed27')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed28'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">6/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed28')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed28')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed28')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed29'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">5/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed29')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed29')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed29')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed30'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">5/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed30')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed30')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed30')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed31'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">4/30/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed31')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed31')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed31')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed32'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">4/30/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed32')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed32')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed32')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed33'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">3/31/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed33')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed33')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed33')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed34'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">3/31/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed34')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed34')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed34')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#D3D3D3;' id='removed35'>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">2/29/2016</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed35')">DUAN, LIAN</td>		
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#D3D3D3', 'removed35')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#D3D3D3', 'removed35')">ACCOUNT FEE</td>			
+		</tr>
+		<tr style='background-color:#FFFFFF;' id='removed36'>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">2/29/2016</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed36')">MORSE, ANDREW</td>		
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">-$15.59</td>
+			<td class='data' onclick="highlightSelection('#FFFFFF', 'removed36')">Monthly SDSC Account Fee</td>			
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">RBSJCS3</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">-1.00</td>
+			<td class='data' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">$15.59</td>		
+			<td class='dataRightSide' align='center' onclick="highlightSelection('#FFFFFF', 'removed36')">ACCOUNT FEE</td>			
+		</tr>
+			<tr height='50px'>
+			</tr>
+		</table>		
+	</body>
+	</html>
