@@ -53,3 +53,4 @@ deploy cluster:
         #- kubectl replace -f ./manifests/sdnap-deploy.yaml --record
       - kubectl apply -f ./manifests/sdnap-svc.yaml --record
       - kubectl apply -f ./manifests/sdnap-ing.yaml --record
+      - kubectl -n jx patch deployment sdnap -p "{\"spec\":{\"template\":{\"metadata\":{\"annotations\":{\"date\":\"`date +'%s'`\"}}}}}"
