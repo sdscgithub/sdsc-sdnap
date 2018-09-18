@@ -5,9 +5,9 @@ Purpose: connect to the sql server
 Description: connect to the sql server
 */
 
-  $db_host   = $_ENV["MYSQL_HOST"];
-  $db_user   = $_ENV["MYSQL_USER"];
-  $db_passwd = $_ENV["MYSQL_PASSWORD"];
+  $db_host   = getenv('SQL_HOST');
+  $db_user   = getenv('SQL_USER');
+  $db_passwd = getenv('SQL_PASSWORD');
 
   /* The page that the user will be directed to after adding,
   editing or deleting */

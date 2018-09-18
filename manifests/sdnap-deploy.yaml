@@ -13,7 +13,7 @@ metadata:
     name: sdnap
     namespace: jx
 spec:
-    replicas: 1
+    replicas: 5
     revisionHistoryLimit: 10
     selector:
       matchLabels:
@@ -38,7 +38,7 @@ spec:
               imagePullPolicy: Always
               env:
                 # The MySQL image will configure a root password with the value of MYSQL_ROOT_PASSWORD...
-                - name: MYSQL_ROOT_PASSWORD
+                - name: SQL_ROOT_PASSWORD
                   valueFrom:
                     # rather than embed sensitive details in this config
                     # we reference another Kubernetes object
@@ -48,23 +48,23 @@ spec:
                       # references the rootpw key-value pair from the mysql-credentials Secret
                       key: rootpw
                 # ... an initial non-root user with a username of the value of MYSQL_USER ...
-                - name: MYSQL_USER
+                - name: SQL_USER
                   valueFrom:
                     secretKeyRef:
                       name: holonet-credentials
                       key: user
                 # ... and a password of the value of MYSQL_PASSWORD ...
-                - name: MYSQL_PASSWORD
+                - name: SQL_PASSWORD
                   valueFrom:
                     secretKeyRef:
                       name: holonet-credentials
                       key: password
                 # ... and an initial database named sdnapdb
                 # with the value of MYSQL_DATABASE (while granting MYSQL_USER superuser access.)
-                - name: MYSQL_DATABASE
+                - name: SQL_DATABASE
                   value: sdnapdb
                 # use service name as host
-                - name: MYSQL_HOST
+                - name: SQL_HOST
                   value: sdnapdb.jx.svc.cluster.local
 
               ports: 
