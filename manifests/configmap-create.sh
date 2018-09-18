@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kubectl -n jx delete configmap apache2-config-sdnap 
+kubectl -n jx delete configmap apache2-config-sdnap
 kubectl -n jx delete configmap php-config-sdnap
 kubectl -n jx delete configmap cert-sdnap
 kubectl -n jx delete configmap key-sdnap
