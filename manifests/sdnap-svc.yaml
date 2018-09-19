@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: sdnap
+    name: sdnapdb
     namespace: jx
 spec:
   #type: NodePort

@@ -12,6 +12,7 @@ RUN mkdir -p /etc/pki/tls/certs
 RUN mkdir -p /etc/pki/tls/private
 RUN mkdir -p /var/run/apache2
 
+RUN apt-get install -y mysql-client curl vim
 
 # example running commands in the containers
 #CMD ["echo ", "198.202.90.177 sdnap.sdsc.edu ", ">>" , "/etc/hosts"]
