@@ -11,9 +11,9 @@
 
 ## TODO
 * Create mysql service in k8s
-* Get Mediawiki to work in deployment (sqlite backend)
+* Get sdnap and tasktracker to work in deployment (mysql backend)
 * Port config parameters for apache, php, mysql
-* Port Sevices website (mysql backend)
+* Sevices endpoint in clusterIP service-name.namespace.cluster.local (mysql backend)
 
 ## DONE
 * Complete CI/CD pipeline with shared runner
@@ -38,6 +38,47 @@
 * volumeclaims (3) for mysql data
 * configmap (4) mysql secret (5)
 * How to handle tls endpoints? these sites have certificates
+
+## authentication via traefik
+```
+apiVersion: v1
+data:
+  auth: YXRoMDM4OiRhcHIxJEV0a2JZWkhOJFlQTmhxcGJGb244QlJjY25pMTJyNC8K
+kind: Secret
+metadata:
+  name: basicauthpasswd
+  namespace: jx
+
+```
+
+## How to create password file for basic auth
+1. Generated a htpasswd file named auth
+
+```
+$ htpasswd -c auth_ath038 ath038
+New password: 
+Re-type new password: 
+
+```
+2. Create a secret yaml file name 
+## authentication via traefik
+```
+apiVersion: v1
+data:
+  auth: YXRoMDM4OiRhcHIxJEV0a2JZWkhOJFlQTmhxcGJGb244QlJjY25pMTJyNC8K
+kind: Secret
+metadata:
+  name: basicauthpasswd
+  namespace: jx
+
+```
+
+## Create new k8s secret from auth file:
+
+```
+$ kubectl create secret generic basicauthpasswd --from-file auth_ath038
+
+```
 
 ## Test and Verify
 

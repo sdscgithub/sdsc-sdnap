@@ -4,6 +4,9 @@ metadata:
   name: sdnap-ingress
   annotations:
     kubernetes.io/ingress.class: traefik
+    ingress.kubernetes.io/auth-realm: traefik
+    ingress.kubernetes.io/auth-secret: basicauthpasswd
+    ingress.kubernetes.io/auth-type: basic
   namespace: jx
 spec:
   rules:
