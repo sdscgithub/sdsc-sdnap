@@ -8,6 +8,7 @@ Description: connect to the sql server
   $db_host   = getenv('SQL_HOST');
   $db_user   = getenv('SQL_USER');
   $db_passwd = getenv('SQL_PASSWORD');
+  $db_name   = getenv('SQL_DATABASE');
 
   /* The page that the user will be directed to after adding,
   editing or deleting */
@@ -20,7 +21,7 @@ Description: connect to the sql server
   /* Connect to db via k8s service in jx namespace */
   /* $mysqli = new mysqli( "sdnapdb.jx.svc.cluster.local", "mysql", "password","sdnapdb");
    */
-  $mysqli = new mysqli( $db_host, $db_user, $db_passwd); 
+  $mysqli = new mysqli( $db_host, $db_user, $db_passwd, $db_name); 
 
  ?>
 
