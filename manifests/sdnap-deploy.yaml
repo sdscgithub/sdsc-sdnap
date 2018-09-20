@@ -13,7 +13,7 @@ metadata:
     name: sdnap
     namespace: jx
 spec:
-    replicas: 1
+    replicas: 3
     revisionHistoryLimit: 10
     selector:
       matchLabels:
@@ -85,9 +85,9 @@ spec:
               - mountPath: "/etc/pki/tls/certs/maersk_sdsc_edu_interm.crt"
                 name: interm-volume
                 subPath: "maersk_sdsc_edu_interm.crt"
-#              - mountPath: "/etc/php5/cli/php.ini"
-#                name: php-config-volume 
-#                subPath: "php.ini"
+              - mountPath: "/var/www/myPHP/db.php"
+                name: db-config-volume 
+                subPath: "db.php"
 #             - mountPath: "/var/lib/mysql"
 #               name: holonetcontent 
 #               subPath: "var/lib/mysql"
@@ -152,7 +152,10 @@ spec:
                 name: apache2-config-sdnap  # generated from configmap-build.sh 
             - name: php-config-volume
               configMap:
-                name: php-config-sdnap  # generated from  configmap-build.s
+                name: php-config-sdnap  # generated from  configmap-build.sh
+            - name: db-config-volume
+              configMap:
+                name: db-config-sdnap  # db.php (from  configmap-build.sh)
             - name: cert-volume
               configMap:
                 name: cert-sdnap  
