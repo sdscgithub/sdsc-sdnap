@@ -6,8 +6,8 @@ before_script:
   - uname -a
   - whoami
 
-  - GITLAB_TOKEN="zznrLXLr1skpUWCmn9s_"
-  - GITLAB_USERNAME="gitlab-aha"
+  - GITLAB_TOKEN=""
+  - GITLAB_USERNAME=""
 
 stages:
   - build
