@@ -5,7 +5,7 @@ ath038@maersk:~$ htpasswd -c auth ath038
 New password:
 Re-type new password:
 Adding password for user ath038
-ath038@maersk:~$ htpasswd auth manager
+$ htpasswd auth manager
 New password:
 Re-type new password:
 Adding password for user manager
@@ -19,8 +19,8 @@ secret/basicauthpasswd
 ```
 ## add more user
 ```
-ath038@maersk:~$ htpasswd auth user1
-New password: (sdsc2connect!)
+$ htpasswd auth user1
+New password: 
 Re-type new password:  
 Adding password for user user1
 ath038@maersk:~$ cat auth |base64 -w 0
